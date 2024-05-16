@@ -293,6 +293,14 @@ table {
    text-align: center;
 }
 
+.main_body_about_image {
+    align-items: center;
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
 .main_body_contact {
     text-align: center;
     display:block
