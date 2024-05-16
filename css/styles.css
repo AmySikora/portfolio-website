@@ -27,7 +27,7 @@ div {
     Margin: 10px; /* Adds a 10px outer spacing to all sides */
     border: none; /* Attributes describe: thickness, type, color */
 }
-.logo-link { 
+.logo { 
     width: 100px; height: auto; justify-items: left; 
 }
 
