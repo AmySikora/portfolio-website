@@ -27,7 +27,9 @@ div {
     Margin: 10px; /* Adds a 10px outer spacing to all sides */
     border: none; /* Attributes describe: thickness, type, color */
 }
-.logo { width: 100px; height: auto; justify-items: left; }
+.logo-link { 
+    width: 100px; height: auto; justify-items: left; 
+}
 
 header { display: flex; /* this stacks everything horizontally */ 
          justify-content: space-between; /* makes equal spaces between the elements*/ 
