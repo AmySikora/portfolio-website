@@ -293,6 +293,10 @@ table {
    text-align: center;
 }
 
+.my-work-indent {
+    text-align: cnter;
+}
+
 .main_body_about_image {
     align-items: center;
     width: 250px;
