@@ -127,6 +127,14 @@ body    {
 /* About Me page */
 
 
+span {
+    color: purple
+}
+
+a {
+    color: #357b70;
+}
+
 a:visited {
     /* visited link */
     color: #05676e;
@@ -239,6 +247,7 @@ table {
 
 .about_interests {
     text-align: center; 
+    padding: 20px;
 }
 
 .my-work-indent {
