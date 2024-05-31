@@ -293,6 +293,11 @@ table {
    text-align: center;
 }
 
+.about_interests {
+    text-align: center 
+    padding: 20px;
+}
+
 .my-work-indent {
     text-align: center;
 }
