@@ -145,17 +145,22 @@ span {
     color: var(--primary-color);
 }
 
-.button, button {
-    border: none;
+.button {
     display: inline-block;
-    font-family: inherit;
-    background-color: var(--primary-color);
-    color: white;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Change to your desired background color */
+    color: #fff; /* Change to your desired text color */
+    text-align: center;
     text-decoration: none;
-    padding: 10px;
-    border-radius: 3px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-    transition: opacity 0.2s;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #45a049; /* Change to your desired hover background color */
+    color: #000; /* Change to your desired hover text color */
 }
 
 button:hover, 
@@ -188,12 +193,33 @@ table {
     text-align: center;
 }
 
+.about-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.main_body_about {
+    max-width: 800px;
+    margin: 0 auto; /* Center the main content horizontally */
+    padding: 20px;
+    text-align: center; /* Center-align text content */
+}
+
+.about_interests {
+    list-style-type: none;
+    padding: 0;
+}
+
 .main_body_about_image {
-    align-items: center;
-    width: 250px;
+    width: 50%; /* Adjust as needed */
     height: auto;
-    border-radius: 50%;
-    background-color: transparent;
+    margin: 20px auto; /* Center the image */
+    display: block;
+}
+
+.about-container {
+    text-align: center;
+    margin: 20px 0;
 }
 
 .table-container {
