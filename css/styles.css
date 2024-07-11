@@ -3,7 +3,7 @@
     --primary-color: #357b70;
     --secondary-color: #e0b354;
     --dark-grey: #2b2b2b;
-    --background-color: #ffffff;
+    --background-color: #f5e6e6;
     --link-hover-color: #489c79;
     --link-visited-color: #05676e;
 }
@@ -53,7 +53,7 @@ div {
 header {
     display: flex;
     justify-content: space-between;
-    background-color: var(--background-color);
+    background-color: white;
 }
 
 h1 {
@@ -66,7 +66,7 @@ h1 {
     display: flex;
     width: 100%;
     padding: 20px;
-    background-color: var(--background-color);
+    background-color: white;
 }
 
 .page-header__item {
@@ -143,11 +143,13 @@ span {
     display: inline-block;
     padding: 10px 20px;
     background-color: #5cb0b6;
+    color: white;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
     border-radius: 5px;
     margin-top: 10px;
+    box-shadow: #01373a;
     transition: background-color 0.3s ease;
 };
 
@@ -186,11 +188,6 @@ table {
     text-align: center;
 }
 
-.about-container {
-    text-align: center;
-    margin: 20px 0;
-}
-
 .main_body_about {
     max-width: 800px;
     margin: 0 auto; /* Center the main content horizontally */
@@ -203,6 +200,12 @@ table {
     height: auto;
     margin: 20px auto; /* Center the image */
     display: block;
+    background: none;
+}
+
+.about-container {
+    text-align: center;
+    margin: 20px 0;
 }
 
 .about_interests {
@@ -210,11 +213,26 @@ table {
     padding: 0;
 }
 
+.about_interests li {
+    margin-bottom: 10px; /* Adjust spacing between items */
+}
+
 .main_body_about_image {
-    width: 50%; /* Adjust as needed */
+    width: 50%; /* Adjust image width as needed */
     height: auto;
-    margin: 20px auto; /* Center the image */
+    margin: 20px auto; /* Center the image horizontally with margin */
     display: block;
+    background: none; /* Remove background */
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.list li {
+    margin-bottom: 10px; /* Adjust as needed */
 }
 
 .about-container {
@@ -264,6 +282,47 @@ table {
     cursor: pointer;
 }
 
+.skills {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill-name {
+    margin-bottom: 5px;
+}
+
+.progress {
+    height: 20px; /* Height of the progress bar */
+    background-color: #f0f0f0; /* Background color of the progress bar container */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #357b70; /* Background color of the progress bar */
+    width: 0; /* Initial width, will be set dynamically */
+    transition: width 1s ease; /* Smooth transition animation for width changes */
+}
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 12px; /* Font size for labels */
+    color: #666; /* Color of the labels */
+}
+
+.progress-labels span {
+    flex: 1;
+    text-align: center;
+}
+
+
 @media all and (max-width: 500px) {
     .grid {
         grid-template-columns: 1fr;
@@ -312,6 +371,7 @@ table {
     padding: 10px;
     z-index: 1;
     cursor: pointer;
+    text-align: center;
 }
 
 .contact-form {
@@ -319,21 +379,17 @@ table {
     border: 1px solid black;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: calc(100% - 100%);
+    padding: 8px;
+    margin-bottom: 10px;
 }
 
 .contact-form label {
     display: inline-block;
+    position: relative;
     width: 100px;
     cursor: pointer;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form input[type="tel"],
-.contact-form input[type="message"] {
-    width: calc(100% - 100%);
-    padding: 8px;
-    margin-bottom: 10px;
+    text-align: center;
 }
 
 .contact-button {
@@ -348,3 +404,28 @@ table {
 .contact-button:hover .button-svg {
     transform: scale(1.1);
 }
+
+/* Add the modal CSS at the end of your existing CSS file */
+.input-wrapper {
+    margin-bottom: 10px;
+    display: center;
+    position: relative;
+    width: 100px;
+    cursor: pointer;
+    text-align: center;
+    padding: 25px;
+    box-shadow: #01373a;
+}
+
+  
+  label {
+    display: inline-block;
+    min-width: 200px;
+    text-align: center;
+  }
+  
+  .error-message {
+    color: rgb(255, 162, 0);
+    font-size: .12em;
+    display:inline-flex;
+  }

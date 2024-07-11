@@ -1,0 +1,102 @@
+(function() {
+  let form = document.querySelector('#contact-form');
+  let emailInput = document.querySelector('#email');
+  let  = nameInout = document.querySelector('#name');
+
+  function showErrorMessage(input, message) {
+    let container = input.parentElement;
+    let error = container.querySelector('.error-message');
+    if (error) {
+      container.removeChild(error);
+    }
+    
+    if (message) {
+      let error = document.createElement('div');
+      error.classList.add('error-message');
+      error.innerText = message;
+      container.appendChild(error);
+    }
+  }
+  
+  function validateEmail() {
+    let value = emailInput.value;
+      let hasAtSign = value.indexOf('@') > -1;
+      let hasDot =  value.indexOf('.') > -1;
+      return value && hasAtSign && hasDot;
+    }
+
+  function validateEmail() {
+    let value = emailInput.value;
+
+    if (!value) {
+      showErrorMessage(emailInput, 'Email is a required field.');
+      return false;
+    }
+
+    if (value.indexOf('@') === -1) {
+      showErrorMessage(emailInput, 'You must enter a valid email address.');
+      return false;
+    }
+
+    if (value.indexOf('.') === -1) {
+      showErrorMessage(emailInput, 'You must enter a valid email address.');
+      return false;
+    }
+
+    showErrorMessage(emailInput, null);
+    return true;
+  }
+    function validateName() {
+      let value = NameInput.value;
+      return value && value.length >= 3;
+  }
+  
+    function validateName() {
+      let value = nameInput.value;
+
+      if (!value) {
+      showErrorMessage(nameInput, 'Name is a required field.');
+        return false;
+    }
+
+      if (value.length < 8) {
+      showErrorMessage(nameInput, 'The name needs to contain at least 3 letters.');
+        return false;
+    }
+
+     showErrorMessage(nameInput, null);
+    return true;
+  }
+
+  function validateForm() {
+    let isValidEmail = validateEmail();
+    let isValidName = validateName();
+    return isValidEmail && isValidName;
+  }
+  
+  form.addEventListener('submit', (e) => {
+    e.preventDefault(); 
+    if (validateForm()) {
+      alert('Success!');
+    }
+  })
+  emailInput.addEventListener('input', validateEmail);
+  passwordInput.addEventListener('input', validateName);
+})();
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Define skill proficiency percentages
+  const htmlProgress = 50; // Example: HTML proficiency is 50%
+  const cssProgress = 30; // Example: CSS proficiency is 30%
+  const jsProgress = 20; // Example: JavaScript proficiency is 20%
+
+  // Set progress bar widths
+  setProgressBarWidth('html-progress', htmlProgress);
+  setProgressBarWidth('css-progress', cssProgress);
+  setProgressBarWidth('js-progress', jsProgress);
+
+  function setProgressBarWidth(id, percent) {
+      const progressBar = document.getElementById(id);
+      progressBar.style.width = percent + '%';
+  }
+});

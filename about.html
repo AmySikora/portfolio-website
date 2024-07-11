@@ -39,12 +39,12 @@
         <div>
             <h1>About My Interests</h1>
             <h2>These are things I enjoy doing:</h2>
-            <ul>
-                <p>Frontend development</p> 
-                <p>Backend development</p>
-                <p>Running</p>
-                <p>Live music</p>
-                <p>Travel</p>       
+            <ul class="list">
+                <li>Frontend development</li>
+                <li>Backend development</li>
+                <li>Running</li>
+                <li>Live music</li>
+                <li>Travel</li>
             </ul>
         </div>
         
@@ -56,52 +56,45 @@
         <h2>My journey to becoming a web developer</h2>
         <p>My previous career and experience in higher education leadership. More information coming soon</p>
         
-        <div>
+        <div class="skills">
             <h2>My web development skills and experience levels</h2>
+    
+            <div class="skill">
+                <div class="skill-name">HTML</div>
+                <div class="progress">
+                    <div id="html-progress" class="progress-bar"></div>
+                    <div class="progress-labels">
+                        <span>Beginner</span>
+                        <span>Expert</span>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="skill">
+                <div class="skill-name">CSS</div>
+                <div class="progress">
+                    <div id="css-progress" class="progress-bar"></div>
+                    <div class="progress-labels">
+                        <span>Beginner</span>
+                        <span>Expert</span>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="skill">
+                <div class="skill-name">JavaScript</div>
+                <div class="progress">
+                    <div id="js-progress" class="progress-bar"></div>
+                    <div class="progress-labels">
+                        <span>Beginner</span>
+                        <span>Intermediate</span>
+                        <span>Expert</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <div class="table-container">
-            <table>  
-                <thead>
-                    <tr>
-                        <th scope="col">Skills</th>
-                        <th scope="col">Years of Experience</th>
-                        <th scope="col">Level of Experience</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">HTML</th>
-                        <td>0</td>
-                        <td>Beginner</td>
-                    </tr>  
-                    <tr>
-                        <th scope="row">CSS</th>
-                        <td>0</td>
-                        <td>Beginner</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">JavaScript</th>
-                        <td>0</td>
-                        <td>Beginner</td>
-                    </tr>
-                </tbody> 
-            </table>  
-        </div> 
-    </main>
-
-    <footer class="page-footer">
-        <p>Find me on</p>
-        <div class="social-media">
-            <a href="http://amysikora.github.io/portfolio-website/" target="_blank">   
-                <img src="img/287725_github_icon.svg" alt="Github logo">
-            </a>
-            
-            <a href="http://linkedin.com/in/amy-sikora-freelance/" target="_blank">   
-                <img src="img/104493_linkedin_icon.svg" alt="LinkedIn logo">
-            </a>
-        </div>
-    </footer>
+    </main>   
+  <script src="js/scripts.js"></script>   
 <script src="js/tota11y.min.js"></script>
 </body>
 </html>
