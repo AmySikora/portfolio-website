@@ -281,30 +281,19 @@ table {
     color: darkslateblue;
     cursor: pointer;
 }
-
-.skills {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.skill {
-    margin-bottom: 20px;
-}
-
-.skill-name {
-    margin-bottom: 5px;
-}
+ /* adding progress bar styles */
 
 .progress {
     height: 20px; /* Height of the progress bar */
     background-color: #f0f0f0; /* Background color of the progress bar container */
     border-radius: 5px;
     overflow: hidden;
+    margin-bottom: 10px; /* Adjust as needed */
 }
 
 .progress-bar {
     height: 100%;
-    background-color: #357b70; /* Background color of the progress bar */
+    background-color: var(--primary-color); /* Background color of the progress bar */
     width: 0; /* Initial width, will be set dynamically */
     transition: width 1s ease; /* Smooth transition animation for width changes */
 }
@@ -315,11 +304,6 @@ table {
     margin-top: 5px;
     font-size: 12px; /* Font size for labels */
     color: #666; /* Color of the labels */
-}
-
-.progress-labels span {
-    flex: 1;
-    text-align: center;
 }
 
 
