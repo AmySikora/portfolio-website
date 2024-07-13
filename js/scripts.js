@@ -70,18 +70,18 @@
 })();
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Define skill proficiency percentages
   const htmlProgress = 50; // Example: HTML proficiency is 50%
   const cssProgress = 30; // Example: CSS proficiency is 30%
   const jsProgress = 20; // Example: JavaScript proficiency is 20%
 
-  // Set progress bar widths
-  setProgressBarWidth('html-progress', htmlProgress);
-  setProgressBarWidth('css-progress', cssProgress);
-  setProgressBarWidth('js-progress', jsProgress);
+  setProgressBarWidth('html-progress-bar', ProgressBar);
+  setProgressBarWidth('css-progress-bar', ProgressBar);
+  setProgressBarWidth('js-progress-bar', ProgressBar);
 
   function setProgressBarWidth(id, percent) {
-      const progressBar = document.getElementById(id);
-      progressBar.style.width = percent + '%';
-  }
+    console.log('Setting width for:', id, 'to', percent + '%');
+    const progressBar = document.getElementById(id);
+    console.log('Progress bar element:', progressBar);
+    progressBar.style.width = percent + '%';
+}
 });
