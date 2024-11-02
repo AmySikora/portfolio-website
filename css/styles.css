@@ -79,7 +79,19 @@ h1 {
     text-align: right;
 }
 
-/* Navigation container styling */
+/* Base style for all links */
+.navigation-list__item {
+    color: var(--primary-color);
+    text-decoration: underline; /* Underline all links by default */
+    font-weight: bold;
+}
+
+/* Remove underline from the active link */
+.navigation-list__item--active {
+    text-decoration: none; /* No underline for the active link */
+}
+
+/* Right-align the navigation menu */
 .navigation-list {
     list-style-type: none;
     padding: 10px 20px; /* Adds spacing from the top and sides */
@@ -89,23 +101,10 @@ h1 {
     gap: 15px;
 }
 
-/* Style for all links */
-.navigation-list__item {
-    color: var(--primary-color);
-    text-decoration: none; /* No underline by default */
-    font-weight: bold;
-}
-
-/* Underline only inactive links */
-.navigation-list__item:not(.navigation-list__item--active) {
-    text-decoration: underline; /* Underline inactive links */
-}
-
-/* Optional: remove underline on hover for inactive links */
+/* Optional: Remove underline on hover for inactive links */
 .navigation-list__item:hover {
     text-decoration: none;
 }
-
 
 .page-footer {
     clear: both;
