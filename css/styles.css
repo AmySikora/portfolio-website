@@ -79,18 +79,33 @@ h1 {
     text-align: right;
 }
 
+/* Navigation container styling */
 .navigation-list {
     list-style-type: none;
+    padding: 10px 20px; /* Adds spacing from the top and sides */
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
 }
 
-.navigation-list li {
-    display: inline-block;
-    margin-left: 15px;
+/* Style for all links */
+.navigation-list__item {
+    color: var(--primary-color);
+    text-decoration: none; /* No underline by default */
+    font-weight: bold;
 }
 
-.navigation-list__item--active {
+/* Underline only inactive links */
+.navigation-list__item:not(.navigation-list__item--active) {
+    text-decoration: underline; /* Underline inactive links */
+}
+
+/* Optional: remove underline on hover for inactive links */
+.navigation-list__item:hover {
     text-decoration: none;
 }
+
 
 .page-footer {
     clear: both;
@@ -101,27 +116,28 @@ h1 {
 }
 
 .button {
-    display: inline-block;
-    padding: 12px 24px; 
-    color: #ffffff; 
-    background-color: var(--primary-color); 
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px; 
-    border-radius: 8px; 
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
-    transition: background-color 0.3s ease, transform 0.2s ease; 
+    display: inline-block !important;
+    padding: 12px 24px !important;
+    color: #ffffff !important;
+    background-color: var(--primary-color) !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    font-size: 18px !important;
+    border-radius: 8px !important;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) !important;
+    transition: background-color 0.3s ease, transform 0.2s ease !important;
 }
 
 .button:hover {
-    background-color: #489c79; 
-    transform: translateY(-2px); 
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); 
+    background-color: #489c79 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15) !important;
 }
 
 .button:active {
-    transform: translateY(1px); 
+    transform: translateY(1px) !important;
 }
+
 
 .social-media a {
     text-decoration: none;
