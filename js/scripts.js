@@ -7,19 +7,13 @@ $(document).ready(function() {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const pageTitles = {
-        "index.html": "Home",
-        "about.html": "About Me",
-        "work.html": "Work",
-        "contact.html": "Contact"
-    };
-    
-    const currentPath = window.location.pathname.split("/").pop() || "index.html";
-    const activePage = pageTitles[currentPath];
     const navLinks = document.querySelectorAll(".navigation-list__item");
 
     navLinks.forEach(link => {
-        if (link.textContent.trim() === activePage) {
+        const linkPath = link.getAttribute("href").split("/").pop();
+        const currentPath = window.location.pathname.split("/").pop() || "index.html";
+
+        if (linkPath === currentPath) {
             link.classList.add("navigation-list__item--active");
         } else {
             link.classList.remove("navigation-list__item--active");

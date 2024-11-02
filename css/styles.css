@@ -79,15 +79,18 @@ h1 {
     text-align: right;
 }
 
+/* Base style for all links */
 .navigation-list__item {
     color: var(--primary-color);
-    text-decoration: underline; 
+    text-decoration: underline; /* Underline all links by default */
     font-weight: bold;
 }
 
+/* Remove underline from the active link */
 .navigation-list__item--active {
-    text-decoration: none;
+    text-decoration: none; /* No underline for the active link */
 }
+
 
 .navigation-list {
     list-style-type: none;
