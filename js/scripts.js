@@ -1,8 +1,9 @@
-$(document).ready(function() {
-    $('.progress').each(function() {
-        $(this).animate({
-            width: $(this).data('percentage') + '%'
-        }, 1000);
+document.addEventListener("DOMContentLoaded", () => {
+    const progressBars = document.querySelectorAll(".progress-bar");
+
+    progressBars.forEach(bar => {
+        const percentage = bar.getAttribute("data-percentage");
+        bar.style.width = `${percentage}%`;
     });
 });
 
