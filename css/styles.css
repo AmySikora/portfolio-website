@@ -1,21 +1,33 @@
-
 :root {
     --primary-color: #357b70;
     --secondary-color: #e0b354;
-    --dark-grey: #2b2b2b;
-    --background-color: #ffffff;
-    --link-hover-color: #489c79;
-    --link-visited-color: #05676e;
+    --accent-color: #489c79;
+    --background-color: #f5dbdb; /* Main page background color */
+    --header-background-color: #ffffff; /* White background for the header */
+    --text-color: #2b2b2b;
 }
 
 body {
     font-family: "Ubuntu", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    background-color: var(--background-color);
-    color: var(--dark-grey);
-    justify-content: center;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color); /* Default background for the page */
+}
+
+.page-header {
+    background-color: var(--header-background-color); /* White background for header */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow to separate header */
+}
+
+.main-content-wrapper {
+    background-color: var(--background-color); /* Pink background for main content */
+    padding: 20px;
+    min-height: 100vh; /* Ensures it covers the full page height */
 }
 
 a {
@@ -205,7 +217,7 @@ table {
     display: block;
 }
 
-./* Updated layout for interests */
+/* Updated layout for interests */
 .about_interests {
     list-style-type: none;
     padding: 0;
