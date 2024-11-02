@@ -7,12 +7,19 @@ $(document).ready(function() {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const currentPath = window.location.pathname.split("/").pop();
+    const pageTitles = {
+        "index.html": "Home",
+        "about.html": "About Me",
+        "work.html": "Work",
+        "contact.html": "Contact"
+    };
+    
+    const currentPath = window.location.pathname.split("/").pop() || "index.html";
+    const activePage = pageTitles[currentPath];
     const navLinks = document.querySelectorAll(".navigation-list__item");
 
     navLinks.forEach(link => {
-        const linkPath = link.getAttribute("href").split("/").pop();
-        if (linkPath === currentPath) {
+        if (link.textContent.trim() === activePage) {
             link.classList.add("navigation-list__item--active");
         } else {
             link.classList.remove("navigation-list__item--active");

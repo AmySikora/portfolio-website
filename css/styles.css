@@ -79,29 +79,25 @@ h1 {
     text-align: right;
 }
 
-/* Base style for all links */
 .navigation-list__item {
     color: var(--primary-color);
-    text-decoration: underline; /* Underline all links by default */
+    text-decoration: underline; 
     font-weight: bold;
 }
 
-/* Remove underline from the active link */
 .navigation-list__item--active {
-    text-decoration: none; /* No underline for the active link */
+    text-decoration: none;
 }
 
-/* Right-align the navigation menu */
 .navigation-list {
     list-style-type: none;
-    padding: 10px 20px; /* Adds spacing from the top and sides */
+    padding: 10px 20px; 
     margin: 0;
     display: flex;
     justify-content: flex-end;
     gap: 15px;
 }
 
-/* Optional: Remove underline on hover for inactive links */
 .navigation-list__item:hover {
     text-decoration: none;
 }
