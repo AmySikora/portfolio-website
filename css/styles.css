@@ -205,9 +205,80 @@ table {
     display: block;
 }
 
+./* Updated layout for interests */
 .about_interests {
     list-style-type: none;
     padding: 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.about_interests li {
+    margin: 5px 0;
+}
+
+/* Skills Progress Bars */
+.skills {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+    height: 20px;
+}
+
+.progress {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 3px 0;
+    border-radius: 10px 0 0 10px;
+    transition: width 1s ease-in-out;
+}
+
+/* Button styling */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: var(--primary-color);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--link-hover-color);
+}
+
+/* Header navigation styles */
+.main-navigation {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navigation-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navigation-list__item {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navigation-list__item:hover {
+    color: var(--link-hover-color);
 }
 
 .main_body_about_image {
