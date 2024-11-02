@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
 document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelectorAll(".navigation-list__item");
 
