@@ -1,39 +1,52 @@
+
 :root {
     --primary-color: #357b70;
     --secondary-color: #e0b354;
-    --accent-color: #489c79;
-    --background-color: #f5dbdb; /* Main page background color */
-    --header-background-color: #ffffff; /* White background for the header */
-    --text-color: #2b2b2b;
+    --dark-grey: #2b2b2b;
+    --background-color: #f4dfdf;
+    --link-hover-color: #489c79;
+    --link-visited-color: #05676e;
 }
 
 body {
-    font-family: "Ubuntu", sans-serif;
-    color: var(--text-color);
     margin: 0;
     padding: 0;
-    background-color: var(--background-color); /* Default background for the page */
+    background-color: #f4dfdf; /* The pink background for the rest of the page */
+    font-family: "Ubuntu", sans-serif;
 }
 
 .page-header {
-    background-color: var(--header-background-color); /* White background for header */
-    padding: 20px;
+    width: 100vw; /* Full viewport width */
+    background-color: #ffffff; /* White background */
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow to separate header */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for separation */
+}
+
+.navigation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navigation-list__item {
+    color: #357b70; /* Primary color for text */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navigation-list__item:hover {
+    text-decoration: underline;
 }
 
 .main-content-wrapper {
-    background-color: var(--background-color); /* Pink background for main content */
     padding: 20px;
-    min-height: 100vh; /* Ensures it covers the full page height */
+    background-color: var(--background-color); /* Keeps the pink background for main content */
 }
-
-a {
-    color: var(--primary-color);
-}
-
 a:visited {
     color: var(--link-visited-color);
 }
