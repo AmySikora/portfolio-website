@@ -4,6 +4,7 @@
     --secondary-color: #e0b354;
     --dark-grey: #2b2b2b;
     --background-color: #f5e6e6;
+    --accent-color: #6d9d88;
     --link-hover-color: #489c79;
     --link-visited-color: #05676e;
 }
@@ -62,11 +63,11 @@ h1 {
     color: var(--dark-grey);
 }
 
-.page-header {
+..page-header {
     display: flex;
-    width: 100%;
-    padding: 20px;
-    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .page-header__item {
@@ -211,13 +212,11 @@ h2 {
 }
 
 .about_interests {
-    list-style-type: none;
-    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    text-align: center;
 }
-
-.about_interests li {
-    margin-bottom: 10px; 
-}    
 
 .list {
     list-style-type: none;
