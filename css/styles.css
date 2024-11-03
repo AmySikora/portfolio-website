@@ -1,9 +1,9 @@
 
 :root {
     --primary-color: #357b70;
-    --secondary-color: #e0b354;
+    --secondary-color: #f06406;
     --dark-grey: #2b2b2b;
-    --background-color: #f5e6e6;
+    --background-color: #faf0f0;
     --accent-color: #6d9d88;
     --link-hover-color: #489c79;
     --link-visited-color: #05676e;
@@ -67,7 +67,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    flex-wrap: wrap; 
 }
 
 .page-header__item {
@@ -79,16 +79,14 @@ h1 {
     text-align: right;
 }
 
-/* Base style for all links */
 .navigation-list__item {
     color: var(--primary-color);
-    text-decoration: underline; /* Underline all links by default */
+    text-decoration: underline;
     font-weight: bold;
 }
 
-/* Remove underline from the active link */
 .navigation-list__item--active {
-    text-decoration: none; /* No underline for the active link */
+    text-decoration: none; 
 }
 
 
@@ -273,7 +271,7 @@ h2 {
 }
 
 .progress-bar {
-    background-color: var(--primary-color); 
+    background-color: var(--secondary-color); 
     width: 0; 
     border-radius: 10px 0 0 10px;
     transition: width 1s ease-in-out; 
@@ -283,7 +281,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     font-size: 0.9em;
-    color: #666;
+    color: #ef490cf4;
 }
 
 .grid {
