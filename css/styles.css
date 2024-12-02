@@ -233,7 +233,7 @@ span {
     background-color: #244c42; 
     transform: translateY(1px); 
 }
-.modal-body .btn {
+.modal-body .button {
     background-color: var(--primary-color);
     color: white; 
     border: none;
@@ -244,7 +244,7 @@ span {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.modal-body .btn:hover {
+.modal-body .button:hover {
     background-color: var(--link-hover-color); 
     transform: scale(1.05); 
     color: white; 
@@ -528,3 +528,109 @@ input {
   .toggle-details:hover {
     background-color: #005fa3;
   }
+
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center align cards */
+    padding: 50px 0;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 400px; /* Fixed card width */
+    height: auto; /* Dynamic height to fit content */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.project-card h2 {
+    font-size: 1.8rem; /* Title size */
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1.2rem; /* Description size */
+    margin-bottom: 20px;
+}
+
+.project-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap */
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+}
+
+.project-buttons .button {
+    padding: 8px 16px;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 120px; /* Fixed button width for consistency */
+    text-align: center;
+}
+
+.project-buttons .button:hover {
+    background-color: var(--link-hover-color);
+}
+
+  .my-work-header h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1200px;
+  }
+  
+  .grid__item {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .grid__item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .grid__item p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .grid__item a {
+    color: #23756a;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .grid__item a:hover {
+    color: #1d5f55;
+    text-decoration: underline;
+  }
+  

@@ -14,7 +14,8 @@
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </head>
-<body>
+
+  <body>
   <!-- Header including the logo and the main navigation-->
    <header class="page-header"> 
     <a href="index.html" class="logo-link"> 
@@ -37,89 +38,60 @@
      </ul>     
    </nav>    
    </header> 
-<main class="container py-4">
-    <h1 class="text-center mb-4">My Work</h1>
-    <div class="row g-4">
 
-      <!-- Pokedex Project -->
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <img src="img/pokedex.jpg" class="card-img-top" alt="Pokédex Project">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Pokédex</h5>
-            <p class="card-text">This web app was built with JavaScript, HTML, and CSS. It allows users to search for a Pokémon to view its image and details.</p>
-            <button
-                class="button button-primary mt-auto"
-                data-bs-toggle="modal"
-                data-bs-target="#projectModal"
-                data-id="pokedex"
-            >
-              View Details
-            </button>
+   <section class="projects">
+    <div class="container">
+      <h1 class="text-center">My Work</h1>
+      <div class="row">
+        <!-- Pokédex Project -->
+        <div class="col-md-4 d-flex align-items-stretch">
+          <div class="project-card">
+            <img src="img/pokedex.jpg" alt="Pokédex Project" class="project-image">
+            <h2>Pokédex</h2>
+            <p>
+              A web app built with JavaScript, HTML, and CSS. Users can search for a Pokémon to view its image and details.
+            </p>
+            <div class="project-buttons">
+              <a href="https://amysikora.github.io/js-app-creation/" class="button" target="_blank">Live Site</a>
+              <a href="https://github.com/AmySikora/js-app-creation" class="button" target="_blank">GitHub Repo</a>
+            </div>
           </div>
         </div>
-      </div>
-          
-      <!-- myFlix Project -->
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <img src="img/myflix.jpg" class="card-img-top" alt="myFlix Project">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">myFlix</h5>
-            <p class="card-text">
+  
+        <!-- myFlix Project -->
+        <div class="col-md-4 d-flex align-items-stretch">
+          <div class="project-card">
+            <img src="img/myflix.jpg" alt="myFlix Project" class="project-image">
+            <h2>myFlix</h2>
+            <p>
               A full-stack movie app using a MERN stack. Users can view, search, and save their favorite movies to their profiles.
             </p>
-            <button
-              class="button button-primary mt-auto"
-              data-bs-toggle="modal"
-              data-bs-target="#projectModal"
-              data-id="myflix"
-            >
-              View Details
-            </button>
+            <div class="project-buttons">
+              <a href="https://myflix-app-123.netlify.app/" class="button" target="_blank">Live Site</a>
+              <a href="https://github.com/AmySikora/myFlix-client" class="button" target="_blank">Frontend Repo</a>
+              <a href="https://github.com/AmySikora/movie_api" class="button" target="_blank">Backend Repo</a>
+            </div>
           </div>
         </div>
-      </div>
-
-      <!-- Meet App Project -->
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <img src="img/meet.jpg" class="card-img-top" alt="Meet App Project">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Meet App</h5>
-            <p class="card-text">
-              A progressive web app that allows users to search for events by city and event, built using React and Google Calendar API.
+  
+        <!-- Meet App Project -->
+        <div class="col-md-4 d-flex align-items-stretch">
+          <div class="project-card">
+            <img src="img/meet.jpg" alt="Meet App Project" class="project-image">
+            <h2>Meet App</h2>
+            <p>
+              A progressive web app that allows users to search for events by city and event. Built with React and the Google Calendar API.
             </p>
-            <button
-              class="button button-primary mt-auto"
-              data-bs-toggle="modal"
-              data-bs-target="#projectModal"
-              data-id="meet"
-            >
-              View Details
-            </button>
+            <div class="project-buttons">
+              <a href="https://amysikora.github.io/meet/" class="button" target="_blank">Live Site</a>
+              <a href="https://github.com/AmySikora/meet" class="button" target="_blank">GitHub Repo</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-</main>
-
-<!-- Modal for Project Details -->
-<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="projectModalLabel"></h5>
-          <button type="button" class="button-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p id="projectDescription"></p>
-          <div id="projectLinks"></div>
-        </div>
-      </div>
-    </div>
-  </div>          
-    
+  </section>
+  
 <!--Footer with links to social mendia profiles-->
 <footer class="page-footer">
    <p>Find me on</p>
