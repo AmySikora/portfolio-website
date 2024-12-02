@@ -22,3 +22,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+document.querySelectorAll('.toggle-details').forEach((button) => {
+    button.addEventListener('click', () => {
+      const details = button.nextElementSibling;
+      const isVisible = details.style.display === 'block';
+      details.style.display = isVisible ? 'none' : 'block';
+      button.textContent = isVisible ? 'More Details' : 'Hide Details';
+    });
+  });
+  
