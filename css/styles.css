@@ -532,8 +532,8 @@ input {
   .projects {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Space between cards */
-    justify-content: center; /* Center align cards */
+    gap: 20px; 
+    justify-content: center; 
     padding: 50px 0;
 }
 
@@ -544,8 +544,8 @@ input {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
-    width: 400px; /* Fixed card width */
-    height: auto; /* Dynamic height to fit content */
+    width: 400px; 
+    height: auto; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -558,20 +558,20 @@ input {
 }
 
 .project-card h2 {
-    font-size: 1.8rem; /* Title size */
+    font-size: 1.8rem; 
     margin-bottom: 10px;
 }
 
 .project-card p {
-    font-size: 1.2rem; /* Description size */
+    font-size: 1.2rem; 
     margin-bottom: 20px;
 }
 
 .project-buttons {
     display: flex;
-    flex-wrap: wrap; /* Allow buttons to wrap */
+    flex-wrap: wrap; 
     justify-content: center;
-    gap: 10px; /* Space between buttons */
+    gap: 10px; 
 }
 
 .project-buttons .button {
@@ -582,7 +582,7 @@ input {
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    width: 120px; /* Fixed button width for consistency */
+    width: 120px; 
     text-align: center;
 }
 
