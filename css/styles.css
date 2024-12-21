@@ -537,58 +537,51 @@ input {
     padding: 50px 0;
 }
 
+
 .project-card {
+    background-color: #f9f9f9;
     border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    border-radius: 8px;
+    padding: 15px;
     text-align: center;
-    width: 400px; 
-    height: auto; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.project-card img {
-    max-width: 100%;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-.project-card h2 {
-    font-size: 1.8rem; 
-    margin-bottom: 10px;
-}
-
-.project-card p {
-    font-size: 1.2rem; 
-    margin-bottom: 20px;
-}
-
-.project-buttons {
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+  .project-images {
     display: flex;
-    flex-wrap: wrap; 
     justify-content: center;
-    gap: 10px; 
-}
-
-.project-buttons .button {
-    padding: 8px 16px;
-    font-size: 1rem;
-    background-color: var(--primary-color);
-    color: #fff;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .project-image {
+    max-width: 45%;
+    height: auto;
+    object-fit: cover;
     border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-buttons .button {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
     text-decoration: none;
-    transition: background-color 0.3s ease;
-    width: 120px; 
-    text-align: center;
-}
-
-.project-buttons .button:hover {
-    background-color: var(--link-hover-color);
-}
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .project-buttons .button:hover {
+    background-color: #0056b3;
+  }
+  
 
   .my-work-header h1 {
     text-align: center;
@@ -632,33 +625,5 @@ input {
   .grid__item a:hover {
     color: #1d5f55;
     text-decoration: underline;
-  }
-  
-  .project-card {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-  }
-  
-  .project-images {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 15px;
-  }
-  
-  .project-image {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 5px;
-    width: 100px; /* Adjust as needed */
-    height: 100px; /* Adjust as needed */
   }
   
