@@ -81,19 +81,4 @@ document.querySelectorAll('.toggle-details').forEach((button) => {
     modal.addEventListener('show.bs.modal', (event) => {
       const button = event.relatedTarget; // Button that triggered the modal
       const projectId = button.getAttribute('data-id');
-      const project = projectDetails[projectId];
-  
-      if (project) {
-        modalTitle.textContent = project.title;
-        modalDescription.textContent = project.description;
-        modalLinks.innerHTML = project.links
-          .map(
-            (link) =>
-              `<a href="${link.url}" class="btn btn-secondary me-2" target="_blank">${link.name}</a>`
-          )
-          .join('');
-      }
-    });
-  });
-  
-  
+      const project
