@@ -7,6 +7,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').slice(1);
+      const targetElement = document.getElementById(targetId);
+
+      window.scrollTo({
+          top: targetElement.offsetTop - 80, // Adjust for header height
+          behavior: 'smooth'
+      });
+  });
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelectorAll(".navigation-list__item");

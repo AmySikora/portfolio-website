@@ -1,67 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" type="text/css" href="css/styles.css">
-      <title>Amy's Webpage</title>
-      <link rel="shortcut icon" href="./img/rainbow_fab.svg">    
-      <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <script src="js/scripts.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amy's Webpage</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="shortcut icon" href="./img/rainbow_fab.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
 <body>
-  <!-- Header including the logo and the main navigation-->
-  <header class="page-header">  
-    <a href="index.html" class="logo-link"> 
-        <img class="page-header__item" width="200" height="auto" src="img/UpdatedLogo.png" alt="logo for this website reads Web Design Amy Sikora">
-     </a>
-   <nav class="main-navigation page-header__item">                                                      
-      <ul role="menubar" class="navigation-list">
-         <li role="presentation">
-             <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
-         </li>
-         <li role="presentation">
-             <a href="about.html" role="menuitem" class="navigation-list__item navigation-list__item--active">About Me</a>
-         </li>
-         <li role="presentation">
-             <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
-         </li>
-         <li role="presentation">
-             <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
-         </li>
-     </ul>
-     
-   </nav>  
-   </header> 
-   <br>
-   <br>
-    <div class="profile">          
-            <!--Add your portrait image here-->  
-            <img src="./img/my-image.JPG" class="profile__portrait" alt="Amy Sikora Portrait"/>
 
-            <h1>Hello!</h1>
-            <p> My name is Amy Sikora.</p> 
-            <p>I am a <span>web</span> developer from the United States.</p>
-            <a href="#">Check out some of my code</a>
-            <!--button type="button">Default Button</button>-->
-            <!--button class="button_secondary">Secondary Button</button-->
+  <!-- Header with navigation -->
+  <header>
+    <a href="#home" class="logo-link">
+      <img src="img/UpdatedLogo.png" alt="Amy Sikora Logo">
+    </a>
+    <nav>
+      <ul class="navigation-list">
+        <li><a href="#home" class="navigation-list__item">Home</a></li>
+        <li><a href="#about" class="navigation-list__item">About Me</a></li>
+        <li><a href="#work" class="navigation-list__item">Work</a></li>
+        <li><a href="#contact" class="navigation-list__item">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
+    <img src="img/my-image.JPG" class="profile__portrait" alt="Amy Sikora Portrait">
+    <h1>Hello!</h1>
+    <p>My name is Amy Sikora.</p>
+    <p>I am a web developer from the United States.</p>
+    <a href="#work" class="button">Check out my work</a>
+  </section>
+
+  <!-- Divider -->
+  <div class="section-divider"></div>
+
+  <!-- About Section -->
+  <section id="about">
+    <h1>About My Interests</h1>
+    <h2>These are things I enjoy doing:</h2>
+    <ul class="about-interests">
+      <li><span>Frontend<br>Development</span></li>
+      <li><span>Backend<br>Development</span></li>
+      <li><span>Running</span></li>
+      <li><span>Live Music</span></li>
+      <li><span>Travel</span></li>
+    </ul>
+    <div class="about-container">
+      <img src="img/Firebird-removebg-preview.png" class="main_body_about_image" alt="Phoenix bird in a desert landscape">
+      <a href="https://www.linkedin.com/in/amy-sikora-freelance/" target="_blank" class="button">Check out my LinkedIn</a>
     </div>
-    <footer class="page-footer">
-      <p>Find me on</p>
-      <div class="social-media">
-          <a href="http://amysikora.github.io/portfolio-website/" target="_blank">   
-              <img src="img/287725_github_icon.svg" alt="Github logo">
-          </a>
-          
-          <a href="http://linkedin.com/in/amy-sikora-freelance/" target="_blank">   
-              <img src="img/104493_linkedin_icon.svg" alt="LinkedIn profile icon for Amy Sikora">
-          </a>
+    <div class="journey">
+      <h2>My journey to becoming a web developer</h2>
+      <p>My previous career and experience in higher education leadership. More information coming soon.</p>
+    </div>
+    <div class="skills">
+      <h2>My web development skills and experience levels</h2>
+      <div class="skill">
+        <div class="skill-name">HTML</div>
+        <div class="progress">
+          <div class="progress-bar" style="width: 25%;"></div>
+        </div>
+        <div class="progress-labels">
+          <span>Beginner</span>
+          <span>Intermediate</span>
+          <span>Expert</span>
+        </div>
       </div>
+      <div class="skill">
+        <div class="skill-name">CSS</div>
+        <div class="progress">
+          <div class="progress-bar" style="width: 25%;"></div>
+        </div>
+        <div class="progress-labels">
+          <span>Beginner</span>
+          <span>Intermediate</span>
+          <span>Expert</span>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">JavaScript</div>
+        <div class="progress">
+          <div class="progress-bar" style="width: 50%;"></div>
+        </div>
+        <div class="progress-labels">
+          <span>Beginner</span>
+          <span>Intermediate</span>
+          <span>Expert</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="section-divider"></div>
+
+  <section id="work">
+    <div class="container">
+      <h1 class="text-center">My Work</h1>
+      <div class="projects">
+        <!-- Pokédex Project -->
+        <div class="project-card">
+          <img src="img/pokedex.jpg" class="project-image" alt="Pokédex Project">
+          <h2>Pokédex</h2>
+          <p>
+            A web app built with JavaScript, HTML, and CSS. Users can search for a Pokémon to view its image and details.
+          </p>
+          <div class="project-buttons">
+            <a href="https://amysikora.github.io/js-app-creation/" class="button" target="_blank">Live Site</a>
+            <a href="https://github.com/AmySikora/js-app-creation" class="button" target="_blank">GitHub Repo</a>
+          </div>
+        </div>
+  
+        <!-- MyFlix Project -->
+        <div class="project-card">
+          <img src="img/myFlix.jpg" class="project-image" alt="myFlix Project">
+          <h2>MyFlix</h2>
+          <p>
+            A full-stack movie app using a MERN stack. Users can view, search, and save their favorite movies to their profiles.
+          </p>
+          <div class="project-buttons">
+            <a href="https://myflix-app-123.netlify.app/" class="button" target="_blank">Live Site</a>
+            <a href="https://github.com/AmySikora/myFlix-client" class="button" target="_blank">Frontend Repo</a>
+            <a href="https://github.com/AmySikora/movie_api" class="button" target="_blank">Backend Repo</a>
+          </div>
+        </div>
+  
+        <!-- Meet App Project -->
+        <div class="project-card">
+          <img src="img/Meet.jpg" class="project-image" alt="Meet App Project">
+          <h2>Meet App</h2>
+          <p>
+            A progressive web app that allows users to search for events by city and event. Built with React and the Google Calendar API.
+          </p>
+          <div class="project-buttons">
+            <a href="https://amysikora.github.io/meet/" class="button" target="_blank">Live Site</a>
+            <a href="https://github.com/AmySikora/meet" class="button" target="_blank">GitHub Repo</a>
+          </div>
+        </div>
+  
+        <!-- Chat App Project -->
+        <div class="project-card">
+          <div class="project-images">
+            <img src="img/ChatStartScreen.jpg" class="project-image" alt="Chat App Start Screen">
+            <img src="img/ChatScreen.jpg" class="project-image" alt="Chat Screen">
+          </div>
+          <h2>Chat App</h2>
+          <p>
+            A mobile chat app built with React Native, allowing real-time messaging, media sharing, and location sharing.
+          </p>
+          <div class="project-buttons">
+            <a href="https://github.com/AmySikora/Chat-App" class="button" target="_blank">GitHub Repo</a>
+          </div>
+        </div>
+  
+        <!-- Angular App Project -->
+        <div class="project-card">
+          <div class="project-images">
+            <img src="img/angular-movies.jpg" class="project-image" alt="myFlix Movies Screen">
+            <img src="img/angular-profile.png" class="project-image" alt="myFlix Profile Screen">
+          </div>
+          <h2>Angular myFlix Project</h2>
+          <p>
+            A movie app built using Angular and TypeScript. Users can view, search, and save their favorite movies to their profiles.
+          </p>
+          <div class="project-buttons">
+            <a href="https://github.com/AmySikora/myFlix-Angular-client" class="button" target="_blank">Frontend Repo</a>
+            <a href="https://github.com/AmySikora/movie_api" class="button" target="_blank">Backend Repo</a>
+            <a href="https://amysikora.github.io/myFlix-Angular-client/" class="button" target="_blank">Live Site</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  
+    
+  <!-- Divider -->
+  <div class="section-divider"></div>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+  </section>
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    <p>Find me on</p>
+    <div class="social-media">
+      <a href="#">
+        <img src="img/287725_github_icon.svg" alt="Github logo">
+      </a>
+      <a href="#">
+        <img src="img/104493_linkedin_icon.svg" alt="LinkedIn logo">
+      </a>
+    </div>
   </footer>
-  <script src="js/scripts.js"></script>
-  <script src="js/tota11y.min.js"></script>
-  </body>
-  </html>
+
+</body>
+</html>
