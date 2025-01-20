@@ -27,6 +27,8 @@ header {
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 /* Section Styling */
@@ -472,21 +474,21 @@ header {
 
 /* Logo Styling */
 .logo-link img {
-    width: 200px; /* Compact logo size */
+    width: 1500px; 
     height: auto;
 }
 
 /* Navigation Links Styling */
 .navigation-list {
     display: flex;
-    gap: 20px; /* Spacing between links */
+    gap: 15px; 
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .navigation-list__item {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     text-decoration: none;
     color: var(--primary-color);
