@@ -428,6 +428,7 @@ input, textarea {
     text-align: center;
     padding: 20px;
     background-color: var(--background-color);
+    text-decoration: none;
 }
 
 .social-media a img {
@@ -621,4 +622,61 @@ header {
       text-align: center; /* Center-align text on smaller screens */
     }
   }
+  
+  /* Contact Section Icons */
+.contact-page h1 {
+    color: var(--primary-color); /* Use theme primary color */
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  
+  .contact-page p {
+    color: var(--dark-grey);
+    font-size: 1.1rem;
+  }
+  
+  /* Icon Styling */
+  .contact-icon {
+    width: 80px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  /* Card Title Styling */
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  /* Card Text Styling */
+  .card-text {
+    font-size: 1rem;
+    color: var(--dark-grey);
+  }
+  
+  /* Button Styling */
+.card .btn-primary {
+    background-color: var(--primary-color);
+    color: #fff; /* Makes the text color white */
+    border: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none; /* Removes underline */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .card .btn-primary:hover {
+    background-color: var(--link-hover-color); /* Lighter hover color */
+    transform: translateY(-2px); /* Adds a hover effect */
+  }
+  
+  .card .btn-primary:focus {
+    outline: none; /* Removes the default focus outline */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Adds a soft focus glow */
+  }
+  
+  
+  
   
