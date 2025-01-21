@@ -510,3 +510,115 @@ header {
         margin-top: 10px;
     }
 }
+
+/* Introduction Section Styling */
+.introduction-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--background-color);
+    color: var(--dark-grey);
+    font-family: "Ubuntu", sans-serif;
+  }
+  
+  .introduction-section h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .introduction-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--dark-grey);
+    margin-bottom: 20px;
+  }
+  
+  .introduction-section .cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .introduction-section .cta-button:hover {
+    background-color: var(--link-hover-color);
+    transform: translateY(-2px);
+  }  
+
+/* Contact Section */
+.contact-page {
+    padding: 60px 20px; /* Increase padding for breathing room */
+    background-color: var(--background-color);
+  }
+  
+  .contact-page h1 {
+    font-size: 2.8rem; /* Slightly larger for emphasis */
+    margin-bottom: 30px; /* Space below the heading */
+  }
+  
+  .contact-page p {
+    font-size: 1.2rem; /* Larger and more readable text */
+    margin-bottom: 40px; /* Add space below the paragraph */
+  }
+  
+  .card {
+    border: 1px solid var(--primary-color); /* Add primary color border */
+    border-radius: 8px; /* Rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: whitesmoke;
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add a deeper shadow on hover */
+  }
+  
+  .card-body {
+    padding: 20px; /* Increase padding for a balanced look */
+  }
+  
+  .card-title {
+    font-size: 1.5rem; /* Larger titles for emphasis */
+    margin-bottom: 10px; /* Add space below the title */
+  }
+  
+  .card-text {
+    font-size: 1rem; /* Standardized text size */
+    margin-bottom: 20px; /* Space below the description */
+  }
+  
+  .btn {
+    padding: 10px 20px; /* Slightly larger buttons */
+    font-size: 1rem; /* Adjust button font size */
+    border-radius: 5px; /* Rounded button edges */
+  }
+  
+  .container {
+    max-width: 1200px; /* Constrain container width */
+  }
+  
+  .row {
+    row-gap: 30px; /* Add spacing between rows */
+    column-gap: 30px; /* Add spacing between columns */
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      margin-bottom: 20px; /* Space out cards on smaller screens */
+    }
+  
+    .card-body {
+      text-align: center; /* Center-align text on smaller screens */
+    }
+  }
+  
