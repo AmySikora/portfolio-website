@@ -17,11 +17,11 @@ body {
     font-weight: 400;
     background-color: var(--background-color);
     color: var(--dark-grey);
-    scroll-behavior: smooth; /* Enables smooth scrolling */
+    scroll-behavior: smooth; 
 }
 
 header {
-    position: sticky; /* Sticks navbar to the top */
+    position: sticky; 
     top: 0;
     z-index: 1000;
     background-color: white;
@@ -76,8 +76,8 @@ section {
 }
 
 html {
-    scroll-behavior: smooth; /* Enables smooth scrolling */
-    scroll-padding-top: 80px; /* Adjust this to match the height of your header */
+    scroll-behavior: smooth; 
+    scroll-padding-top: 80px; 
 }
 
 
@@ -116,45 +116,45 @@ section {
     margin: 0 auto;
     text-align: center;
     max-width: 1200px;
-    background-color: #fdecea; /* Light pink background */
+    background-color: #fdecea; 
     position: relative;
 }
 
 /* Divider Line Between Sections */
 .section-divider {
-    width: 80%; /* Adjust width as needed */
-    height: 4px; /* Thickness of the divider */
-    margin: 40px auto; /* Space between sections */
-    background: linear-gradient(to right, #ff9800, #f57c00, #ffc107); /* Sun-themed gradient */
-    border-radius: 10px; /* Rounds the edges */
+    width: 80%; 
+    height: 4px; 
+    margin: 40px auto; 
+    background: linear-gradient(to right, #ff9800, #f57c00, #ffc107); 
+    border-radius: 10px; 
 }
 
 /* Decorative Dotted Line */
 .section-divider-dots {
     text-align: center;
     margin: 40px auto;
-    color: #f57c00; /* Theme color */
+    color: #f57c00; 
     font-size: 1.5rem;
     letter-spacing: 5px;
 }
 
 /* Heading Styling */
 h1 {
-    font-weight: 700; /* Bold for emphasis */
-    text-align: center; /* Center the heading */
-    color: #357b70; /* Primary color */
-    margin-bottom: 20px; /* Space below the heading */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    font-size: 2.5rem; /* Adjust font size */
+    font-weight: 700; 
+    text-align: center; 
+    color: #357b70; 
+    margin-bottom: 20px; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+    font-size: 2.5rem; 
 }
 
 h2 {
-    font-weight: 700; /* Bold for emphasis */
-    text-align: center; /* Center the heading */
-    color: #8A28E6; /* Purple color from the rainbow */
-    margin-bottom: 20px; /* Space below the heading */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    font-size: 2rem; /* Adjust font size */
+    font-weight: 700; 
+    text-align: center; 
+    color: #8A28E6; 
+    margin-bottom: 20px; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+    font-size: 2rem; 
 }
 
 
@@ -162,7 +162,7 @@ h2 {
 .about-interests {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+    flex-wrap: wrap; 
     gap: 20px;
     list-style: none;
     padding: 0;
@@ -174,29 +174,29 @@ h2 {
     font-weight: bold;
     text-align: center;
     font-size: 1rem;
-    width: 120px; /* Circle size */
+    width: 120px; 
     height: 120px;
-    line-height: 1.2; /* Adjust line-height for multi-line text */
-    border-radius: 50%; /* Circular shape */
-    background: radial-gradient(circle, #ffc107 30%, #ff9800 60%, #f57c00 100%); /* Sun-like gradient */
+    line-height: 1.2; 
+    border-radius: 50%; 
+    background: radial-gradient(circle, #ffc107 30%, #ff9800 60%, #f57c00 100%); 
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex; /* Flexbox for centering */
+    display: flex; 
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 5px; /* Ensures proper padding for text */
+    padding: 5px; 
 }
 
 .about-interests li:hover {
-    transform: scale(1.1); /* Enlarges on hover */
+    transform: scale(1.1); 
     box-shadow: 0 0 15px 5px rgba(255, 165, 0, 0.8); /* Glowing ring effect */
 }
 
 .about-interests li span {
-    font-size: 0.9rem; /* Adjust font size for better fit */
-    word-wrap: break-word; /* Ensures text wraps inside the circle */
+    font-size: 0.9rem; 
+    word-wrap: break-word; 
 }
 
 /* Responsive Styling for Circles */
@@ -207,7 +207,7 @@ h2 {
     }
 
     .about-interests li span {
-        font-size: 0.8rem; /* Scales text down slightly */
+        font-size: 0.8rem; 
     }
 }
 
@@ -218,7 +218,7 @@ h2 {
     }
 
     .about-interests li span {
-        font-size: 0.7rem; /* Further scales text for smaller screens */
+        font-size: 0.7rem; 
     }
 }
 
@@ -232,7 +232,7 @@ h2 {
 }
 
 .progress-bar {
-    background-color: rgb(138, 40, 230); /* Updated progress bar color */
+    background-color: rgb(138, 40, 230); 
     height: 100%;
     border-radius: 10px 0 0 10px;
 }
@@ -467,8 +467,8 @@ header {
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Logo on the left, links on the right */
-    background-color: white; /* Use theme background */
+    justify-content: space-between; 
+    background-color: white;
     padding: 10px 40px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -507,7 +507,7 @@ header {
     }
 
     .navigation-list {
-        justify-content: center; /* Center links on smaller screens */
+        justify-content: center; 
         margin-top: 10px;
     }
 }
@@ -557,75 +557,74 @@ header {
 
 /* Contact Section */
 .contact-page {
-    padding: 60px 20px; /* Increase padding for breathing room */
+    padding: 60px 20px; 
     background-color: var(--background-color);
   }
   
   .contact-page h1 {
-    font-size: 2.8rem; /* Slightly larger for emphasis */
-    margin-bottom: 30px; /* Space below the heading */
+    font-size: 2.8rem; 
+    margin-bottom: 30px; 
   }
   
   .contact-page p {
-    font-size: 1.2rem; /* Larger and more readable text */
-    margin-bottom: 40px; /* Add space below the paragraph */
+    font-size: 1.2rem; 
+    margin-bottom: 40px; 
   }
   
   .card {
-    border: 1px solid var(--primary-color); /* Add primary color border */
-    border-radius: 8px; /* Rounded edges */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 1px solid var(--primary-color);
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: whitesmoke;
   }
   
   .card:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add a deeper shadow on hover */
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
   }
   
   .card-body {
-    padding: 20px; /* Increase padding for a balanced look */
+    padding: 20px; 
   }
   
   .card-title {
-    font-size: 1.5rem; /* Larger titles for emphasis */
-    margin-bottom: 10px; /* Add space below the title */
+    font-size: 1.5rem; 
+    margin-bottom: 10px; 
   }
   
   .card-text {
-    font-size: 1rem; /* Standardized text size */
-    margin-bottom: 20px; /* Space below the description */
+    font-size: 1rem; 
+    margin-bottom: 20px;
   }
   
   .btn {
-    padding: 10px 20px; /* Slightly larger buttons */
-    font-size: 1rem; /* Adjust button font size */
-    border-radius: 5px; /* Rounded button edges */
+    padding: 10px 20px;
+    font-size: 1rem; 
+    border-radius: 5px;
   }
   
   .container {
-    max-width: 1200px; /* Constrain container width */
+    max-width: 1200px; 
   }
   
   .row {
-    row-gap: 30px; /* Add spacing between rows */
-    column-gap: 30px; /* Add spacing between columns */
+    row-gap: 30px; 
+    column-gap: 30px; 
   }
   
   @media (max-width: 768px) {
     .card {
-      margin-bottom: 20px; /* Space out cards on smaller screens */
+      margin-bottom: 20px; 
     }
   
     .card-body {
-      text-align: center; /* Center-align text on smaller screens */
-    }
+      text-align: center; 
   }
   
   /* Contact Section Icons */
 .contact-page h1 {
-    color: var(--primary-color); /* Use theme primary color */
+    color: var(--primary-color); 
     font-size: 2.5rem;
     font-weight: 700;
   }
@@ -637,7 +636,7 @@ header {
   
   /* Icon Styling */
   .contact-icon {
-    width: 80px; /* Adjust size as needed */
+    width: 80px; 
     height: auto;
     margin-bottom: 15px;
   }
@@ -658,25 +657,23 @@ header {
   /* Button Styling */
 .card .btn-primary {
     background-color: var(--primary-color);
-    color: #fff; /* Makes the text color white */
+    color: #fff; 
     border: none;
     font-size: 1rem;
     padding: 10px 20px;
     border-radius: 5px;
-    text-decoration: none; /* Removes underline */
+    text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
   
   .card .btn-primary:hover {
-    background-color: var(--link-hover-color); /* Lighter hover color */
-    transform: translateY(-2px); /* Adds a hover effect */
+    background-color: var(--link-hover-color); 
+    transform: translateY(-2px); 
   }
   
   .card .btn-primary:focus {
-    outline: none; /* Removes the default focus outline */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Adds a soft focus glow */
+    outline: none; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
   }
   
-  
-  
-  
+}
