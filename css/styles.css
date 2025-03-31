@@ -677,3 +677,21 @@ header {
   }
   
 }
+.tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .tech-list li {
+    background-color: var(--third-color);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+  }
+  
