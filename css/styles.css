@@ -1003,4 +1003,26 @@ header {
     height: 60px;
   }
   
+  .logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .animated-svg-logo {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+  }
+  
+  .animated-svg-logo svg {
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+  
+  .logo-link {
+    margin-right: 20px;
+  }
   
