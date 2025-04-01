@@ -742,3 +742,112 @@ header {
     transform: rotateY(180deg);
   }
   
+  .skills-section {
+    padding: 60px 20px;
+    background-color: var(--background-color);
+  }
+  
+  .skills-title {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--third-color);
+    margin-bottom: 40px;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .skill-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  
+  .skill-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+  }
+  
+  .skill-level {
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--dark-grey);
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .skills-section {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .skills-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    justify-items: center;
+    margin-top: 30px;
+  }
+  
+  .skill-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 120px;
+  }
+  
+  .circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .circle svg {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-90deg);
+  }
+  
+  .circle circle {
+    fill: none;
+    stroke-width: 10;
+    stroke: #e6e6e6;
+  }
+  
+  .circle .progress {
+    stroke: var(--primary-color);
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    transition: stroke-dashoffset 1s ease;
+  }
+  
+  .circle .number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  

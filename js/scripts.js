@@ -41,3 +41,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const circles = document.querySelectorAll(".circle");
+
+  circles.forEach(circle => {
+    const percent = circle.dataset.percent;
+    const progress = circle.querySelector(".progress");
+    const number = circle.querySelector(".number span");
+
+    const radius = progress.r.baseVal.value;
+    const circumference = 2 * Math.PI * radius;
+    const offset = circumference - (percent / 100) * circumference;
+
+    progress.style.strokeDasharray = `${circumference} ${circumference}`;
+    progress.style.strokeDashoffset = offset;
+    number.textContent = percent;
+  });
+});
