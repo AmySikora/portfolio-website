@@ -19,7 +19,9 @@
         <img src="img/logo.svg" alt="Amy's Logo">
       </div>
     </a>
-  
+
+    <button class="menu-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+
     <nav>
       <ul class="navigation-list">
         <li><a href="#home" class="navigation-list__item">Home</a></li>
@@ -29,7 +31,7 @@
       </ul>
     </nav>
   </header>
-  
+
   <!-- Home Section -->
   <section id="home">
     <img src="img/my-image.JPG" class="profile__portrait" alt="Amy Sikora Portrait">
@@ -363,7 +365,13 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/scripts.js"></script>
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navList = document.querySelector(".navigation-list");
+
+    menuToggle.addEventListener("click", () => {
+      navList.classList.toggle("show");
+    });
+  </script>
 </body>
 </html>
-
