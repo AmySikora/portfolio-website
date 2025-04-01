@@ -1248,13 +1248,14 @@ header {
 
 .logo-container img {
   height: 260px;
-  margin-top: -24px; /* Adjust as needed until "amy" is fully visible */
+  padding-top: 20px;
+  margin-top: -20px; /* Adjust as needed until "amy" is fully visible */
   border: none;
   outline: none;
 }
 
 header {
-  height: 120px; /* Enough room for larger logo */
+  height: 140px; /* Enough room for larger logo */
   display: flex;
   align-items: center;
   justify-content: space-between;
