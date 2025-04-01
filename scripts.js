@@ -42,21 +42,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
  
-    $(document).ready(function() {
-      const techStacks = {
-        'Pokédex': ['JavaScript', 'HTML', 'CSS'],
-        'MyFlix': ['React', 'Node.js', 'MongoDB', 'Express'],
-        'Meet App': ['React', 'PWA', 'Google Calendar API']
-      };
-
-      $('.project-card').each(function() {
-        const title = $(this).find('h2').text().trim();
-        if (techStacks[title]) {
-          const techDiv = $('<div>').addClass('project-buttons tech-list');
-          techStacks[title].forEach(tech => {
-            $('<span>').addClass('tech-badge').text(tech).appendTo(techDiv);
-          });
-          $(this).find('p').last().after(techDiv);
-        }
-      });
-    }); 
