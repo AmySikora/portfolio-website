@@ -998,5 +998,9 @@ header {
     stroke-width: 24;
   }
   
+  .animated-svg-logo svg {
+    width: 60px;
+    height: 60px;
+  }
   
   
