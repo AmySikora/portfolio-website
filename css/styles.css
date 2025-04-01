@@ -1262,6 +1262,13 @@ header {
   padding: 0 35px;
 }
 
+.logo-container img {
+  transition: transform 0.3s ease;
+}
+
+.logo-container img:hover {
+  transform: translateY(-8px) scale(1.05);
+}
 
 
 
