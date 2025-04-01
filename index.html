@@ -15,25 +15,11 @@
   <!-- Header with navigation -->
   <header>
     <a href="#home" class="logo-link" aria-label="Go to homepage">
-      <svg viewBox="0 0 500 500" class="animated-logo" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <style>
-            .rainbow-band {
-              transition: transform 0.3s ease;
-              transform-origin: center;
-            }
-          </style>
-        </defs>
-        <circle class="rainbow-band" cx="250" cy="250" r="200" fill="#e5543c" />
-        <circle class="rainbow-band" cx="250" cy="250" r="160" fill="#ea9f31" />
-        <circle class="rainbow-band" cx="250" cy="250" r="120" fill="#f0b69e" />
-        <circle class="rainbow-band" cx="250" cy="250" r="80" fill="#0097b2" />
-        <circle class="rainbow-band" cx="250" cy="250" r="40" fill="#8c52ff" />
-        <!-- Add initials or text if needed -->
-        <text x="50%" y="55%" text-anchor="middle" fill="white" font-size="48px" font-family="Ubuntu" dy=".3em">Amy</text>
-      </svg>
+      <div class="animated-svg-logo">
+        <img src="./img/logo.svg" alt="Amy's Logo" />
+      </div>
     </a>
-
+  
     <nav>
       <ul class="navigation-list">
         <li><a href="#home" class="navigation-list__item">Home</a></li>
@@ -43,7 +29,7 @@
       </ul>
     </nav>
   </header>
-
+  
   <!-- Home Section -->
   <section id="home">
     <img src="img/my-image.JPG" class="profile__portrait" alt="Amy Sikora Portrait">
