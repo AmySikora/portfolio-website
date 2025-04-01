@@ -60,3 +60,26 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     }); 
+
+    // Animate rainbow bands on logo hover
+document.addEventListener("DOMContentLoaded", () => {
+    const logo = document.querySelector(".animated-logo");
+    if (logo) {
+      const bands = logo.querySelectorAll(".band");
+  
+      logo.addEventListener("mouseover", () => {
+        bands.forEach((band, i) => {
+          band.style.transition = `transform 0.3s ease ${i * 0.05}s`;
+          band.style.transform = "scale(1.3)";
+        });
+      });
+  
+      logo.addEventListener("mouseout", () => {
+        bands.forEach((band) => {
+          band.style.transition = "transform 0.3s ease";
+          band.style.transform = "scale(1)";
+        });
+      });
+    }
+  });
+  
