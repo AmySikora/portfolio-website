@@ -1243,8 +1243,8 @@ header {
 }
 
 .logo-container {
-  width: 160px;     /* Make it wider */
-  height: 160px;    /* Taller to show more logo */
+  width: 180px;
+  height: 130px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -1252,8 +1252,8 @@ header {
 }
 
 .logo-container img {
-  height: 240px;     /* Scale up the logo */
-  margin-top: -60px; /* Push top further out of view */
+  height: 260px;
+  margin-top: -36px; /* sweet spot: crop web design, show amy */
 }
 
 header {
