@@ -1195,12 +1195,20 @@ header {
 
 /* Logo crop from top */
 .logo-container {
-  height: 80px;
+  width: 100px; /* Increase width */
+  height: 100px; /* Match header height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
 .logo-container img {
+  width: 80px; /* Adjust size */
+  height: auto;
+  object-fit: contain;
   position: relative;
-  top: -20px;
+  top: 0; /* Remove any crop offset */
 }
+
 
