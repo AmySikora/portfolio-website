@@ -1046,4 +1046,18 @@ header {
     height: 100%;
     display: block;
   }
+
+  .logo-link {
+    display: inline-block;
+  }
+  
+  .animated-logo {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .logo-link:hover .rainbow-band {
+    transform: scale(1.1);
+  }
+  
   
