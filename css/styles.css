@@ -964,4 +964,27 @@ header {
     color: var(--dark-grey);
     font-size: 1rem;
   }
+
+  .animated-logo {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .animated-logo .band {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100%;
+    border-radius: 2px;
+    transform: scale(1);
+  }
+  
+  .band-red    { background-color: red; left: 0px; }
+  .band-orange { background-color: orange; left: 20px; }
+  .band-yellow { background-color: yellow; left: 40px; }
+  .band-green  { background-color: green; left: 60px; }
+  .band-blue   { background-color: blue; left: 80px; }
+  .band-purple { background-color: purple; left: 100px; }
+  
   
