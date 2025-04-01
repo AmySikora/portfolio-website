@@ -1,7 +1,7 @@
 /* Root Variables */
 :root {
     --primary-color: #137e71;
-    --secondary-color: #b12a08;
+    --secondary-color: #b6550b;
     --third-color: rgb(138, 40, 230);
     --forth-color: rgb(242, 193, 19);
     --dark-grey: #2b2b2b;
@@ -860,5 +860,61 @@ header {
     border-radius: 15px;
     font-size: 0.8rem;
     font-weight: bold;
+  }
+  .skills-title {
+    font-size: 2.2rem;
+    text-align: center;
+    color: var(--primary-color); /* More consistent than the purple */
+    margin-bottom: 40px;
+  }
+  
+  .skill-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 120px;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .circle svg {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-90deg);
+  }
+  
+  .circle circle {
+    fill: none;
+    stroke-width: 10;
+    stroke: #e6e6e6;
+  }
+  
+  .circle .progress {
+    stroke: var(--primary-color);
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    transition: stroke-dashoffset 1s ease;
+  }
+  
+  .circle .number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-color);
   }
   
