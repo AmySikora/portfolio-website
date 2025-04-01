@@ -2,7 +2,7 @@
 :root {
     --primary-color: #137e71;
     --secondary-color: #b6550b;
-    --third-color: rgb(138, 40, 230);
+    --third-color: rgb(198, 95, 12);
     --forth-color: rgb(242, 193, 19);
     --dark-grey: #2b2b2b;
     --background-color: #faf0f0;
@@ -916,5 +916,35 @@ header {
     font-size: 18px;
     font-weight: bold;
     color: var(--primary-color);
+  }
+  
+  /* Fix spacing for skill progress bars */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    align-items: start;
+  }
+  
+  .skill-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 140px;
+    transition: transform 0.3s ease;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-6px);
+  }
+  
+  .skill-card p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--dark-grey);
+    font-size: 1rem;
   }
   
