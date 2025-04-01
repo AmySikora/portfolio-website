@@ -1072,3 +1072,61 @@ header {
     top: -20px; /* Adjust to hide the top part */
   }
   
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    height: 100px; /* Increase height */
+  }
+  
+  .logo-link img,
+  .animated-svg-logo svg {
+    height: 80px; /* Adjust this to increase logo size */
+  }
+
+  .navigation-list__item {
+    font-size: 1.2rem; /* Make font bigger */
+    margin-left: 20px;
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #005F5F;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .navigation-list {
+      display: none;
+      flex-direction: column;
+      background-color: #fff;
+      position: absolute;
+      top: 100px;
+      right: 0;
+      width: 200px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .navigation-list.show {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  }
+
+  .profile-pic {
+    margin-bottom: 10px; /* Try lowering this value */
+  }
+  
+  .about-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  
