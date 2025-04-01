@@ -1060,4 +1060,15 @@ header {
     transform: scale(1.1);
   }
   
+  .logo-container {
+    width: 120px; /* Adjust as needed */
+    height: 120px; /* Crop height */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .logo-container img {
+    position: relative;
+    top: -20px; /* Adjust to hide the top part */
+  }
   
