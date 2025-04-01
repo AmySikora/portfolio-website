@@ -1249,7 +1249,7 @@ header {
 .logo-container img {
   height: 260px;
   padding-top: 10px;
-  margin-top: -25px; /* Adjust as needed until "amy" is fully visible */
+  margin-top: -30px; /* Adjust as needed until "amy" is fully visible */
   border: none;
   outline: none;
 }
@@ -1259,7 +1259,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 30px;
+  padding: 0 35px;
 }
 
 
