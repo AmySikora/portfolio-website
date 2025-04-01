@@ -986,5 +986,17 @@ header {
   .band-green  { background-color: green; left: 60px; }
   .band-blue   { background-color: blue; left: 80px; }
   .band-purple { background-color: purple; left: 100px; }
+
+  /* Rainbow logo hover animation */
+.rainbow-logo .rainbow-band path {
+    transition: transform 0.4s ease, stroke-width 0.4s ease;
+    transform-origin: center;
+  }
+  
+  .rainbow-logo:hover .rainbow-band path {
+    transform: scale(1.1);
+    stroke-width: 24;
+  }
+  
   
   
