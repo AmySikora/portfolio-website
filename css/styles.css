@@ -1243,8 +1243,8 @@ header {
 }
 
 .logo-container {
-  width: 140px; /* Wider */
-  height: 140px; /* Taller */
+  width: 160px;     /* Make it wider */
+  height: 160px;    /* Taller to show more logo */
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -1252,9 +1252,18 @@ header {
 }
 
 .logo-container img {
-  height: 200px; /* Larger image */
-  margin-top: -45px; /* Crop top part even more */
+  height: 240px;     /* Scale up the logo */
+  margin-top: -60px; /* Push top further out of view */
 }
+
+header {
+  height: 120px; /* Enough room for larger logo */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
 
 
 
