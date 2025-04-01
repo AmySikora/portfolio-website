@@ -1128,5 +1128,79 @@ header {
     font-size: 1.2rem;
     line-height: 1.6;
   }
-  
-  
+
+/* Add hamburger toggle button */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+/* Responsive navbar with hamburger */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+
+  nav.show {
+    display: block;
+  }
+
+  .navigation-list {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+    text-align: center;
+  }
+}
+
+/* Improve profile image spacing */
+.profile__portrait {
+  margin-bottom: 10px;
+}
+
+/* Increase intro section font size */
+.introduction-section p {
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+
+/* Adjust introduction-section spacing */
+.introduction-section {
+  padding: 30px 20px 60px;
+}
+
+/* Larger navbar */
+header {
+  height: 120px;
+  padding: 30px 40px;
+}
+
+.navigation-list__item {
+  font-size: 1.4rem;
+}
+
+/* Logo crop from top */
+.logo-container {
+  height: 80px;
+  overflow: hidden;
+}
+
+.logo-container img {
+  position: relative;
+  top: -20px;
+}
+
