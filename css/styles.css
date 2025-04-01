@@ -1060,4 +1060,209 @@ header {
     transform: scale(1.1);
   }
   
+  .logo-container {
+    width: 120px; /* Adjust as needed */
+    height: 120px; /* Crop height */
+    overflow: hidden;
+    position: relative;
+  }
   
+  .logo-container img {
+    position: relative;
+    top: -20px; /* Adjust to hide the top part */
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    height: 100px; /* Increase height */
+  }
+  
+  .logo-link img,
+  .animated-svg-logo svg {
+    height: 80px; /* Adjust this to increase logo size */
+  }
+
+  .navigation-list__item {
+    font-size: 1.2rem; /* Make font bigger */
+    margin-left: 20px;
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #005F5F;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .navigation-list {
+      display: none;
+      flex-direction: column;
+      background-color: #fff;
+      position: absolute;
+      top: 100px;
+      right: 0;
+      width: 200px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .navigation-list.show {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  }
+
+  .profile-pic {
+    margin-bottom: 10px; /* Try lowering this value */
+  }
+  
+  .about-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+/* Add hamburger toggle button */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+/* Responsive navbar with hamburger */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+
+  nav.show {
+    display: block;
+  }
+
+  .navigation-list {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+    text-align: center;
+  }
+}
+
+/* Improve profile image spacing */
+.profile__portrait {
+  margin-bottom: 10px;
+}
+
+/* Increase intro section font size */
+.introduction-section p {
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+
+/* Adjust introduction-section spacing */
+.introduction-section {
+  padding: 30px 20px 60px;
+}
+
+/* Larger navbar */
+header {
+  height: 120px;
+  padding: 30px 40px;
+}
+
+.navigation-list__item {
+  font-size: 1.4rem;
+}
+
+/* Logo crop from top */
+.logo-container {
+  width: 100px; /* Increase width */
+  height: 100px; /* Match header height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logo-container img {
+  width: 80px; /* Adjust size */
+  height: auto;
+  object-fit: contain;
+  position: relative;
+  top: 0; /* Remove any crop offset */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 100px;
+}
+
+.logo-container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.logo-container {
+  width: 180px;
+  height: 130px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+}
+
+.logo-container img {
+  height: 260px;
+  padding-top: 10px;
+  margin-top: -20px; /* Adjust as needed until "amy" is fully visible */
+  border: none;
+  outline: none;
+}
+
+header {
+  height: 140px; /* Enough room for larger logo */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+
+
+
+
+
