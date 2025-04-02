@@ -1272,15 +1272,21 @@ header {
 
 .bird-section {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .bird-image {
-  width: 200px;
+  width: 260px;
   max-width: 100%;
   height: auto;
   margin-bottom: 20px;
 }
+
+.bird-section .button {
+  display: inline-block;
+  margin-top: 10px;
+}
+
 
 
 
