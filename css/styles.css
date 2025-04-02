@@ -1275,11 +1275,23 @@ header {
   margin-top: 60px;
 }
 
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.bird-image {
+  animation: float 4s ease-in-out infinite;
+}
+
 .bird-image {
   width: 260px;
   max-width: 100%;
   height: auto;
   margin-bottom: 20px;
+  background: transparent;
+  border: none;
 }
 
 .bird-section .button {
@@ -1296,6 +1308,18 @@ p {
   margin: 0 auto 20px;
 }
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.about-interests li:hover .flip-inner {
+  animation: bounce 0.5s ease;
+}
 
 
 
