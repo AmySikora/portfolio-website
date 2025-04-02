@@ -1285,6 +1285,13 @@ header {
   animation: float 4s ease-in-out infinite;
 }
 
+.bird-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
 .bird-image {
   width: 260px;
   max-width: 100%;
@@ -1321,5 +1328,12 @@ p {
   animation: bounce 0.5s ease;
 }
 
+.about-interests li {
+  margin: 10px; 
 
+}
 
+  body {
+    font-size: 1.2rem; /* Match journey paragraph size */
+  }
+  
