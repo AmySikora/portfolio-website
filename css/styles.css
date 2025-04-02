@@ -744,7 +744,7 @@ header {
   
   .about-interests li .flip-front {
     background: radial-gradient(circle, #ffc107 30%, #ff9800 60%, #f57c00 100%);
-    color: white;
+    color: var(--primary-color);
   }
   
   .about-interests li .flip-back {
@@ -755,9 +755,9 @@ header {
     border: 2px solid var(--primary-color);
   }
   
-  .about-interests li.flipped .flip-inner {
+  .about-interests li:hover .flip-inner {
     transform: rotateY(180deg);
-  }
+  }  
   
   .skills-section {
     padding: 60px 20px;
