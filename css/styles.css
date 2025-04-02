@@ -1270,6 +1270,17 @@ header {
   transform: translateY(-8px) scale(1.05);
 }
 
+.bird-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.bird-image {
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
 
 
 
