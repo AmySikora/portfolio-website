@@ -1355,9 +1355,16 @@ header {
 }
 
 .bird-wrapper {
+  background: white;  /* <--- this */
+  border-radius: 50%; 
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   position: relative;
-  display: inline-block;
 }
+
 
 .bird-image {
   width: 300px;
