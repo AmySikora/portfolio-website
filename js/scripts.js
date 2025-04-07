@@ -91,9 +91,12 @@ document.addEventListener("DOMContentLoaded", () => {
       
           const circumference = 2 * Math.PI * 45;
       
+          progress.style.strokeDasharray = circumference;
+          progress.style.strokeDashoffset = circumference;
+      
           const offset = circumference - (percent / 100) * circumference;
           progress.style.strokeDashoffset = offset;
         });
-      });
+      });      
     });
     
