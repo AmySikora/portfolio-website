@@ -62,34 +62,38 @@ document.addEventListener("DOMContentLoaded", () => {
     }); 
 
     // Animate rainbow bands on logo hover
-document.addEventListener("DOMContentLoaded", () => {
-    const logo = document.querySelector(".animated-logo");
-    if (logo) {
-      const bands = logo.querySelectorAll(".band");
-  
-      logo.addEventListener("mouseover", () => {
-        bands.forEach((band, i) => {
-          band.style.transition = `transform 0.3s ease ${i * 0.05}s`;
-          band.style.transform = "scale(1.3)";
+    document.addEventListener("DOMContentLoaded", () => {
+      const logo = document.querySelector(".animated-logo");
+      if (logo) {
+        const bands = logo.querySelectorAll(".band");
+    
+        logo.addEventListener("mouseover", () => {
+          bands.forEach((band, i) => {
+            band.style.transition = `transform 0.3s ease ${i * 0.05}s`;
+            band.style.transform = "scale(1.3)";
+          });
         });
-      });
-  
-      logo.addEventListener("mouseout", () => {
-        bands.forEach((band) => {
-          band.style.transition = "transform 0.3s ease";
-          band.style.transform = "scale(1)";
+    
+        logo.addEventListener("mouseout", () => {
+          bands.forEach((band) => {
+            band.style.transition = "transform 0.3s ease";
+            band.style.transform = "scale(1)";
+          });
         });
-      });
+      }
+    
       // Animate skill progress circles
-      document.querySelectorAll(".circle").forEach(circle => {
-        const progress = circle.querySelector(".progress");
-        const number = circle.querySelector(".number span");
-        const percent = parseInt(number.textContent);
-        const circumference = 2 * Math.PI * 45; // 2πr
-
-        const offset = circumference - (percent / 100) * circumference;
-        progress.style.strokeDashoffset = offset;
-});
-    }
-  });
-  
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".circle").forEach(circle => {
+          const progress = circle.querySelector(".progress");
+          const number = circle.querySelector(".number span");
+          const percent = parseInt(number.textContent);
+      
+          const circumference = 2 * Math.PI * 45;
+      
+          const offset = circumference - (percent / 100) * circumference;
+          progress.style.strokeDashoffset = offset;
+        });
+      });
+    });
+    

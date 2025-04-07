@@ -915,25 +915,24 @@ header {
   .circle circle {
     fill: none;
     stroke-width: 10;
-    stroke: #e6e6e6;
+    stroke: #e0e0e0;
   }
-  
   .circle .progress {
-    stroke: var(--primary-color);
+    fill: none;
+    stroke: #137e71;
+    stroke-width: 10;
+    stroke-linecap: round;
     stroke-dasharray: 283;
     stroke-dashoffset: 283;
-    transition: stroke-dashoffset 1s ease;
+    transition: stroke-dashoffset 1.5s ease-out;
   }
-  
-  .circle .number {
+  .number {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 18px;
-    font-weight: bold;
-    color: var(--primary-color);
   }
+  
   
   /* Fix spacing for skill progress bars */
 .skills-grid {
