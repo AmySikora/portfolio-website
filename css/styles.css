@@ -1324,41 +1324,43 @@ header {
   align-items: center;
   justify-content: center;
   margin-top: 60px;
-  position: relative;
   text-align: center;
+  position: relative;
 }
 
 .bird-wrapper {
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sun-rays {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 200px; /* smaller! */
-  height: 200px;
-  background: radial-gradient(circle, rgba(255,0,0,0.4) 20%, rgba(255,165,0,0.3) 50%, rgba(255,255,0,0.2) 70%, transparent 80%);
+  width: 300px; /* about the same size as the bird */
+  height: 300px;
+  background: radial-gradient(circle, rgba(255,165,0,0.6) 20%, rgba(255,223,0,0.4) 50%, transparent 80%);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   animation: spin 20s linear infinite;
-  z-index: 1; /* Behind the bird */
+  z-index: 1;
+  opacity: 0.8;
   pointer-events: none;
-  opacity: 0.6;
 }
 
 .bird-image {
-  width: 400px; /* MUCH bigger bird */
+  width: 450px; /* BIGGER BIRD */
   height: auto;
   position: relative;
-  z-index: 2; /* In front of the rays */
+  z-index: 2;
 }
 
 .bird-section .button {
-  display: inline-block;
-  margin-top: 30px;
-  position: relative;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
   z-index: 2;
 }
 
