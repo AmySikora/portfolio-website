@@ -89,10 +89,11 @@ document.addEventListener("DOMContentLoaded", () => {
           const number = circle.querySelector(".number span");
           const percent = parseInt(number.textContent);
       
-          const circumference = 2 * Math.PI * 45;
+          const radius = 45;
+          const circumference = 2 * Math.PI * radius;
       
-          progress.style.strokeDasharray = circumference;
-          progress.style.strokeDashoffset = circumference;
+          progress.style.strokeDasharray = `${circumference}`;
+          progress.style.strokeDashoffset = `${circumference}`;
       
           const offset = circumference - (percent / 100) * circumference;
           progress.style.strokeDashoffset = offset;
