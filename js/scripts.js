@@ -80,6 +80,16 @@ document.addEventListener("DOMContentLoaded", () => {
           band.style.transform = "scale(1)";
         });
       });
+      // Animate skill progress circles
+      document.querySelectorAll(".circle").forEach(circle => {
+        const progress = circle.querySelector(".progress");
+        const number = circle.querySelector(".number span");
+        const percent = parseInt(number.textContent);
+        const circumference = 2 * Math.PI * 45; // 2πr
+
+        const offset = circumference - (percent / 100) * circumference;
+        progress.style.strokeDashoffset = offset;
+});
     }
   });
   
