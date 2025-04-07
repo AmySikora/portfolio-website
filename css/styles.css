@@ -909,14 +909,15 @@ header {
     position: relative;
     width: 100px;
     height: 100px;
-    transform: rotate(-90deg);
+    transform: rotate(-90deg); /* Rotate so 0% starts at top */
   }
   
   .circle circle {
     fill: none;
     stroke-width: 10;
-    stroke: #e0e0e0;
+    stroke: #e0e0e0; /* light gray background */
   }
+  
   .circle .progress {
     fill: none;
     stroke: var(--primary-color);
@@ -926,12 +927,15 @@ header {
     stroke-dashoffset: 283;
     transition: stroke-dashoffset 1.5s ease-out;
   }
-
-  .number {
+  
+  .circle .number {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-color);
   }
   
   
