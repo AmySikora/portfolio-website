@@ -1379,7 +1379,7 @@ header {
     width: 400px; 
     height: auto;
     display: block;
-    margin: 0 auto 30px; /* center the bird and add padding below */
+    margin: 0 auto 30px;
     animation: float 6s ease-in-out infinite;
   }
   
