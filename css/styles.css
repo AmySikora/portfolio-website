@@ -1376,7 +1376,7 @@ header {
   }
   
   .bird-image {
-    width: 400px; /* make it BIGGER */
+    width: 400px; 
     height: auto;
     display: block;
     margin: 0 auto 30px; /* center the bird and add padding below */
