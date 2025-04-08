@@ -1324,49 +1324,30 @@ header {
   align-items: center;
   justify-content: center;
   margin-top: 60px;
+  padding: 20px;
   text-align: center;
-  position: relative;
 }
 
-.bird-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.sun-rays {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300px; /* about the same size as the bird */
-  height: 300px;
-  background: radial-gradient(circle, rgba(255,165,0,0.6) 20%, rgba(255,223,0,0.4) 50%, transparent 80%);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  animation: spin 20s linear infinite;
-  z-index: 1;
-  opacity: 0.8;
-  pointer-events: none;
-}
 
 .bird-image {
-  width: 450px; /* BIGGER BIRD */
+  width: 800px; 
+  max-width: 100%;
   height: auto;
-  position: relative;
-  z-index: 2;
+  display: block;
+  margin-bottom: 30px; 
+}
+
+/* Float animation (gentle float up and down) */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
 }
 
 .bird-section .button {
-  margin-top: 20px;
-  padding: 12px 24px;
-  font-size: 1rem;
-  z-index: 2;
-}
-
-@keyframes spin {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to { transform: translate(-50%, -50%) rotate(360deg); }
+  display: inline-block;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .about-interests li:hover .flip-inner {
@@ -1395,8 +1376,11 @@ header {
   }
   
   .bird-image {
-    width: 180px;
+    width: 400px; /* make it BIGGER */
     height: auto;
-    animation: float 4s ease-in-out infinite;
+    display: block;
+    margin: 0 auto 30px; /* center the bird and add padding below */
+    animation: float 6s ease-in-out infinite;
   }
+  
   
