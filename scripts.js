@@ -76,6 +76,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const offset = circumference - (percent / 100) * circumference;
     progress.style.strokeDashoffset = offset;
   });
+
+  // 🆕 Hamburger Menu Toggle
+  const toggleButton = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav');
+
+  if (toggleButton && nav) {
+    toggleButton.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  }
 });
 
 // jQuery-based tech badges
