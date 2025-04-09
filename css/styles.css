@@ -1191,10 +1191,16 @@ header {
     width: 100%;
     background: white;
     z-index: 999;
+    display: none; /* hide nav initially */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav.show {
+    display: flex; /* show nav when 'show' is added */
   }
 
   .navigation-list {
-    display: none; /* Hide initially */
     flex-direction: column;
     align-items: center;
     gap: 10px;
@@ -1202,10 +1208,6 @@ header {
     background: white;
     list-style: none;
     margin: 0;
-  }
-
-  nav.show .navigation-list {
-    display: flex; /* Show when nav has "show" */
   }
 }
 
