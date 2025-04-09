@@ -78,15 +78,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Hamburger Menu Toggle
-const toggleButton = document.querySelector('.menu-toggle');
-const nav = document.querySelector('nav');
+    const toggleButton = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
 
-if (toggleButton && nav) {
-  toggleButton.addEventListener('click', () => {
-    nav.classList.toggle('show');
-  });
-}
-
+    if (toggleButton && nav) {
+      toggleButton.addEventListener('click', function() {
+        nav.classList.toggle('show');
+      });
+    }
 });
 
 // jQuery-based tech badges
