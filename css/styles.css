@@ -1178,29 +1178,34 @@ header {
   cursor: pointer;
 }
 
-/* Responsive navbar with hamburger */
+/* Mobile styles */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block; /* Show the hamburger */
+    display: block;
   }
 
   nav {
-    position: relative; /* Important! Not absolute. */
-    background-color: white;
+    position: absolute;
+    top: 100px;
+    right: 0;
     width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+    z-index: 999;
   }
 
   .navigation-list {
-    display: none; /* Hide menu by default */
+    display: none; /* Hide initially */
     flex-direction: column;
-    gap: 20px;
-    padding: 20px 0;
-    text-align: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    background: white;
+    list-style: none;
+    margin: 0;
   }
 
   nav.show .navigation-list {
-    display: flex; /* Show menu when nav has "show" */
+    display: flex; /* Show when nav has "show" */
   }
 }
 
