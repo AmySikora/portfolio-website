@@ -1185,24 +1185,41 @@ header {
   }
 
   nav {
+    display: none; /* Hide nav by default on mobile */
+    flex-direction: column;
     position: absolute;
     top: 100px;
-    right: 0;
+    right: 20px;
     background-color: white;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: none;
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    z-index: 1000;
   }
 
   nav.show {
-    display: block;
+    display: flex; /* When 'show' class is toggled, display flex */
   }
 
   .navigation-list {
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navigation-list__item {
+    display: block;
     padding: 10px 0;
-    text-align: center;
+    font-size: 18px;
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+
+  .navigation-list__item:hover {
+    color: var(--link-hover-color);
   }
 }
 
