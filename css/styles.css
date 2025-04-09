@@ -1181,28 +1181,26 @@ header {
 /* Responsive navbar with hamburger */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block;
+    display: block; /* Show the hamburger */
   }
 
   nav {
-    position: relative; /* 🛠️ Change this to relative! */
+    position: relative; /* Important! Not absolute. */
     background-color: white;
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
-  /* Hide the navigation list by default */
   .navigation-list {
-    display: none;
+    display: none; /* Hide menu by default */
     flex-direction: column;
     gap: 20px;
     padding: 20px 0;
     text-align: center;
   }
 
-  /* When nav has 'show' class, show the nav list */
   nav.show .navigation-list {
-    display: flex;
+    display: flex; /* Show menu when nav has "show" */
   }
 }
 
