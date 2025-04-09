@@ -244,7 +244,7 @@ h2 {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
   gap: 20px;
   justify-items: center;
   margin-top: 40px;
@@ -389,109 +389,104 @@ h2 {
   border-radius: 10px; 
 }
 
-/* Work Section */
+/* --- Work Section --- */
 .projects {
-    display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .project-card {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .project-images {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 15px;
-  }
-  
-  .project-image {
-    max-width: 100%;
-    max-height: 150px;
-    object-fit: cover;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .project-buttons {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .project-buttons .button {
-    padding: 10px 15px;
-    font-size: 14px;
-    font-weight: bold;
-    color: #fff;
-    background-color: var(--primary-color);
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-  }
-  
-  .project-buttons .button:hover {
-    background-color: #2b645a;
-  }
-  
-  h1.text-center {
-    font-size: 2rem;
-    margin-bottom: 30px;
-  }
-  
-/* Contact Section */
-.main_body_contact {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  max-width: 1200px;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* Individual Project Card */
+.project-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 30px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100%; /* Make cards stretch evenly */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Buttons */
+/* Smooth hover effect */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Images inside cards */
+.project-images {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.project-image {
+  max-width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Tech Stack Badges */
+.project-buttons.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.tech-badge {
+  background-color: #00796b;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 15px;
+}
+
+/* Action Buttons (Live Site, GitHub Repo) */
+.project-buttons.action-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
 .button {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 16px;
-    color: #fff;
-    background-color: var(--primary-color);
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--primary-color); /* Your custom color */
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  min-width: 140px;
+  max-width: 180px;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .button:hover {
-    background-color: var(--link-hover-color);
-    transform: translateY(-2px);
+  background-color: #2b645a;
+  transform: translateY(-2px);
 }
 
-.button:active {
-    transform: translateY(1px);
+/* Titles */
+.project-card h2 {
+  font-size: 1.5rem;
+  color: #7c3aed; /* Your nice purple */
+  margin: 15px 0;
 }
 
 /* Footer */
@@ -628,89 +623,74 @@ header {
 
 /* Contact Section */
 .contact-page {
-    padding: 60px 20px; 
-    background-color: var(--background-color);
-  }
-  
-  .contact-page h1 {
-    font-size: 2.8rem; 
-    margin-bottom: 30px; 
-  }
-  
-  .contact-page p {
-    font-size: 1.2rem; 
-    margin-bottom: 40px; 
-  }
-  
-  .card {
-    border: 1px solid var(--primary-color);
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: whitesmoke;
-  }
-  
-  .card:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
-  }
-  
-  .card-body {
-    padding: 20px; 
-  }
-  
-  .card-title {
-    font-size: 1.5rem; 
-    margin-bottom: 10px; 
-  }
-  
-  .card-text {
-    font-size: 1rem; 
-    margin-bottom: 20px;
-  }
-  
-  .btn {
-    padding: 10px 20px;
-    font-size: 1rem; 
-    border-radius: 5px;
-  }
-  
-  .container {
-    max-width: 1200px; 
-  }
-  
-  .row {
-    row-gap: 30px; 
-    column-gap: 30px; 
-  }
-  
-  @media (max-width: 768px) {
-    .card {
-      margin-bottom: 20px; 
-    }
-  
-    .card-body {
-      text-align: center; 
-  }
-  
-  /* Contact Section Icons */
+  padding: 60px 20px;
+  background-color: var(--background-color);
+}
+
 .contact-page h1 {
-    color: var(--primary-color); 
-    font-size: 2.5rem;
-    font-weight: 700;
-  }
-  
-  .contact-page p {
-    color: var(--dark-grey);
-    font-size: 1.1rem;
-  }
-  
-  /* Icon Styling */
-  .contact-icon {
-    width: 80px; 
-    height: auto;
-    margin-bottom: 15px;
-  }
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.contact-page p {
+  font-size: 1.2rem;
+  color: var(--dark-grey);
+  margin-bottom: 40px;
+}
+
+.contact-icon {
+  width: 50px;  /* Smaller and neater */
+  height: 50px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 30px 20px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: var(--dark-grey);
+  margin-bottom: 20px;
+}
+
+/* Make the contact buttons match your other project buttons */
+.card a.btn-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.card a.btn-primary:hover {
+  background-color: var(--link-hover-color);
+  transform: translateY(-2px);
+}
   
   /* Card Title Styling */
   .card-title {
@@ -726,28 +706,29 @@ header {
   }
   
   /* Button Styling */
-.card .btn-primary {
-    background-color: var(--primary-color);
-    color: #fff; 
-    border: none;
-    font-size: 1rem;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .card .btn-primary:hover {
-    background-color: var(--link-hover-color); 
-    transform: translateY(-2px); 
-  }
+.card a.button {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.card a.button:hover {
+  background-color: var(--link-hover-color);
+  transform: translateY(-2px);
+}
+
   
   .card .btn-primary:focus {
     outline: none; 
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
   }
   
-}
 .tech-list {
     list-style: none;
     padding: 0;
@@ -1348,7 +1329,7 @@ header {
 
 .bird-glow-ring {
   position: absolute;
-  width: 500px;   /* Slightly bigger than the image */
+  width: 500px;
   height: 500px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(255,165,0,0.5) 40%, rgba(255, 215, 0, 0) 70%);
@@ -1356,39 +1337,52 @@ header {
   z-index: 0;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 0.7;
-  }
-  50% {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0.7;
-  }
-}
-
-/* Float animation for the bird */
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-/* Float animation (gentle float up and down) */
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+.bird-image {
+  width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto 30px;
+  animation: float 6s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
 }
 
 .bird-section .button {
   display: inline-block;
   margin-top: 10px;
   text-align: center;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.bird-wrapper::before {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(255, 100, 0, 0.6) 20%, rgba(255, 200, 0, 0) 60%);
+  border-radius: 50%;
+  filter: blur(10px);
+  animation: flames 2s infinite ease-in-out;
+  z-index: 0;
+}
+
+@keyframes flames {
+  0% { transform: scale(1) translateY(0); opacity: 0.8; }
+  50% { transform: scale(1.2) translateY(-10px); opacity: 1; }
+  100% { transform: scale(1) translateY(0); opacity: 0.8; }
 }
 
 .about-interests li:hover .flip-inner {

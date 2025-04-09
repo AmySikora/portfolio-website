@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amy's Webpage</title>
+  <title>Amy Sikora | Portfolio</title>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="shortcut icon" href="./img/RainbowFab.png">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700&display=swap" rel="stylesheet">
@@ -12,104 +11,76 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+
   <!-- Header with navigation -->
   <header>
-    <a href="#home" class="logo-link" aria-label="Go to homepage">
-      <div class="logo-container">
-        <img src="img/logo.svg" alt="Amy's Logo">
-      </div>
-    </a>
-
-    <button class="menu-toggle" aria-label="Toggle navigation menu">&#9776;</button>
-
-    <nav>
-      <ul class="navigation-list">
-        <li><a href="#home" class="navigation-list__item">Home</a></li>
-        <li><a href="#about" class="navigation-list__item">About Me</a></li>
-        <li><a href="#work" class="navigation-list__item">Work</a></li>
-        <li><a href="#contact" class="navigation-list__item">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <a href="#home" class="logo-link" aria-label="Home">
+    <div class="logo-container">
+      <img src="img/logo.svg" alt="Amy's Logo">
+    </div>
+  </a>
+  <button class="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
+  <nav>
+    <ul class="navigation-list">
+      <li><a href="#home" class="navigation-list__item">Home</a></li>
+      <li><a href="#about" class="navigation-list__item">About Me</a></li>
+      <li><a href="#skills" class="navigation-list__item">Skills</a></li> 
+      <li><a href="#work" class="navigation-list__item">Work</a></li>
+      <li><a href="#contact" class="navigation-list__item">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
   <!-- Home Section -->
   <section id="home">
     <img src="img/my-image.JPG" class="profile__portrait" alt="Amy Sikora Portrait">
     <section class="introduction-section">
       <h1>Hello!</h1>
-      <p>
-        My name's Amy Sikora, and I made a career change! It's one of the best decisions I've made. My background is in higher education leadership and student services, but it was time for a new start.
-      </p>
-      <p>
-        I enrolled in a full-stack developer program and I've enjoyed learning about and working with Frontend and Backend devlopment, and I'm ready to show off my new skills!
-      </p>
-      <a href="#work" class="cta-button">Check out my work</a>
+      <p>I transitioned from a career in higher education leadership to web development.</p>
+      <p>I completed a full-stack program and love both Frontend and Backend development. I'm excited to show off my skills!</p>
+      <a href="#work" class="cta-button">See My Work</a>
     </section>
+  </section>
     
   <!-- Divider -->
   <div class="section-divider"></div>
 
   <!-- About Section -->
-  <section id="about">
+<section id="about">
     <h1>About My Interests</h1>
-    <h2>These are things I enjoy doing:</h2>
+    <h2>Things I Enjoy Doing</h2>
     <ul class="about-interests">
-      <li>
-        <div class="flip-inner">
-          <div class="flip-front"><span>Frontend<br>Development</span></div>
-          <div class="flip-back">I love building clean, responsive UIs!</div>
-        </div>
-      </li>
-      <li>
-        <div class="flip-inner">
-          <div class="flip-front"><span>Backend<br>Development</span></div>
-          <div class="flip-back">I enjoy working with databases and data.</div>
-        </div>
-      </li>
-      <li>
-        <div class="flip-inner">
-          <div class="flip-front"><span>Running</span></div>
-          <div class="flip-back">I run 5Ks and love destination races!</div>
-        </div>
-      </li>
-      <li>
-        <div class="flip-inner">
-          <div class="flip-front"><span>Live Music</span></div>
-          <div class="flip-back">Fun fact: I used to be in a punk band!</div>
-        </div>
-      </li>
-      <li>
-        <div class="flip-inner">
-          <div class="flip-front"><span>Cooking</span></div>
-          <div class="flip-back">I love cooking so much I made a recipe app!</div>
-        </div>
-      </li>
+      <!-- Interest Circles with Flip -->
+      <li><div class="flip-inner"><div class="flip-front"><span>Frontend<br>Development</span></div><div class="flip-back">I love building clean, responsive UIs!</div></div></li>
+      <li><div class="flip-inner"><div class="flip-front"><span>Backend<br>Development</span></div><div class="flip-back">I enjoy working with databases and data.</div></div></li>
+      <li><div class="flip-inner"><div class="flip-front"><span>Running</span></div><div class="flip-back">I run 5Ks and love destination races!</div></div></li>
+      <li><div class="flip-inner"><div class="flip-front"><span>Live Music</span></div><div class="flip-back">Fun fact: I used to be in a punk band!</div></div></li>
+      <li><div class="flip-inner"><div class="flip-front"><span>Cooking</span></div><div class="flip-back">I love cooking so much I made a recipe app!</div></div></li>
     </ul>
 
-    <div class="bird-wrapper">
-      <div class="bird-glow-ring"></div>
-        <img src="img/PhoenixBird.png" class="bird-image" alt="Phoenix bird in a desert landscape">
-      </div>
+    <div class="bird-section">
+        <div class="bird-wrapper">
+          <div class="bird-glow-ring"></div>
+          <img src="img/PhoenixBird.png" class="bird-image" alt="Phoenix bird in a desert landscape">
+        </div>
         <a href="https://www.linkedin.com/in/amy-sikora-freelance/" target="_blank" class="button">Check out my LinkedIn</a>
-    </div>
-
+      </div>      
     
     <div class="journey">
-      <h2>My Journey into Web Development</h2>
+    <h2>My Journey into Web Development</h2>
+    <p>I was born and raised in Phoenix, Arizona and I've always been fascinated by the mythological Phoenix bird rising from its ashes to reinvent itself.</p>
+    <p>My logo represents my journey into web development, and rising anew!</p>
+  </div>
+</section>
 
-      <p>I was born and raised in Phoenix, Arizona and I've always been fascinated 
-        by the mythological Phoenix bird rising from its ashes to reinvent itself. 
-      </p>
+<!-- Section Divider -->
+<div class="section-divider"></div>
 
-      <p>I've created the logo above to represent my journey transitioning from a 
-         higher education career, to doing something I've always wanted to do,
-         becoming a web developer!  
-        </p>
+   <!-- Skills Section -->
+<section id="skills" class="skills-section">
+    <h2 class="skills-title">My Web Development Skills</h2>
+    <div class="skills-grid">
 
-        <section class="skills-section">
-          <h2 class="skills-title">My Web Development Skills and Experience Levels</h2>
-          
-          <div class="skills-grid">
             <!-- Skill Card Example -->
             <div class="skill-card">
               <div class="circle" data-percent="70">
@@ -201,144 +172,145 @@
           </div>
         </section>
         
- <!-- Divider -->
- <div class="section-divider"></div>
+<!-- Divider -->
+<div class="section-divider"></div>
 
-  <section id="work">
-    <div class="container">
-      <h1 class="text-center">My Work</h1>
-      <div class="projects">
-        <!-- Pokédex Project -->
-        <div class="project-card">
-          <img src="img/ScreenshotPokedex.png" class="project-image" alt="Pokédex Project">
-          <h2>Pokédex</h2>
-          <p>
-            A web app built with JavaScript, HTML, and CSS. Users can search for a Pokémon to view its image and details.
-          </p>
-          <div class="project-buttons">
-            <a href="https://amysikora.github.io/js-app-creation/" class="button" target="_blank">Live Site</a>
-            <a href="https://github.com/AmySikora/js-app-creation" class="button" target="_blank">GitHub Repo</a>
-          </div>
+<!-- Work Section -->
+<section id="work">
+  <div class="container">
+    <h1 class="text-center">My Work</h1>
+    <div class="projects">
+
+      <!-- Recipe App (Web Version) -->
+      <div class="project-card">
+        <div class="project-images">
+          <img src="img/Allrecipes.png" class="project-image" alt="Recipe App All Recipes">
+          <img src="img/RecipeDetail.png" class="project-image" alt="Recipe App Recipe Details">
         </div>
-  
-        <!-- MyFlix Project -->
-        <div class="project-card">
-          <img src="img/myFlix.jpg" class="project-image" alt="myFlix Project">
-          <h2>MyFlix</h2>
-          <p>
-            A full-stack movie app using a MERN stack. Users can view, search, and save their favorite movies to their profiles.
-          </p>
-          <div class="project-buttons">
-            <a href="https://myflix-app-123.netlify.app/" class="button" target="_blank">Live Site</a>
-            <a href="https://github.com/AmySikora/myFlix-client" class="button" target="_blank">Frontend Repo</a>
-            <a href="https://github.com/AmySikora/movie_api" class="button" target="_blank">Backend Repo</a>
-          </div>
+        <h2>Recipe App (Web)</h2>
+        <p>A Django web app for managing and exploring recipes. Users can create and edit recipes, add ratings and comments, and view charts. Images are stored in AWS S3, deployed via Heroku.</p>
+        <div class="project-buttons tech-stack">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Django</span>
+          <span class="tech-badge">PostgreSQL</span>
+          <span class="tech-badge">AWS S3</span>
+          <span class="tech-badge">Heroku</span>
+          <span class="tech-badge">Pandas</span>
+          <span class="tech-badge">Matplotlib</span>
         </div>
-  
-        <!-- Meet App Project -->
-        <div class="project-card">
-          <img src="img/Meet.jpg" class="project-image" alt="Meet App Project">
-          <h2>Meet App</h2>
-          <p>
-            A progressive web app that allows users to search for events by city and event. Built with React and the Google Calendar API.
-          </p>
-          <div class="project-buttons">
-            <a href="https://amysikora.github.io/meet/" class="button" target="_blank">Live Site</a>
-            <a href="https://github.com/AmySikora/meet" class="button" target="_blank">GitHub Repo</a>
-          </div>
-        </div>
-  
-        <!-- Chat App Project -->
-        <div class="project-card">
-          <div class="project-images">
-            <img src="img/ChatStartScreen.jpg" class="project-image" alt="Chat App Start Screen">
-            <img src="img/ChatScreen.jpg" class="project-image" alt="Chat Screen">
-          </div>
-          <h2>Chat App</h2>
-          <p>
-            A mobile chat app built with React Native, allowing real-time messaging, media sharing, and location sharing.
-          </p>
-          <div class="project-buttons">
-            <a href="https://github.com/AmySikora/Chat-App" class="button" target="_blank">GitHub Repo</a>
-          </div>
-        </div>
-  
-        <!-- Angular App Project -->
-        <div class="project-card">
-          <div class="project-images">
-            <img src="img/angular-movies.jpg" class="project-image" alt="myFlix Movies Screen">
-            <img src="img/angular-profile.png" class="project-image" alt="myFlix Profile Screen">
-          </div>
-          <h2>Angular myFlix Project</h2>
-          <p>
-            A movie app built using Angular and TypeScript. Users can view, search, and save their favorite movies to their profiles.
-          </p>
-          <div class="project-buttons">
-            <a href="https://github.com/AmySikora/myFlix-Angular-client" class="button" target="_blank">Frontend Repo</a>
-            <a href="https://github.com/AmySikora/movie_api" class="button" target="_blank">Backend Repo</a>
-            <a href="https://amysikora.github.io/myFlix-Angular-client/" class="button" target="_blank">Live Site</a>
-          </div>
+        <div class="project-buttons action-buttons">
+          <a href="https://recipe-app77-71493f5cca54.herokuapp.com/" class="button" target="_blank">Live Site</a>
+          <a href="https://github.com/AmySikora/recipe-app" class="button" target="_blank">GitHub Repo</a>
         </div>
       </div>
-    </div>
 
- <!-- Recipe App (Command Line Version) -->
- <div class="project-card">
-  <img src="img/RecipeAppCommandLineVersion.png" class="project-image" alt="Recipe CLI Screenshot">
-  <h2>Recipe App (Command Line)</h2>
-  <p>
-    A command-line app where users can add, view, search, and manage recipes. It stores recipe ingredients, calculates cooking time, and automatically rates difficulty.
-  </p>
-  <div class="project-buttons">
-    <span class="tech-badge">Python</span>
-    <span class="tech-badge">MySQL</span>
-  </div>
-  <div class="project-buttons">
-    <a href="https://github.com/AmySikora/cf-python-base-project" class="button" target="_blank">GitHub Repo</a>
-  </div>
-</div>
+      <!-- Recipe App (Command Line Version) -->
+      <div class="project-card">
+        <div class="project-images">
+          <img src="img/RecipeAppCommandLineVersion.png" class="project-image" alt="Recipe CLI Screenshot">
+        </div>
+        <h2>Recipe App (Command Line)</h2>
+        <p>A command-line app where users can add, view, search, and manage recipes. It stores recipe ingredients, calculates cooking time, and automatically rates difficulty.</p>
+        <div class="project-buttons tech-stack">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">MySQL</span>
+        </div>
+        <div class="project-buttons action-buttons">
+          <a href="https://github.com/AmySikora/cf-python-base-project" class="button" target="_blank">GitHub Repo</a>
+        </div>
+      </div>
 
-<!-- Recipe App (Web Version) -->
-<div class="project-card">
-  <div class="project-images">
-    <img src="img/Allrecipes.png" class="project-image" alt="Recipe App All Recipes">
-    <img src="img/RecipeDetail.png" class="project-image" alt="Recipe App Recipe Details">
-  </div>
-  <h2>Recipe App (Web)</h2>
-  <p>
-    A Django web app for managing and exploring recipes. Users can create and edit recipes, add ratings and comments, and view charts. Images are stored in AWS S3, deployed via Heroku.
-  </p>
-  <div class="project-buttons">
-    <span class="tech-badge">Python</span>
-    <span class="tech-badge">Django</span>
-    <span class="tech-badge">PostgreSQL</span>
-    <span class="tech-badge">AWS S3</span>
-    <span class="tech-badge">Heroku</span>
-    <span class="tech-badge">Pandas</span>
-    <span class="tech-badge">Matplotlib</span>
-  </div>
-  <div class="project-buttons">
-    <a href="https://recipe-app77-0cd9c1b1912d.herokuapp.com/" class="button" target="_blank">Live Site</a>
-    <a href="https://github.com/AmySikora/recipe-app" class="button" target="_blank">GitHub Repo</a>
-  </div>
-</div>
-</div> <!-- End of .projects -->
-</div> <!-- End of .container -->
+      <!-- Angular myFlix Project -->
+      <div class="project-card">
+        <div class="project-images">
+          <img src="img/angular-movies.jpg" class="project-image" alt="Angular Movies Screen">
+          <img src="img/angular-profile.png" class="project-image" alt="Angular Profile Screen">
+        </div>
+        <h2>Angular myFlix Project</h2>
+        <p>A movie app built using Angular and TypeScript. Users can view, search, and save their favorite movies to their profiles.</p>
+        <div class="project-buttons tech-stack">
+          <span class="tech-badge">Angular</span>
+          <span class="tech-badge">TypeScript</span>
+          <span class="tech-badge">SCSS</span>
+        </div>
+        <div class="project-buttons action-buttons">
+          <a href="https://github.com/AmySikora/myFlix-Angular-client" class="button" target="_blank">Frontend Repo</a>
+          <a href="https://github.com/AmySikora/movie_api" class="button" target="_blank">Backend Repo</a>
+          <a href="https://amysikora.github.io/myFlix-Angular-client/" class="button" target="_blank">Live Site</a>
+        </div>
+      </div>
+
+      <!-- Chat App Project -->
+      <div class="project-card">
+        <div class="project-images">
+          <img src="img/ChatStartScreen.jpg" class="project-image" alt="Chat App Start Screen">
+          <img src="img/ChatScreen.jpg" class="project-image" alt="Chat Screen">
+        </div>
+        <h2>Chat App</h2>
+        <p>A mobile chat app built with React Native, allowing real-time messaging, media sharing, and location sharing.</p>
+        <div class="project-buttons tech-stack">
+          <span class="tech-badge">React Native</span>
+          <span class="tech-badge">Firebase</span>
+          <span class="tech-badge">Expo</span>
+        </div>
+        <div class="project-buttons action-buttons">
+          <a href="https://github.com/AmySikora/Chat-App" class="button" target="_blank">GitHub Repo</a>
+        </div>
+      </div>
+
+      <!-- Meet App Project -->
+      <div class="project-card">
+        <div class="project-images">
+          <img src="img/Meet.jpg" class="project-image" alt="Meet App Project">
+        </div>
+        <h2>Meet App</h2>
+        <p>A progressive web app that allows users to search for events by city and event. Built with React and the Google Calendar API.</p>
+        <div class="project-buttons action-buttons">
+          <a href="https://amysikora.github.io/meet/" class="button" target="_blank">Live Site</a>
+          <a href="https://github.com/AmySikora/meet" class="button" target="_blank">GitHub Repo</a>
+        </div>
+      </div>
+
+      <!-- MyFlix Project -->
+      <div class="project-card">
+        <div class="project-images">
+          <img src="img/myFlix.jpg" class="project-image" alt="MyFlix Project">
+        </div>
+        <h2>MyFlix</h2>
+        <p>A full-stack movie app using a MERN stack. Users can view, search, and save their favorite movies to their profiles.</p>
+        <div class="project-buttons action-buttons">
+          <a href="https://myflix-app-123.netlify.app/" class="button" target="_blank">Live Site</a>
+          <a href="https://github.com/AmySikora/myFlix-client" class="button" target="_blank">Frontend Repo</a>
+          <a href="https://github.com/AmySikora/movie_api" class="button" target="_blank">Backend Repo</a>
+        </div>
+      </div>
+
+      <!-- Pokédex Project -->
+      <div class="project-card">
+        <div class="project-images">
+          <img src="img/ScreenshotPokedex.png" class="project-image" alt="Pokédex Project">
+        </div>
+        <h2>Pokédex</h2>
+        <p>A web app built with JavaScript, HTML, and CSS. Users can search for a Pokémon to view its image and details.</p>
+        <div class="project-buttons action-buttons">
+          <a href="https://amysikora.github.io/js-app-creation/" class="button" target="_blank">Live Site</a>
+          <a href="https://github.com/AmySikora/js-app-creation" class="button" target="_blank">GitHub Repo</a>
+        </div>
+      </div>
+
+    </div> <!-- End of .projects -->
+  </div> <!-- End of .container -->
 </section>
+
 
   <!-- Divider -->
   <div class="section-divider"></div>
 
   <!-- Contact Section -->
-  <section id="contact">
+<section id="contact">
     <div class="contact-page">
-      <div class="text-center py-5">
-        <h1 class="fw-bold">Contact Me</h1>
-        <p class="fs-5 mt-3">
-          Would you like to learn more about my work? Please reach out!
-        </p>
-      </div>
-  
+      <h1 class="fw-bold">Contact Me</h1>
+      <p>Would you like to learn more about my work? Please reach out!</p>
       <div class="container my-5">
         <div class="row justify-content-center">
           <!-- Email Card -->
@@ -348,32 +320,35 @@
                 <img src="img/gmailImage.png" alt="Email Icon" class="contact-icon mb-3">
                 <h5 class="card-title mt-3">Email</h5>
                 <p class="card-text">Send me an email!</p>
-                <a href="#" class="btn btn-primary">Email Me</a>
+                <a href="mailto:your-email@example.com" class="button">Email Me</a>
               </div>
             </div>
           </div>
+  
           <!-- GitHub Card -->
           <div class="col-md-4">
             <div class="card text-center shadow-sm h-100">
               <div class="card-body">
                 <img src="img/287725_github_icon.svg" alt="GitHub Icon" class="contact-icon mb-3">
                 <h5 class="card-title mt-3">GitHub</h5>
-                <p class="card-text">Take a look at my projects on GitHub.</p>
-                <a href="https://github.com/AmySikora" target="_blank" class="btn btn-primary">View My GitHub</a>
+                <p class="card-text">Check out my projects.</p>
+                <a href="https://github.com/AmySikora" target="_blank" class="button">View GitHub</a>
               </div>
             </div>
           </div>
+  
           <!-- LinkedIn Card -->
           <div class="col-md-4">
             <div class="card text-center shadow-sm h-100">
               <div class="card-body">
                 <img src="img/104493_linkedin_icon.svg" alt="LinkedIn Icon" class="contact-icon mb-3">
                 <h5 class="card-title mt-3">LinkedIn</h5>
-                <p class="card-text">Let's connect on LinkedIn!</p>
-                <a href="https://www.linkedin.com/in/amy-sikora-freelance" target="_blank" class="btn btn-primary">Connect with Me</a>
+                <p class="card-text">Let's connect!</p>
+                <a href="https://www.linkedin.com/in/amy-sikora-freelance" target="_blank" class="button">Connect on LinkedIn</a>
               </div>
             </div>
           </div>
+  
         </div>
       </div>
     </div>
@@ -383,23 +358,13 @@
   <footer class="page-footer">
     <p>Find me on</p>
     <div class="social-media">
-      <a href="https://github.com/AmySikora">
-        <img src="img/287725_github_icon.svg" alt="Github logo">
-      </a>
-      <a href="https://www.linkedin.com/in/amy-sikora-freelance">
-        <img src="img/104493_linkedin_icon.svg" alt="LinkedIn logo">
-      </a>
+      <a href="https://github.com/AmySikora"><img src="img/287725_github_icon.svg" alt="GitHub Logo"></a>
+      <a href="https://www.linkedin.com/in/amy-sikora-freelance"><img src="img/104493_linkedin_icon.svg" alt="LinkedIn Logo"></a>
     </div>
   </footer>
-
+  
   <!-- Scripts -->
-  <script>
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navList = document.querySelector(".navigation-list");
-
-    menuToggle.addEventListener("click", () => {
-      navList.classList.toggle("show");
-    });
-  </script>
-</body>
-</html>
+  <script src="scripts.js"></script>
+  
+  </body>
+  </html>
