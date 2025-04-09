@@ -1176,6 +1176,7 @@ header {
   border: none;
   color: var(--primary-color);
   cursor: pointer;
+  z-index: 1001; /* Ensure button is clickable */
 }
 
 /* Mobile styles */
@@ -1188,19 +1189,13 @@ header {
     position: absolute;
     top: 100px;
     right: 0;
-    width: 100%;
+    width: 100vw; /* ✅ FULL SCREEN width */
     background: white;
-    z-index: 999;
-    display: none; /* hide nav initially */
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav.show {
-    display: flex; /* show nav when 'show' is added */
+    z-index: 1000;
   }
 
   .navigation-list {
+    display: none; /* Hide initially */
     flex-direction: column;
     align-items: center;
     gap: 10px;
@@ -1208,6 +1203,10 @@ header {
     background: white;
     list-style: none;
     margin: 0;
+  }
+
+  nav.show .navigation-list {
+    display: flex; /* Show only when nav has 'show' class */
   }
 }
 
