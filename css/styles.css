@@ -1185,25 +1185,22 @@ header {
   }
 
   nav {
-    position: absolute;
-    top: 100px;
-    right: 0;
+    position: relative; /* 🛠️ Change this to relative! */
     background-color: white;
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* REMOVE display: none from nav */
   }
 
-  /* ✅ Make the UL hidden first */
+  /* Hide the navigation list by default */
   .navigation-list {
     display: none;
     flex-direction: column;
-    gap: 10px;
-    padding: 10px 0;
+    gap: 20px;
+    padding: 20px 0;
     text-align: center;
   }
 
-  /* ✅ When 'show' class is on nav, show the UL */
+  /* When nav has 'show' class, show the nav list */
   nav.show .navigation-list {
     display: flex;
   }
