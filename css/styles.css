@@ -438,6 +438,18 @@ h2 {
 }
 
 /* === PHOENIX BIRD SECTION === */
+
+.bird-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -100px auto 20px; 
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+}
+
 .bird-wrapper {
   position: relative;
   width: 180px;
