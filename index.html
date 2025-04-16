@@ -127,14 +127,27 @@
       </li>
     </ul>
 
-    <!-- Bird + Button -->
     <div class="bird-section">
-      <div class="bird-wrapper">
-        <div class="flame-flicker"></div>
-        <img src="img/PhoenixBird.png" class="bird-image" alt="Phoenix bird in a desert landscape">
+      <div class="bird-flip-container">
+        <div class="bird-flip-inner">
+          <!-- FRONT: Phoenix Bird -->
+          <div class="bird-front">
+            <div class="bird-wrapper">
+              <div class="flame-flicker"></div>
+              <img src="img/PhoenixBird.png" class="bird-image" alt="Phoenix bird">
+            </div>
+          </div>
+    
+          <!-- BACK: Fire Egg -->
+          <div class="bird-back">
+            <div class="bird-wrapper">
+              <img src="img/fire-egg.png" class="bird-image" alt="Fiery phoenix egg">
+            </div>
+          </div>
+        </div>
       </div>
-    </div>    
-      
+    </div>
+    
     <!-- Journey Text -->
     <div class="journey">
       <h2>My Journey into Web Development</h2>
@@ -278,131 +291,147 @@
 
 <!-- Work Section -->
 <section id="work">
-  <div class="container">
-    <h1 class="text-center">My Work</h1>
-    <div class="projects">
+  <h1 class="text-center">My Work</h1>
+  <div class="projects">
 
-      <!-- Recipe App (Web Version) -->
-      <div class="project-card">
-        <div class="project-images">
-          <img src="img/Allrecipes.png" class="project-image" alt="Recipe App All Recipes">
-          <img src="img/RecipeDetail.png" class="project-image" alt="Recipe App Recipe Details">
-        </div>
-        <h2>Recipe App (Web)</h2>
-        <p>A Django web app for managing and exploring recipes. Users can create and edit recipes, add ratings and comments, and view charts. Images are stored in AWS S3, deployed via Heroku.</p>
-        <div class="project-buttons tech-stack">
-          <span class="tech-badge">Python</span>
-          <span class="tech-badge">Django</span>
-          <span class="tech-badge">PostgreSQL</span>
-          <span class="tech-badge">AWS S3</span>
-          <span class="tech-badge">Heroku</span>
-          <span class="tech-badge">Pandas</span>
-          <span class="tech-badge">Matplotlib</span>
-        </div>
-        <div class="project-buttons action-buttons">
-          <a href="https://recipe-app77-71493f5cca54.herokuapp.com/" class="button" target="_blank">Live Site</a>
-          <a href="https://github.com/AmySikora/recipe-app" class="button" target="_blank">GitHub Repo</a>
-        </div>
+    <!-- Recipe App (Web Version) -->
+    <div class="project-card">
+      <div class="project-images">
+        <img src="img/Allrecipes.png" class="project-image" alt="Recipe App All Recipes">
+        <img src="img/RecipeDetail.png" class="project-image" alt="Recipe App Recipe Details">
       </div>
-
-      <!-- Recipe App (Command Line Version) -->
-      <div class="project-card">
-        <div class="project-images">
-          <img src="img/RecipeAppCommandLineVersion.png" class="project-image" alt="Recipe CLI Screenshot">
-        </div>
-        <h2>Recipe App (Command Line)</h2>
-        <p>A command-line app where users can add, view, search, and manage recipes. It stores recipe ingredients, calculates cooking time, and automatically rates difficulty.</p>
-        <div class="project-buttons tech-stack">
-          <span class="tech-badge">Python</span>
-          <span class="tech-badge">MySQL</span>
-        </div>
-        <div class="project-buttons action-buttons">
-          <a href="https://github.com/AmySikora/cf-python-base-project" class="button" target="_blank">GitHub Repo</a>
-        </div>
+      <h2>Recipe App (Web)</h2>
+      <p>A Django web app for managing and exploring recipes. Users can create and edit recipes, add ratings and comments, and view charts. Images are stored in AWS S3, deployed via Heroku.</p>
+      <div class="project-buttons tech-stack">
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">Django</span>
+        <span class="tech-badge">PostgreSQL</span>
+        <span class="tech-badge">AWS S3</span>
+        <span class="tech-badge">Heroku</span>
+        <span class="tech-badge">Pandas</span>
+        <span class="tech-badge">Matplotlib</span>
       </div>
-
-      <!-- Angular myFlix Project -->
-      <div class="project-card">
-        <div class="project-images">
-          <img src="img/angular-movies.jpg" class="project-image" alt="Angular Movies Screen">
-          <img src="img/angular-profile.png" class="project-image" alt="Angular Profile Screen">
-        </div>
-        <h2>Angular myFlix Project</h2>
-        <p>A movie app built using Angular and TypeScript. Users can view, search, and save their favorite movies to their profiles.</p>
-        <div class="project-buttons tech-stack">
-          <span class="tech-badge">Angular</span>
-          <span class="tech-badge">TypeScript</span>
-          <span class="tech-badge">SCSS</span>
-        </div>
-        <div class="project-buttons action-buttons">
-          <a href="https://github.com/AmySikora/myFlix-Angular-client" class="button" target="_blank">Frontend Repo</a>
-          <a href="https://github.com/AmySikora/movie_api" class="button" target="_blank">Backend Repo</a>
-          <a href="https://amysikora.github.io/myFlix-Angular-client/" class="button" target="_blank">Live Site</a>
-        </div>
+      <div class="project-buttons action-buttons">
+        <a href="https://recipe-app77-71493f5cca54.herokuapp.com/" class="button" target="_blank">Live Site</a>
+        <a href="https://github.com/AmySikora/recipe-app" class="button" target="_blank">GitHub Repo</a>
       </div>
+    </div>
 
-      <!-- Chat App Project -->
-      <div class="project-card">
-        <div class="project-images">
-          <img src="img/ChatStartScreen.jpg" class="project-image" alt="Chat App Start Screen">
-          <img src="img/ChatScreen.jpg" class="project-image" alt="Chat Screen">
-        </div>
-        <h2>Chat App</h2>
-        <p>A mobile chat app built with React Native, allowing real-time messaging, media sharing, and location sharing.</p>
-        <div class="project-buttons tech-stack">
-          <span class="tech-badge">React Native</span>
-          <span class="tech-badge">Firebase</span>
-          <span class="tech-badge">Expo</span>
-        </div>
-        <div class="project-buttons action-buttons">
-          <a href="https://github.com/AmySikora/Chat-App" class="button" target="_blank">GitHub Repo</a>
-        </div>
+    <!-- Recipe App (Command Line Version) -->
+    <div class="project-card">
+      <div class="project-images">
+        <img src="img/RecipeAppCommandLineVersion.png" class="project-image" alt="Recipe CLI Screenshot">
       </div>
-
-      <!-- Meet App Project -->
-      <div class="project-card">
-        <div class="project-images">
-          <img src="img/Meet.jpg" class="project-image" alt="Meet App Project">
-        </div>
-        <h2>Meet App</h2>
-        <p>A progressive web app that allows users to search for events by city and event. Built with React and the Google Calendar API.</p>
-        <div class="project-buttons action-buttons">
-          <a href="https://amysikora.github.io/meet/" class="button" target="_blank">Live Site</a>
-          <a href="https://github.com/AmySikora/meet" class="button" target="_blank">GitHub Repo</a>
-        </div>
+      <h2>Recipe App (Command Line)</h2>
+      <p>A command-line app where users can add, view, search, and manage recipes. It stores recipe ingredients, calculates cooking time, and automatically rates difficulty.</p>
+      <div class="project-buttons tech-stack">
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">MySQL</span>
       </div>
-
-      <!-- MyFlix Project -->
-      <div class="project-card">
-        <div class="project-images">
-          <img src="img/myFlix.jpg" class="project-image" alt="MyFlix Project">
-        </div>
-        <h2>MyFlix</h2>
-        <p>A full-stack movie app using a MERN stack. Users can view, search, and save their favorite movies to their profiles.</p>
-        <div class="project-buttons action-buttons">
-          <a href="https://myflix-app-123.netlify.app/" class="button" target="_blank">Live Site</a>
-          <a href="https://github.com/AmySikora/myFlix-client" class="button" target="_blank">Frontend Repo</a>
-          <a href="https://github.com/AmySikora/movie_api" class="button" target="_blank">Backend Repo</a>
-        </div>
+      <div class="project-buttons action-buttons">
+        <a href="https://github.com/AmySikora/cf-python-base-project" class="button" target="_blank">GitHub Repo</a>
       </div>
+    </div>
 
-      <!-- Pokédex Project -->
-      <div class="project-card">
-        <div class="project-images">
-          <img src="img/ScreenshotPokedex.png" class="project-image" alt="Pokédex Project">
-        </div>
-        <h2>Pokédex</h2>
-        <p>A web app built with JavaScript, HTML, and CSS. Users can search for a Pokémon to view its image and details.</p>
-        <div class="project-buttons action-buttons">
-          <a href="https://amysikora.github.io/js-app-creation/" class="button" target="_blank">Live Site</a>
-          <a href="https://github.com/AmySikora/js-app-creation" class="button" target="_blank">GitHub Repo</a>
-        </div>
+
+    <!-- Angular myFlix Project -->
+    <div class="project-card">
+      <div class="project-images">
+        <img src="img/angular-movies.jpg" class="project-image" alt="Angular Movies Screen">
+        <img src="img/angular-profile.png" class="project-image" alt="Angular Profile Screen">
       </div>
+      <h2>Angular myFlix Project</h2>
+      <p>A movie app built using Angular and TypeScript. Users can view, search, and save their favorite movies to their profiles.</p>
+      <div class="project-buttons tech-stack">
+        <span class="tech-badge">Angular</span>
+        <span class="tech-badge">TypeScript</span>
+        <span class="tech-badge">SCSS</span>
+      </div>
+      <div class="project-buttons action-buttons">
+        <a href="https://github.com/AmySikora/myFlix-Angular-client" class="button" target="_blank">Frontend Repo</a>
+        <a href="https://github.com/AmySikora/movie_api" class="button" target="_blank">Backend Repo</a>
+        <a href="https://amysikora.github.io/myFlix-Angular-client/" class="button" target="_blank">Live Site</a>
+      </div>
+    </div>
 
-    </div> <!-- End of .projects -->
-  </div> <!-- End of .container -->
+    <!-- Chat App Project -->
+    <div class="project-card">
+      <div class="project-images">
+        <img src="img/ChatStartScreen.jpg" class="project-image" alt="Chat App Start Screen">
+        <img src="img/ChatScreen.jpg" class="project-image" alt="Chat Screen">
+      </div>
+      <h2>Chat App</h2>
+      <p>A mobile chat app built with React Native, allowing real-time messaging, media sharing, and location sharing.</p>
+      <div class="project-buttons tech-stack">
+        <span class="tech-badge">React Native</span>
+        <span class="tech-badge">Firebase</span>
+        <span class="tech-badge">Expo</span>
+      </div>
+      <div class="project-buttons action-buttons">
+        <a href="https://github.com/AmySikora/Chat-App" class="button" target="_blank">GitHub Repo</a>
+      </div>
+    </div>
+
+    <!-- Meet App Project -->
+    <div class="project-card">
+      <div class="project-images">
+        <img src="img/Meet.jpg" class="project-image" alt="Meet App Project">
+      </div>
+      <h2>Meet App</h2>
+      <p>A progressive web app that allows users to search for events by city and event. Built with React and the Google Calendar API.</p>
+      <div class="project-buttons tech-stack">
+        <span class="tech-badge">React</span>
+        <span class="tech-badge">PWA</span>
+        <span class="tech-badge">Google Calendar API</span>
+      </div>
+      <div class="project-buttons action-buttons">
+        <a href="https://amysikora.github.io/meet/" class="button" target="_blank">Live Site</a>
+        <a href="https://github.com/AmySikora/meet" class="button" target="_blank">GitHub Repo</a>
+      </div>
+    </div>
+
+
+    <!-- MyFlix Project -->
+    <div class="project-card">
+      <div class="project-images">
+        <img src="img/myFlix.jpg" class="project-image" alt="MyFlix Project">
+      </div>
+      <h2>MyFlix</h2>
+      <p>A full-stack movie app using a MERN stack. Users can view, search, and save their favorite movies to their profiles.</p>
+      <div class="project-buttons tech-stack">
+        <span class="tech-badge">React</span>
+        <span class="tech-badge">Node.js</span>
+        <span class="tech-badge">MongoDB</span>
+        <span class="tech-badge">Express</span>
+      </div>
+      <div class="project-buttons action-buttons">
+        <a href="https://myflix-app-123.netlify.app/" class="button" target="_blank">Live Site</a>
+        <a href="https://github.com/AmySikora/myFlix-client" class="button" target="_blank">Frontend Repo</a>
+        <a href="https://github.com/AmySikora/movie_api" class="button" target="_blank">Backend Repo</a>
+      </div>
+    </div>
+
+
+    <!-- Pokédex Project -->
+    <div class="project-card">
+      <div class="project-images">
+        <img src="img/ScreenshotPokedex.png" class="project-image" alt="Pokédex Project">
+      </div>
+      <h2>Pokédex</h2>
+      <p>A web app built with JavaScript, HTML, and CSS. Users can search for a Pokémon to view its image and details.</p>
+      <div class="project-buttons tech-stack">
+        <span class="tech-badge">JavaScript</span>
+        <span class="tech-badge">HTML</span>
+        <span class="tech-badge">CSS</span>
+      </div>
+      <div class="project-buttons action-buttons">
+        <a href="https://amysikora.github.io/js-app-creation/" class="button" target="_blank">Live Site</a>
+        <a href="https://github.com/AmySikora/js-app-creation" class="button" target="_blank">GitHub Repo</a>
+      </div>
+    </div>
+
+  </div> <!-- End of .projects -->
 </section>
-
 
   <!-- Divider -->
   <div class="section-divider"></div>

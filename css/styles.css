@@ -4,6 +4,7 @@
     --secondary-color: #b6550b;
     --third-color: rgb(198, 95, 12);
     --forth-color: rgb(242, 193, 19);
+    --fifth-color: rgb(133, 64, 217);
     --dark-grey: #2b2b2b;
     --background-color: #faf0f0;
     --accent-color: #6d9d88;
@@ -662,62 +663,54 @@ circle.bg {
   border-radius: 10px; 
 }
 
-/* === WORK SECTION === */
 #work {
-  padding: 60px 20px;
   background-color: var(--background-color);
+  padding: 80px 20px;
   text-align: center;
 }
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
+  grid-template-columns: repeat(2, 1fr); /* Always 2 per row */
+  gap: 40px; /* Space between both rows and columns */
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px 20px;
   box-sizing: border-box;
 }
 
-/* Individual Project Card */
 .project-card {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 15px;
+  background-color: var(--primary-color);
+  border-radius: 20px;
   padding: 30px 20px;
-  text-align: center;
+  color: white;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  animation: slideIn 1s ease forwards;
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateY(40px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
 }
 
 .project-card h2 {
-  font-size: 1.4rem;
-  color: var(--third-color);
-  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--forth-color); /* Optional highlight color like gold */
+  margin: 20px 0 10px;
+  text-align: center;
 }
 
-/* Project Images */
+.project-card p {
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
 .project-images {
   display: flex;
   justify-content: center;
@@ -734,47 +727,54 @@ circle.bg {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Tech badges */
 .project-buttons.tech-stack {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 8px;
-  margin: 15px 0;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .tech-badge {
-  background-color: var(--primary-color);
-  color: white;
-  font-size: 0.8rem;
-  padding: 6px 12px;
-  border-radius: 15px;
-  font-weight: bold;
+  background-color: var(--dark-grey) !important; 
+  color: white !important;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  border-radius: 999px; 
+  font-weight: 600;
+  margin: 4px;
+  display: inline-block;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
 }
 
-/* Action Buttons */
+.project-spacer {
+  height: 40px; /* Adjust spacing as needed */
+}
+
 .project-buttons.action-buttons {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
-  margin-top: auto;
 }
 
 .project-buttons .button {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color); /* Orange */
   color: white;
-  padding: 10px 20px;
+  padding: 10px 16px;
   font-size: 0.9rem;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 8px;
   text-decoration: none;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .project-buttons .button:hover {
   background-color: var(--link-hover-color);
   transform: translateY(-2px);
 }
+
 /* Footer */
 .page-footer {
     text-align: center;
@@ -1661,8 +1661,8 @@ header {
   position: relative;
   width: 240px;
   height: 240px;
-  padding: 20px; /* 👈 gives room for glow to show */
-  box-sizing: content-box; /* important so padding doesn't shrink image */
+  padding: 20px;
+  box-sizing: content-box; 
 }
 
 .bird-wrapper::before {

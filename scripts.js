@@ -55,46 +55,46 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   //  Animate skill progress circles
-  const skillCards = document.querySelectorAll(".skill-card");
+const skillCards = document.querySelectorAll(".skill-card");
 
-  skillCards.forEach(card => {
-    const percent = parseInt(card.getAttribute("data-percent"));
-    const progress = card.querySelector(".progress");
-  
-    if (!progress) return;
-  
-    const radius = 45;
-    const circumference = 2 * Math.PI * radius;
-    const offset = circumference - (percent / 100) * circumference;
-  
-    // Set initial state
-    progress.style.strokeDasharray = `${circumference}`;
-    progress.style.strokeDashoffset = `${circumference}`;
-  
-    // Observer triggers when card enters view
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          requestAnimationFrame(() => {
-            // Animate to target offset
-            progress.style.transition = "stroke-dashoffset 1.5s ease-out";
+skillCards.forEach(card => {
+  const percent = parseInt(card.getAttribute("data-percent"));
+  const progress = card.querySelector(".progress");
+
+  if (!progress) return;
+
+  const radius = 45;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (percent / 100) * circumference;
+
+  // Set initial state
+  progress.style.strokeDasharray = `${circumference}`;
+  progress.style.strokeDashoffset = `${circumference}`;
+
+  // Observer triggers when card enters view
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        requestAnimationFrame(() => {
+          // Animate to target offset
+          progress.style.transition = "stroke-dashoffset 1.5s ease-out";
+          progress.style.strokeDashoffset = offset;
+
+          // After animation finishes, lock in the value
+          setTimeout(() => {
+            progress.style.transition = "none";
             progress.style.strokeDashoffset = offset;
-  
-            // After animation finishes, lock in the value
-            setTimeout(() => {
-              progress.style.transition = "none";
-              progress.style.strokeDashoffset = offset;
-            }, 1600);
-          });
-  
-          observer.unobserve(entry.target); // Animate only once
-        }
-      });
-    }, { threshold: 0.5 });
-  
-    observer.observe(card);
-  });
-  
+          }, 1600);
+        });
+
+        observer.unobserve(entry.target); // Animate only once
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(card);
+});
+
   // 🎯 Hamburger menu toggle
   const toggleButton = document.querySelector('.menu-toggle');
   const nav = document.querySelector('nav');
@@ -106,48 +106,3 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // jQuery-based tech badges (auto-tagging projects)
-$(document).ready(function () {
-  const techStacks = {
-    'Pokédex': ['JavaScript', 'HTML', 'CSS'],
-    'MyFlix': ['React', 'Node.js', 'MongoDB', 'Express'],
-    'Meet App': ['React', 'PWA', 'Google Calendar API']
-  };
-
-  $('.project-card').each(function () {
-    const title = $(this).find('h2').text().trim();
-    if (techStacks[title]) {
-      const techDiv = $('<div>').addClass('project-buttons tech-list');
-      techStacks[title].forEach(tech => {
-        $('<span>').addClass('tech-badge').text(tech).appendTo(techDiv);
-      });
-      $(this).find('p').last().after(techDiv);
-    }
-  });
-});
-
-// Adding animations to home page name and hello
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const el = entry.target;
-
-      if (entry.isIntersecting) {
-        // Add animation classes when visible
-        el.classList.add('animate-pop');
-
-        if (el.classList.contains('home-name')) {
-          el.classList.add('animate-type');
-        }
-      } else {
-        // Remove animation classes when out of view to allow replay
-        el.classList.remove('animate-pop', 'animate-type');
-      }
-    });
-  }, {
-    threshold: 0.6 // Trigger when 60% of the element is visible
-  });
-
-  document.querySelectorAll('.home-title, .home-name').forEach(el => {
-    observer.observe(el);
-  });
-
-
