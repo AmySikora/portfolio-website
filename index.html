@@ -8,6 +8,7 @@
   <link rel="shortcut icon" href="./img/RainbowFab.png">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
@@ -33,150 +34,245 @@
     </nav>
   </header>  
 
-  <!-- Home Section -->
-  <section id="home">
-    <img src="img/my-image.JPG" class="profile__portrait" alt="Amy Sikora Portrait">
-    <section class="introduction-section">
-      <h1>Hello!</h1>
-      <p>I transitioned from a career in higher education leadership to web development.</p>
-      <p>I completed a full-stack program and love both Frontend and Backend development. I'm excited to show off my skills!</p>
-      <a href="assets/AmySikoraWebDeveloperResume.pdf" download class="resume-button">
-        📄 Resume
-      </a>
-      
-    </section>
-  </section>
+ <!-- Home Section -->
+<section id="home">
+  <div class="home-container">
     
+    <!-- Title -->
+    <h1 class="home-title">Hello!</h1>
+
+    <!-- Main content area -->
+    <div class="home-content">
+
+      <!-- Left side: Name, short intro, icons -->
+      <div class="home-left">
+        <h2 class="home-name">Amy Sikora</h2>
+        <p class="home-short">
+          Web development fueled by creativity, curiosity, and coffee.<br>
+          As a problem solver with wanderlust, my explorations lead me to ideas that spark the unexpected...in a good way!
+        </p>
+        <div class="home-icons">
+          <a href="https://www.linkedin.com/in/amy-sikora-freelance/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/AmySikora" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="assets/AmySikoraWebDeveloperResume.pdf" download aria-label="Download Resume">
+            <i class="fas fa-download"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Center: Photo -->
+      <div class="home-center">
+        <img src="img/my-image.JPG" alt="Amy Sikora" class="home-photo">
+      </div>
+
+      <!-- Right side: Longer paragraph -->
+      <div class="home-right">
+        <p class="home-long">
+          I'm a web developer based out of Albany, OR who loves turning ideas into real, working things. After a career helping students succeed, I made the jump into tech to keep solving problems and learning every day.
+          <br><br>
+          I bring energy, creativity, and a people first mindset to everything I do. I'm excited to build projects that make life easier, better, and a little more fun.
+        </p>
+      </div>
+
+    </div> <!-- end home-content -->
+
+  </div> <!-- end home-container -->
+</section>
+  
   <!-- Divider -->
   <div class="section-divider"></div>
 
   <!-- About Section -->
 <section id="about">
-    <h1>About My Interests</h1>
-    <h2>Things I Enjoy Doing</h2>
+  <h1>My Interests</h1>
+  <h2>Things I Enjoy Doing</h2>
+
+  <div class="about-content">
+
+    <!-- Interest Circles -->
     <ul class="about-interests">
-      <!-- Interest Circles with Flip -->
-      <li><div class="flip-inner"><div class="flip-front"><span>Frontend<br>Development</span></div><div class="flip-back">I love building clean, responsive UIs!</div></div></li>
-      <li><div class="flip-inner"><div class="flip-front"><span>Backend<br>Development</span></div><div class="flip-back">I enjoy working with databases and data.</div></div></li>
-      <li><div class="flip-inner"><div class="flip-front"><span>Running</span></div><div class="flip-back">I run 5Ks and love destination races!</div></div></li>
-      <li><div class="flip-inner"><div class="flip-front"><span>Live Music</span></div><div class="flip-back">Fun fact: I used to be in a punk band!</div></div></li>
-      <li><div class="flip-inner"><div class="flip-front"><span>Cooking</span></div><div class="flip-back">I love cooking so much I made a recipe app!</div></div></li>
+      <li>
+        <div class="flip-inner">
+          <div class="flip-front"><span>Frontend<br>Development</span></div>
+          <div class="flip-back">I love building clean, responsive UIs!</div>
+        </div>
+      </li>
+      <li>
+        <div class="flip-inner">
+          <div class="flip-front"><span>Backend<br>Development</span></div>
+          <div class="flip-back">I enjoy working with databases and data.</div>
+        </div>
+      </li>
+      <li>
+        <div class="flip-inner">
+          <div class="flip-front"><span>Running</span></div>
+          <div class="flip-back">I run 5Ks and love destination races!</div>
+        </div>
+      </li>
+      <li>
+        <div class="flip-inner">
+          <div class="flip-front"><span>Live Music</span></div>
+          <div class="flip-back">Fun fact: I used to be in a punk band!</div>
+        </div>
+      </li>
+      <li>
+        <div class="flip-inner">
+          <div class="flip-front"><span>Cooking</span></div>
+          <div class="flip-back">I love cooking so much I made a recipe app!</div>
+        </div>
+      </li>
     </ul>
 
+    <!-- Bird + Button -->
     <div class="bird-section">
-        <div class="bird-wrapper">
-          <div class="bird-glow-ring"></div>
-          <img src="img/PhoenixBird.png" class="bird-image" alt="Phoenix bird in a desert landscape">
-        </div>
-        <a href="https://www.linkedin.com/in/amy-sikora-freelance/" target="_blank" class="button">Check out my LinkedIn</a>
-      </div>      
-    
+      <div class="bird-wrapper">
+        <div class="flame-flicker"></div>
+        <img src="img/PhoenixBird.png" class="bird-image" alt="Phoenix bird in a desert landscape">
+      </div>
+    </div>    
+      
+    <!-- Journey Text -->
     <div class="journey">
-    <h2>My Journey into Web Development</h2>
-    <p>I was born and raised in Phoenix, Arizona and I've always been fascinated by the mythological Phoenix bird rising from its ashes to reinvent itself.</p>
-    <p>My logo represents my journey into web development, and rising anew!</p>
+      <h2>My Journey into Web Development</h2>
+      <p>I grew up in Phoenix, Arizona, a city named after the mythological bird that burns in an inferno and rises from its ashes, stronger than before.</p>
+      <p>My logo reflects that journey by embracing change, chasing something new, and rising into web development with fresh energy and purpose.</p>
+    </div>
+
+  </div> <!-- end about-content -->
+</section>
+
+<!-- Optional Divider -->
+<div class="section-divider"></div>
+
+ <!-- Skills Section -->
+<section id="skills" class="skills-section">
+  <h2 class="skills-title">Web Development Skills</h2>
+
+  <!-- Fire gradient defined once -->
+  <svg style="display: none;">
+    <defs>
+      <linearGradient id="fireGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ff6a00" />
+        <stop offset="50%" stop-color="#ff3c00" />
+        <stop offset="100%" stop-color="#ffc400" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <div class="skills-grid">
+
+    <!-- Skill Card HTML -->
+    <div class="skill-card" data-percent="70">
+      <img src="img/tech-badges/html5.jpeg" alt="HTML Icon" class="skill-icon" />
+      <div class="circle">
+        <svg viewBox="0 0 100 100">
+          <circle class="bg" cx="50" cy="50" r="45" />
+          <circle class="glow" cx="50" cy="50" r="45" />
+          <circle class="progress" cx="50" cy="50" r="45" />
+        </svg>
+        <div class="number"><span>70</span>%</div>
+      </div>
+      <p>HTML</p>
+    </div>
+
+
+    <div class="skill-card" data-percent="65">
+      <img src="img/tech-badges/css3.jpeg" alt="CSS Icon" class="skill-icon" />
+      <div class="circle">
+        <svg viewBox="0 0 100 100">
+          <circle class="bg" cx="50" cy="50" r="45" />
+          <circle class="glow" cx="50" cy="50" r="45" />
+          <circle class="progress" cx="50" cy="50" r="45" />
+        </svg>
+        <div class="number"><span>65</span>%</div>
+      </div>
+      <p>CSS</p>
+    </div>
+
+    <div class="skill-card" data-percent="60">
+      <img src="img/tech-badges/javascript.png" alt="JavaScript Icon" class="skill-icon" />
+      <div class="circle">
+        <svg viewBox="0 0 100 100">
+          <circle class="bg" cx="50" cy="50" r="45" />
+          <circle class="glow" cx="50" cy="50" r="45" />
+          <circle class="progress" cx="50" cy="50" r="45" />
+        </svg>
+        <div class="number"><span>60</span>%</div>
+      </div>
+      <p>JavaScript</p>
+    </div>
+
+    <div class="skill-card" data-percent="60">
+      <img src="img/tech-badges/react.png" alt="React Icon" class="skill-icon" />
+      <div class="circle">
+        <svg viewBox="0 0 100 100">
+          <circle class="bg" cx="50" cy="50" r="45" />
+          <circle class="glow" cx="50" cy="50" r="45" />
+          <circle class="progress" cx="50" cy="50" r="45" />
+        </svg>
+        <div class="number"><span>60</span>%</div>
+      </div>
+      <p>React</p>
+    </div>
+
+    <div class="skill-card" data-percent="55">
+      <img src="img/tech-badges/angular.jpeg" alt="Angular Icon" class="skill-icon" />
+      <div class="circle">
+        <svg viewBox="0 0 100 100">
+          <circle class="bg" cx="50" cy="50" r="45" />
+          <circle class="glow" cx="50" cy="50" r="45" />
+          <circle class="progress" cx="50" cy="50" r="45" />
+        </svg>
+        <div class="number"><span>55</span>%</div>
+      </div>
+      <p>Angular</p>
+    </div>
+
+    <div class="skill-card" data-percent="70">
+      <img src="img/tech-badges/python.png" alt="Python Icon" class="skill-icon" />
+      <div class="circle">
+        <svg viewBox="0 0 100 100">
+          <circle class="bg" cx="50" cy="50" r="45" />
+          <circle class="glow" cx="50" cy="50" r="45" />
+          <circle class="progress" cx="50" cy="50" r="45" />
+        </svg>
+        <div class="number"><span>70</span>%</div>
+      </div>
+      <p>Python</p>
+    </div>
+
+    <div class="skill-card" data-percent="65">
+      <img src="img/tech-badges/django.png" alt="Django Icon" class="skill-icon" />
+      <div class="circle">
+        <svg viewBox="0 0 100 100">
+          <circle class="bg" cx="50" cy="50" r="45" />
+          <circle class="glow" cx="50" cy="50" r="45" />
+          <circle class="progress" cx="50" cy="50" r="45" />
+        </svg>
+        <div class="number"><span>65</span>%</div>
+      </div>
+      <p>Django</p>
+    </div>
+
+    <div class="skill-card" data-percent="60">
+      <img src="img/tech-badges/sql.png" alt="SQL Icon" class="skill-icon" />
+      <div class="circle">
+        <svg viewBox="0 0 100 100">
+          <circle class="bg" cx="50" cy="50" r="45" />
+          <circle class="glow" cx="50" cy="50" r="45" />
+          <circle class="progress" cx="50" cy="50" r="45" />
+        </svg>
+        <div class="number"><span>60</span>%</div>
+      </div>
+      <p>SQL</p>
+    </div>
   </div>
 </section>
 
-<!-- Section Divider -->
-<div class="section-divider"></div>
-
-   <!-- Skills Section -->
-<section id="skills" class="skills-section">
-    <h2 class="skills-title">My Web Development Skills</h2>
-    <div class="skills-grid">
-
-            <!-- Skill Card Example -->
-            <div class="skill-card">
-              <div class="circle" data-percent="70">
-                <svg>
-                  <circle cx="50" cy="50" r="45"></circle>
-                  <circle cx="50" cy="50" r="45" class="progress"></circle>
-                </svg>
-                <div class="number"><span>70</span>%</div>
-              </div>
-              <p>HTML</p>
-            </div>
-        
-            <div class="skill-card">
-              <div class="circle" data-percent="65">
-                <svg>
-                  <circle cx="50" cy="50" r="45"></circle>
-                  <circle cx="50" cy="50" r="45" class="progress"></circle>
-                </svg>
-                <div class="number"><span>65</span>%</div>
-              </div>
-              <p>CSS</p>
-            </div>
-        
-            <div class="skill-card">
-              <div class="circle" data-percent="60">
-                <svg>
-                  <circle cx="50" cy="50" r="45"></circle>
-                  <circle cx="50" cy="50" r="45" class="progress"></circle>
-                </svg>
-                <div class="number"><span>60</span>%</div>
-              </div>
-              <p>JavaScript</p>
-            </div>
-        
-            <div class="skill-card">
-              <div class="circle" data-percent="60">
-                <svg>
-                  <circle cx="50" cy="50" r="45"></circle>
-                  <circle cx="50" cy="50" r="45" class="progress"></circle>
-                </svg>
-                <div class="number"><span>60</span>%</div>
-              </div>
-              <p>React</p>
-            </div>
-        
-            <div class="skill-card">
-              <div class="circle" data-percent="55">
-                <svg>
-                  <circle cx="50" cy="50" r="45"></circle>
-                  <circle cx="50" cy="50" r="45" class="progress"></circle>
-                </svg>
-                <div class="number"><span>55</span>%</div>
-              </div>
-              <p>Angular</p>
-            </div>
-        
-            <div class="skill-card">
-              <div class="circle" data-percent="70">
-                <svg>
-                  <circle cx="50" cy="50" r="45"></circle>
-                  <circle cx="50" cy="50" r="45" class="progress"></circle>
-                </svg>
-                <div class="number"><span>70</span>%</div>
-              </div>
-              <p>Python</p>
-            </div>
-        
-            <div class="skill-card">
-              <div class="circle" data-percent="65">
-                <svg>
-                  <circle cx="50" cy="50" r="45"></circle>
-                  <circle cx="50" cy="50" r="45" class="progress"></circle>
-                </svg>
-                <div class="number"><span>65</span>%</div>
-              </div>
-              <p>Django</p>
-            </div>
-        
-            <div class="skill-card">
-              <div class="circle" data-percent="60">
-                <svg>
-                  <circle cx="50" cy="50" r="45"></circle>
-                  <circle cx="50" cy="50" r="45" class="progress"></circle>
-                </svg>
-                <div class="number"><span>60</span>%</div>
-              </div>
-              <p>SQL</p>
-            </div>
-          </div>
-        </section>
-        
 <!-- Divider -->
 <div class="section-divider"></div>
 
