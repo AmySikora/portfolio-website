@@ -106,3 +106,48 @@ skillCards.forEach(card => {
 });
 
 // jQuery-based tech badges (auto-tagging projects)
+$(document).ready(function () {
+  const techStacks = {
+    'Pokédex': ['JavaScript', 'HTML', 'CSS'],
+    'MyFlix': ['React', 'Node.js', 'MongoDB', 'Express'],
+    'Meet App': ['React', 'PWA', 'Google Calendar API']
+  };
+
+  $('.project-card').each(function () {
+    const title = $(this).find('h2').text().trim();
+    if (techStacks[title]) {
+      const techDiv = $('<div>').addClass('project-buttons tech-list');
+      techStacks[title].forEach(tech => {
+        $('<span>').addClass('tech-badge').text(tech).appendTo(techDiv);
+      });
+      $(this).find('p').last().after(techDiv);
+    }
+  });
+});
+
+// Adding animations to home page name and hello
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const el = entry.target;
+
+      if (entry.isIntersecting) {
+        // Add animation classes when visible
+        el.classList.add('animate-pop');
+
+        if (el.classList.contains('home-name')) {
+          el.classList.add('animate-type');
+        }
+      } else {
+        // Remove animation classes when out of view to allow replay
+        el.classList.remove('animate-pop', 'animate-type');
+      }
+    });
+  }, {
+    threshold: 0.6 // Trigger when 60% of the element is visible
+  });
+
+  document.querySelectorAll('.home-title, .home-name').forEach(el => {
+    observer.observe(el);
+  });
+
+
