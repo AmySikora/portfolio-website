@@ -659,7 +659,6 @@ h2 {
   }
 }
 
-
 /* === SKILLS SECTION === */
 
 .skills-section {
@@ -1015,59 +1014,156 @@ header {
     transform: translateY(-2px);
   }  
 
-/* Contact Section */
-.contact-page {
-  padding: 60px 20px;
-  background-color: var(--background-color);
+/* === CONTACT SECTION REFINED === */
+/* Contact Row Layout */
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.contact-page h1 {
-  font-size: 2.5rem;
-  color: var(--primary-color);
-  margin-bottom: 20px;
+/* Smaller Icon Cards */
+.contact-card {
+  background-color: #fff;
+  border: 1px solid var(--primary-color);
+  border-radius: 12px;
+  width: 180px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInPop 1s ease forwards;
+  opacity: 0;
+  position: relative;
+  overflow: hidden;
 }
 
-.contact-page p {
-  font-size: 1.2rem;
-  color: var(--dark-grey);
-  margin-bottom: 40px;
+.contact-card:nth-child(1) { animation-delay: 0.1s; }
+.contact-card:nth-child(2) { animation-delay: 0.2s; }
+.contact-card:nth-child(3) { animation-delay: 0.3s; }
+.contact-card:nth-child(4) { animation-delay: 0.4s; }
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(255, 140, 0, 0.15);
+}
+
+@keyframes fadeInPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(30px);
+    box-shadow: 0 0 0 transparent;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    box-shadow: 0 0 12px rgba(255, 140, 0, 0.2);
+  }
+}
+
+/* Sparkle Animation */
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0.5) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
+}
+
+.contact-card::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #fffacd 30%, transparent 70%);
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  animation: sparkle 2.5s ease-in-out infinite;
+  pointer-events: none;
 }
 
 .contact-icon {
-  width: 50px;  /* Smaller and neater */
-  height: 50px;
-  margin-bottom: 10px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
-}
-
-.card {
-  background-color: #fff;
-  border: 1px solid var(--primary-color);
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 30px 20px;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.card-title {
-  font-size: 1.4rem;
-  color: var(--primary-color);
-  margin-top: 10px;
   margin-bottom: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 3px rgba(255, 165, 0, 0.4));
 }
 
-.card-text {
+.contact-icon:hover {
+  transform: scale(1.3) rotate(8deg);
+  filter: drop-shadow(0 0 12px rgba(255, 165, 0, 0.7));
+}
+
+.contact-card h5 {
   font-size: 1rem;
-  color: var(--dark-grey);
-  margin-bottom: 20px;
+  color: var(--primary-color);
+  margin-bottom: 8px;
 }
 
-/* Make the contact buttons match your other project buttons */
+.contact-card p {
+  font-size: 0.9rem;
+  color: var(--dark-grey);
+  margin-bottom: 12px;
+}
+
+.contact-card .button {
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  font-weight: bold;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-card .button:hover {
+  background-color: var(--link-hover-color);
+  transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .contact-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* === Animations === */
+.contact-card {
+  animation: fadeInPop 1s ease forwards;
+  opacity: 0;
+}
+
+.contact-card:nth-child(1) { animation-delay: 0.1s; }
+.contact-card:nth-child(2) { animation-delay: 0.2s; }
+.contact-card:nth-child(3) { animation-delay: 0.3s; }
+.contact-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Icon hover sparkle + glow */
+.animated-icon {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 3px rgba(255, 165, 0, 0.4));
+}
+
+.animated-icon:hover {
+  transform: scale(1.3) rotate(8deg);
+  filter: drop-shadow(0 0 12px rgba(255, 165, 0, 0.7));
+}
+
+/* Make the contact buttons match other project buttons */
 .card a.btn-primary {
   display: inline-block;
   padding: 10px 20px;
