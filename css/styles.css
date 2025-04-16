@@ -522,18 +522,19 @@ h2 {
   }
 }
 
-/* Flip container */
+/* Flip Container */
 .bird-flip-container {
   perspective: 1000px;
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
+  margin: 40px auto; /* add spacing */
 }
 
 .bird-flip-inner {
   width: 100%;
   height: 100%;
   position: relative;
-  transition: transform 0.8s ease-in-out;
+  transition: transform 0.8s;
   transform-style: preserve-3d;
 }
 
@@ -541,7 +542,7 @@ h2 {
   transform: rotateY(180deg);
 }
 
-/* Front and back sides */
+/* Flip Sides */
 .bird-front,
 .bird-back {
   position: absolute;
@@ -555,8 +556,10 @@ h2 {
   transform: rotateY(180deg);
 }
 
-.bird-section {
-  margin-bottom: 80px;
+/* Back Side Image (no animation needed) */
+.bird-back .bird-image {
+  animation: none;
+  filter: drop-shadow(0 0 8px orange);
 }
 
 /* === JOURNEY SECTION === */
