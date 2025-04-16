@@ -1662,4 +1662,93 @@ header {
   width: 240px;
   height: 240px;
   padding: 20px; /* 👈 gives room for glow to show */
-  box-sizing: content-box; /* important so padding doesn'
+  box-sizing: content-box; /* important so padding doesn't shrink image */
+}
+
+.bird-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 40px 15px rgba(255, 165, 0, 0.4); /* glowing ring */
+  z-index: 0;
+}
+
+.bird-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.bird-wrapper::before {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(255, 100, 0, 0.6) 20%, rgba(255, 200, 0, 0) 60%);
+  border-radius: 50%;
+  filter: blur(10px);
+  animation: flames 2s infinite ease-in-out;
+  z-index: 0;
+}
+
+@keyframes flames {
+  0% { transform: scale(1) translateY(0); opacity: 0.8; }
+  50% { transform: scale(1.2) translateY(-10px); opacity: 1; }
+  100% { transform: scale(1) translateY(0); opacity: 0.8; }
+}
+
+.about-interests li:hover .flip-inner {
+  animation: bounce 0.5s ease;
+}
+
+.about-interests li {
+  margin: 10px; 
+
+}
+
+  body {
+    font-size: 1.2rem; /* Match journey paragraph size */
+  }
+  
+  .bird-circle {
+    width: 280px;
+    height: 280px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* optional soft shadow */
+  }
+  
+  .bird-image {
+    width: 400px; 
+    height: auto;
+    display: block;
+    margin: 0 auto 30px;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  
