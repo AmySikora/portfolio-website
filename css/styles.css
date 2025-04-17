@@ -12,6 +12,7 @@
     --link-visited-color: #05676e;
 }
 
+
 /* Body and General Elements */
 body {
     font-family: "Ubuntu", sans-serif;
@@ -985,6 +986,47 @@ circle.bg {
 .project-buttons .button:hover {
   background-color: var(--link-hover-color);
   transform: translateY(-2px);
+}
+
+/* === SLIDE-IN ANIMATIONS FOR PROJECT CARDS === */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.project-card.slide-left {
+  animation: slideInLeft 1s ease forwards;
+  opacity: 0;
+}
+
+.project-card.slide-right {
+  animation: slideInRight 1s ease forwards;
+  opacity: 0;
+}
+
+/* === RESPONSIVE GRID ADJUSTMENT FOR PROJECTS === */
+@media (max-width: 768px) {
+  .projects {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
 }
 
 /* Footer */

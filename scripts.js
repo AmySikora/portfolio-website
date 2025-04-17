@@ -36,64 +36,56 @@ document.addEventListener("DOMContentLoaded", () => {
     link.classList.toggle("navigation-list__item--active", linkPath === currentPath);
   });
 
-  // Animate rainbow bands on logo hover
+  // 🎯 Animate rainbow bands on logo hover
   const logo = document.querySelector(".animated-logo");
   if (logo) {
     const bands = logo.querySelectorAll(".band");
-    logo.addEventListener("mouseover", () => {
+    logo.addEventListener("mouseenter", () => {
       bands.forEach((band, i) => {
         band.style.transition = `transform 0.3s ease ${i * 0.05}s`;
-        band.style.transform = "scale(1.3)";
+        band.style.transform = "scale(1.3) rotate(5deg)";
       });
     });
-    logo.addEventListener("mouseout", () => {
+    logo.addEventListener("mouseleave", () => {
       bands.forEach(band => {
         band.style.transition = "transform 0.3s ease";
-        band.style.transform = "scale(1)";
+        band.style.transform = "scale(1) rotate(0)";
       });
     });
   }
 
-  //  Animate skill progress circles
-const skillCards = document.querySelectorAll(".skill-card");
+  // 🎯 Animate skill progress circles
+  const skillCards = document.querySelectorAll(".skill-card");
+  skillCards.forEach(card => {
+    const percent = parseInt(card.getAttribute("data-percent"));
+    const progress = card.querySelector(".progress");
+    if (!progress) return;
 
-skillCards.forEach(card => {
-  const percent = parseInt(card.getAttribute("data-percent"));
-  const progress = card.querySelector(".progress");
+    const radius = 45;
+    const circumference = 2 * Math.PI * radius;
+    const offset = circumference - (percent / 100) * circumference;
 
-  if (!progress) return;
+    progress.style.strokeDasharray = `${circumference}`;
+    progress.style.strokeDashoffset = `${circumference}`;
 
-  const radius = 45;
-  const circumference = 2 * Math.PI * radius;
-  const offset = circumference - (percent / 100) * circumference;
-
-  // Set initial state
-  progress.style.strokeDasharray = `${circumference}`;
-  progress.style.strokeDashoffset = `${circumference}`;
-
-  // Observer triggers when card enters view
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        requestAnimationFrame(() => {
-          // Animate to target offset
-          progress.style.transition = "stroke-dashoffset 1.5s ease-out";
-          progress.style.strokeDashoffset = offset;
-
-          // After animation finishes, lock in the value
-          setTimeout(() => {
-            progress.style.transition = "none";
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          requestAnimationFrame(() => {
+            progress.style.transition = "stroke-dashoffset 1.5s ease-out";
             progress.style.strokeDashoffset = offset;
-          }, 1600);
-        });
+            setTimeout(() => {
+              progress.style.transition = "none";
+              progress.style.strokeDashoffset = offset;
+            }, 1600);
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
 
-        observer.unobserve(entry.target); // Animate only once
-      }
-    });
-  }, { threshold: 0.5 });
-
-  observer.observe(card);
-});
+    observer.observe(card);
+  });
 
   // 🎯 Hamburger menu toggle
   const toggleButton = document.querySelector('.menu-toggle');
@@ -103,6 +95,46 @@ skillCards.forEach(card => {
       nav.classList.toggle('show');
     });
   }
+
+  // 🎯 Project cards slide-in animation
+  const projectCards = document.querySelectorAll(".project-card");
+  const projectObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        if (index % 2 === 0) {
+          entry.target.classList.add("slide-left");
+        } else {
+          entry.target.classList.add("slide-right");
+        }
+        projectObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  projectCards.forEach(card => projectObserver.observe(card));
+
+  // 🎯 Animate home title and name
+  const homeObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const el = entry.target;
+      if (entry.isIntersecting) {
+        el.classList.add('animate-pop');
+        if (el.classList.contains('home-name')) {
+          el.classList.add('animate-type');
+        }
+      } else {
+        el.classList.remove('animate-pop', 'animate-type');
+      }
+    });
+  }, {
+    threshold: 0.6
+  });
+
+  document.querySelectorAll('.home-title, .home-name').forEach(el => {
+    homeObserver.observe(el);
+  });
 });
 
 // jQuery-based tech badges (auto-tagging projects)
@@ -124,30 +156,3 @@ $(document).ready(function () {
     }
   });
 });
-
-// Adding animations to home page name and hello
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const el = entry.target;
-
-      if (entry.isIntersecting) {
-        // Add animation classes when visible
-        el.classList.add('animate-pop');
-
-        if (el.classList.contains('home-name')) {
-          el.classList.add('animate-type');
-        }
-      } else {
-        // Remove animation classes when out of view to allow replay
-        el.classList.remove('animate-pop', 'animate-type');
-      }
-    });
-  }, {
-    threshold: 0.6 // Trigger when 60% of the element is visible
-  });
-
-  document.querySelectorAll('.home-title, .home-name').forEach(el => {
-    observer.observe(el);
-  });
-
-
