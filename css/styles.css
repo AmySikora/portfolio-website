@@ -2133,4 +2133,7 @@ header {
     height: auto;
     display: block;
     margin: 0 auto 30px;
-    animati
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  

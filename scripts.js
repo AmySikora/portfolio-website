@@ -155,4 +155,10 @@ $(document).ready(function () {
     const title = $(this).find('h2').text().trim();
     if (techStacks[title]) {
       const techDiv = $('<div>').addClass('project-buttons tech-list');
-      techSta
+      techStacks[title].forEach(tech => {
+        $('<span>').addClass('tech-badge').text(tech).appendTo(techDiv);
+      });
+      $(this).find('p').last().after(techDiv);
+    }
+  });
+});
