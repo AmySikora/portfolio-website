@@ -91,8 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleButton = document.querySelector('.menu-toggle');
   const nav = document.querySelector('nav');
   const navLinks = document.querySelectorAll('.navigation-list__item');
-  const openIcon = toggleButton.querySelector('.open');
-  const closeIcon = toggleButton.querySelector('.close');
 
   if (toggleButton && nav) {
     toggleButton.addEventListener('click', () => {

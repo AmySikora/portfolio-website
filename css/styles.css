@@ -1893,6 +1893,18 @@ header {
   z-index: 1001; /* Ensure button is clickable */
 }
 
+.menu-toggle .close {
+  display: none;
+}
+
+.menu-toggle.open-menu .open {
+  display: none;
+}
+
+.menu-toggle.open-menu .close {
+  display: inline-block;
+}
+
 /* Mobile styles */
 @media (max-width: 768px) {
   .menu-toggle {
