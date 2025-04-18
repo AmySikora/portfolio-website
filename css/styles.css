@@ -1814,32 +1814,43 @@ header {
   }
   
   .logo-container {
-    width: 120px; /* Adjust as needed */
-    height: 120px; /* Crop height */
+    width: 100px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
-    position: relative;
+    padding: 0;
+    margin: 0;
   }
   
   .logo-container img {
-    position: relative;
-    top: -20px; /* Adjust to hide the top part */
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    display: block;
   }
   
   header {
+    height: 80px;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    height: 100px; /* Increase height */
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   .logo-link img,
   .animated-svg-logo svg {
-    height: 80px; /* Adjust this to increase logo size */
+    height: 80px; 
   }
 
   .navigation-list__item {
-    font-size: 1.2rem; /* Make font bigger */
+    font-size: 1.2rem; 
     margin-left: 20px;
   }
   
@@ -1872,9 +1883,22 @@ header {
       display: block;
     }
   }
+  /* Initially show hamburger, hide close */
+  .menu-toggle .icon-close {
+    display: none;
+  }
+
+  /* When nav is open, show close, hide hamburger */
+  nav.show .menu-toggle .icon-hamburger {
+    display: none;
+  }
+
+  nav.show .menu-toggle .icon-close {
+    display: inline;
+  }
 
   .profile-pic {
-    margin-bottom: 10px; /* Try lowering this value */
+    margin-bottom: 10px;
   }
   
   .about-description {
@@ -1891,18 +1915,6 @@ header {
   color: var(--primary-color);
   cursor: pointer;
   z-index: 1001; /* Ensure button is clickable */
-}
-
-.menu-toggle .close {
-  display: none;
-}
-
-.menu-toggle.open-menu .open {
-  display: none;
-}
-
-.menu-toggle.open-menu .close {
-  display: inline-block;
 }
 
 /* Mobile styles */
@@ -1960,91 +1972,47 @@ header {
   padding: 30px 20px 60px;
 }
 
-/* Larger navbar */
+/* NAVBAR */
 header {
-  height: 120px;
-  padding: 30px 40px;
+  height: 80px; /* slightly taller than before */
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* LOGO CONTAINER */
+.logo-container {
+  height: 70px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* LOGO IMAGE */
+.logo-container img {
+  height: 65px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
+
+.logo-container img:hover {
+  transform: scale(1.05);
 }
 
 .navigation-list__item {
   font-size: 1.4rem;
-}
-
-/* Logo crop from top */
-.logo-container {
-  width: 100px; 
-  height: 100px; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.logo-container img {
-  width: 80px; 
-  height: auto;
-  object-fit: contain;
-  position: relative;
-  top: 0; 
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 40px;
-  height: 100px;
-}
-
-.logo-container {
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-container img {
-  height: 80px;
-  width: auto;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
-}
-
-
-.logo-container {
-  width: 180px;
-  height: 130px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  outline: none;
-}
-
-.logo-container img {
-  height: 260px;
-  padding-top: 10px;
-  margin-top: -35px;
-  border: none;
-  outline: none;
-}
-
-header {
-  height: 140px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 35px;
-}
-
-.logo-container img {
-  transition: transform 0.3s ease;
-}
-
-.logo-container img:hover {
-  transform: translateY(-8px) scale(1.05);
 }
 
 .bird-section {
