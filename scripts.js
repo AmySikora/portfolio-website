@@ -94,7 +94,13 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleButton.addEventListener('click', () => {
       nav.classList.toggle('show');
     });
-  }
+    // Close menu on nav item click (optional but nice)
+  document.querySelectorAll('.navigation-list__item').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('show');
+    });
+  });
+}
 
   // Project cards slide-in animation
   const projectCards = document.querySelectorAll(".project-card");
@@ -149,10 +155,4 @@ $(document).ready(function () {
     const title = $(this).find('h2').text().trim();
     if (techStacks[title]) {
       const techDiv = $('<div>').addClass('project-buttons tech-list');
-      techStacks[title].forEach(tech => {
-        $('<span>').addClass('tech-badge').text(tech).appendTo(techDiv);
-      });
-      $(this).find('p').last().after(techDiv);
-    }
-  });
-});
+      techSta
