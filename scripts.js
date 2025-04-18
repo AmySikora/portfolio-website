@@ -90,17 +90,23 @@ document.addEventListener("DOMContentLoaded", () => {
   // Hamburger menu toggle
   const toggleButton = document.querySelector('.menu-toggle');
   const nav = document.querySelector('nav');
+  const navLinks = document.querySelectorAll('.navigation-list__item');
+  const openIcon = toggleButton.querySelector('.open');
+  const closeIcon = toggleButton.querySelector('.close');
+
   if (toggleButton && nav) {
     toggleButton.addEventListener('click', () => {
       nav.classList.toggle('show');
+      toggleButton.classList.toggle('open-menu');
     });
-    // Close menu on nav item click (optional but nice)
-  document.querySelectorAll('.navigation-list__item').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('show');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('show');
+        toggleButton.classList.remove('open-menu');
+      });
     });
-  });
-}
+  }
 
   // Project cards slide-in animation
   const projectCards = document.querySelectorAll(".project-card");
@@ -155,4 +161,10 @@ $(document).ready(function () {
     const title = $(this).find('h2').text().trim();
     if (techStacks[title]) {
       const techDiv = $('<div>').addClass('project-buttons tech-list');
-      techSta
+      techStacks[title].forEach(tech => {
+        $('<span>').addClass('tech-badge').text(tech).appendTo(techDiv);
+      });
+      $(this).find('p').last().after(techDiv);
+    }
+  });
+});
