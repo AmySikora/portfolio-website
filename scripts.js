@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 🎯 Progress Bars: Set width from data-percentage
+  // Progress Bars: Set width from data-percentage
   document.querySelectorAll(".progress-bar").forEach(bar => {
     const percent = bar.getAttribute("data-percentage");
     if (percent) {
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 🎯 Smooth scroll for anchor links
+  // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
@@ -22,21 +22,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 🎯 Flip effect for interest circles
+  // Flip effect for interest circles
   document.querySelectorAll(".about-interests li").forEach(circle => {
     circle.addEventListener("click", () => {
       circle.classList.toggle("flipped");
     });
   });
 
-  // 🎯 Active nav link based on current page
+  // Active nav link based on current page
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".navigation-list__item").forEach(link => {
     const linkPath = link.getAttribute("href").split("/").pop();
     link.classList.toggle("navigation-list__item--active", linkPath === currentPath);
   });
 
-  // 🎯 Animate rainbow bands on logo hover
+  // Animate rainbow bands on logo hover
   const logo = document.querySelector(".animated-logo");
   if (logo) {
     const bands = logo.querySelectorAll(".band");
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 🎯 Animate skill progress circles
+  // Animate skill progress circles
   const skillCards = document.querySelectorAll(".skill-card");
   skillCards.forEach(card => {
     const percent = parseInt(card.getAttribute("data-percent"));
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(card);
   });
 
-  // 🎯 Hamburger menu toggle
+  // Hamburger menu toggle
   const toggleButton = document.querySelector('.menu-toggle');
   const nav = document.querySelector('nav');
   if (toggleButton && nav) {
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 🎯 Project cards slide-in animation
+  // Project cards slide-in animation
   const projectCards = document.querySelectorAll(".project-card");
   const projectObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry, index) => {
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   projectCards.forEach(card => projectObserver.observe(card));
 
-  // 🎯 Animate home title and name
+  // Animate home title and name
   const homeObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       const el = entry.target;
