@@ -1340,7 +1340,7 @@ header {
 .contact-card p {
   font-size: 0.9rem;
   color: var(--dark-grey);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .contact-card .button {
@@ -1357,6 +1357,15 @@ header {
 .contact-card .button:hover {
   background-color: var(--link-hover-color);
   transform: translateY(-2px);
+}
+
+.contact-card a img {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.contact-card a img:hover {
+  transform: scale(1.15);
 }
 
 /* Responsive Adjustments */
