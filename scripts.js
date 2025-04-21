@@ -150,9 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // jQuery-based tech badges (auto-tagging projects)
 $(document).ready(function () {
   const techStacks = {
-    'Pokédex': ['JavaScript', 'HTML', 'CSS'],
-    'MyFlix': ['React', 'Node.js', 'MongoDB', 'Express'],
-    'Meet App': ['React', 'PWA', 'Google Calendar API']
+
   };
 
   $('.project-card').each(function () {
