@@ -2818,3 +2818,59 @@ header nav.is-open{ opacity: 1; pointer-events: auto; transform: translateY(0); 
 .navigation-list{ display: flex; flex-direction: column; gap: 10px; padding: 12px 16px; }
 .icon-close{ display: none; } /* default hidden; script toggles */
 }
+
+/* ===== Higher-Ed layout fixes ===== */
+
+/* 2-col grid: big feature left, stacked cards right */
+.higher-ed-grid{
+  display: grid;
+  grid-template-columns: minmax(320px, 1.2fr) minmax(300px, 1fr);
+  gap: 24px;
+  align-items: stretch;   /* right column gets same height as the left */
+}
+
+/* Remove any “container” chrome on the stack column */
+.presentations-stack{
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+
+  /* stack + push to bottom so the pair ends flush with the left card */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: flex-end;   /* <— bottom align */
+  height: 100%;
+}
+
+/* Keep each presentation card looking like your other project cards */
+.presentation-card{
+  margin: 0;  /* no extra margins since we use gap above */
+}
+
+/* Mobile: stack everything full-width in the natural order */
+@media (max-width: 900px){
+  .higher-ed-grid{
+    grid-template-columns: 1fr;
+  }
+  .presentations-stack{
+    justify-content: flex-start;   /* no bottom alignment on narrow screens */
+  }
+}
+/* ===== Contact section link cleanup ===== */
+#contact .contact-card {
+  text-decoration: none !important;
+  color: inherit; /* keep text matching your site theme */
+}
+
+#contact .contact-card h5,
+#contact .contact-card p {
+  text-decoration: none !important;
+}
+
+#contact .contact-card:hover {
+  text-decoration: none;
+  transform: translateY(-3px);
+  transition: transform 0.2s ease-in-out;
+}
