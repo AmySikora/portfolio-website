@@ -2861,7 +2861,7 @@ header nav.is-open{ opacity: 1; pointer-events: auto; transform: translateY(0); 
 /* ===== Contact section link cleanup ===== */
 #contact .contact-card {
   text-decoration: none !important;
-  color: inherit; /* keep text matching your site theme */
+  color: inherit;
 }
 
 #contact .contact-card h5,
@@ -2874,3 +2874,4 @@ header nav.is-open{ opacity: 1; pointer-events: auto; transform: translateY(0); 
   transform: translateY(-3px);
   transition: transform 0.2s ease-in-out;
 }
+
