@@ -2294,6 +2294,59 @@ header {
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
 
+#presentations {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.presentations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.presentation-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: transform 0.2s ease;
+}
+
+.presentation-card:hover {
+  transform: translateY(-5px);
+}
+
+.presentation-card .card-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.presentation-card h3 {
+  font-size: 1.2rem;
+  color: #137e71; /* adjust to your brand color */
+  margin-bottom: 10px;
+}
+
+.presentation-card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.presentation-card a {
+  color: #b6550b; /* adjust to your theme */
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.presentation-card a:hover {
+  text-decoration: underline;
+}
+
 /* ===== Minimal modal visibility/layout ===== */
 #modal { display: none; position: fixed; inset: 0; z-index: 2000; }
 #modal.is-open { display: block; }
@@ -2395,4 +2448,373 @@ header {
 }
 @media (prefers-reduced-motion: reduce) {
   #modal .modal__dialog { animation: none; }
+}
+
+/* Layout: two columns on desktop, stacked on mobile */
+.higher-ed-grid{
+  display:grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 900px){
+  .higher-ed-grid{ grid-template-columns: 1fr; }
+}
+
+/* Featured project visuals: single hero image, no crop of text */
+.project-card--feature{ border-radius:16px; box-shadow:0 8px 22px rgba(0,0,0,.10); }
+.project-images--feature{ display:block; }
+.project-images--feature .project-image{
+  width:100%; height:auto; display:block;
+  aspect-ratio: 16/9; object-fit: cover; border-radius:10px;
+}
+
+/* Right column stack */
+.presentations-stack{ display:flex; flex-direction:column; gap:24px; }
+.presentation-card .card-icon{ font-size:1.6rem; margin-bottom:8px; }
+.presentation-card h3{ color: var(--primary-color, #137e71); margin-bottom:8px; }
+.presentation-card p{ margin-bottom:10px; }
+.inline-link{ color: var(--secondary-color, #b6550b); font-weight:600; text-decoration:none; }
+.inline-link:hover{ text-decoration:underline; }
+
+/* Ensure card text never gets clipped */
+.project-card{ overflow: visible; }
+.project-card h2, .project-card h3, .project-card p{ overflow: visible; }
+
+/* Optional: keep the section spacing consistent with site */
+#higher-ed{ padding:80px 20px; max-width:1200px; margin:0 auto; }
+
+/* Generic modal shell (reuse or keep if you already have this) */
+.modal{ position: fixed; inset: 0; display:none; align-items:center; justify-content:center; background: rgba(0,0,0,.45); z-index: 1000; }
+.modal.is-open{ display:flex; }
+.modal-content{
+  background:#fff; color:#2b2b2b; width:min(720px, 90vw); max-height: 85vh; overflow:auto;
+  border-radius:16px; padding:24px; box-shadow:0 20px 50px rgba(0,0,0,.2);
+}
+.modal-close{ border:0; background:transparent; font-size:1.6rem; line-height:1; cursor:pointer; position:absolute; right:18px; top:12px; }
+.modal-content h3{ color: var(--primary-color, #137e71); margin-top:0; }
+.modal-content ul{ margin: 10px 0 0 18px; }
+
+/* Match the gentle banded fade used elsewhere */
+#higher-ed{
+  padding: 80px 20px; max-width: 1200px; margin: 0 auto;
+  background: linear-gradient(to bottom, transparent 0%, #fbe4e9 20%, #fbe4e9 80%, transparent 100%);
+  transition: background 1s ease-in-out;
+  content-visibility: auto; /* if you’re using this elsewhere */
+}
+
+/* Keep the two-column symmetry you liked */
+.higher-ed-grid{
+  display:grid; grid-template-columns: 1.25fr 1fr; gap:24px; align-items:start;
+}
+@media (max-width: 900px){ .higher-ed-grid{ grid-template-columns:1fr; } }
+
+.presentations-stack{ display:flex; flex-direction:column; gap:24px; }
+.presentation-card{ padding:18px 20px; }
+.presentation-card h3{ margin-bottom:8px; color: var(--primary-color, #137e71); }
+.presentation-card .inline-link{ color: var(--secondary-color, #b6550b); font-weight:600; text-decoration:none; }
+.presentation-card .inline-link:hover{ text-decoration:underline; }
+
+.highlights {
+  background: linear-gradient(to right, #fff7fb, #fbe4e9);
+  padding: 14px 0;
+}
+.highlights-list {
+  display:flex; gap:18px; overflow:auto; white-space:nowrap;
+  align-items:center; justify-content:center; max-width:1200px; margin:0 auto; padding:0 16px;
+  list-style:none;
+}
+.highlights-list li { font-weight:600; }
+
+/* soft band around higher-ed block for continuity */
+.higher-ed-grid {
+  background: linear-gradient(to bottom, #fff 0%, #fbe4e9 8%, #fbe4e9 92%, #fff 100%);
+  padding: 20px;
+  border-radius: 16px;
+  margin-top: 10px;
+}
+
+/* Highlights: soft band + centered chips (no scrollbar) */
+.highlights {
+  background: linear-gradient(to right, #fff7fb, #fbe4e9);
+  padding: 10px 0;               /* tighter */
+  border-top: 1px solid rgba(0,0,0,.04);
+  border-bottom: 1px solid rgba(0,0,0,.04);
+}
+.highlights-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 12px;
+  display: flex;
+  flex-wrap: wrap;               /* wraps instead of scrolling */
+  justify-content: center;
+  gap: 8px 10px;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.06);
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* No visible scrollbars if something overflows temporarily */
+.highlights-inner::-webkit-scrollbar { display: none; }
+.highlights-inner { -ms-overflow-style: none; scrollbar-width: none; }
+
+
+/* Make the generic divider slimmer */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(0,0,0,.12), transparent);
+  margin: 24px 0;   /* was larger; tighten */
+}
+
+/* Standardize section spacing so the flow feels continuous */
+section[id] {       /* any main section */
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+/* A few sections can be even tighter */
+#highlights { padding: 10px 0; }                /* already set above */
+#about, #skills, #skills-pro, #recognition,
+#work, #contact { padding-top: 40px; padding-bottom: 40px; }
+
+/* Higher-Ed wrapper feel: subtle, not a big block */
+.higher-ed-grid {
+  background: linear-gradient(to bottom, #ffffff 0%, #f9eef2 10%, #f9eef2 90%, #fff 100%);
+  padding: 18px;
+  border-radius: 14px;
+  margin-top: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.04);
+}
+
+.project-card h2, .project-card h3, .project-card p { overflow: visible; }
+
+/* Clean shell for the whole Higher-Ed block */
+.higher-ed-wrap{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  border-radius: 18px;
+  background: #fff;                           /* remove the pink fade */
+  box-shadow: 0 8px 28px rgba(0,0,0,.08);     /* subtle card shadow */
+}
+
+/* Keep your two-column layout exactly as before */
+.higher-ed-grid{
+  display:grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap:24px;
+  align-items:start;
+}
+@media (max-width: 900px){
+  .higher-ed-grid{ grid-template-columns:1fr; }
+}
+
+/* Small utilities for compact lists inside cards */
+.mini-list{
+  margin: 8px 0 0 18px;
+  padding: 0;
+}
+.mini-list li{ margin: 2px 0; }
+.meta{
+  display:block; font-size:.9rem; opacity:.85; margin-top:6px;
+}
+
+/* Ensure readable text in presentation cards */
+.presentation-card,
+.presentation-card h3,
+.presentation-card p,
+.presentation-card li,
+.presentation-card .meta {
+  color: #1f1f1f;                 /* dark text */
+}
+
+.presentation-card .inline-link {
+  color: var(--secondary-color, #b6550b);
+  text-decoration: none;
+  font-weight: 700;
+}
+.presentation-card .inline-link:hover { text-decoration: underline; }
+
+/* Keep right column cards lined up with the left feature card */
+.higher-ed-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr; /* left bigger, right column consistent */
+  gap: 24px;
+  align-items: start;
+}
+
+.presentations-stack { display: flex; flex-direction: column; gap: 24px; }
+.presentations-stack .project-card {
+  width: 100%;
+  padding: 18px 20px;              /* match left card’s inner spacing vibe */
+  box-sizing: border-box;
+}
+
+/* Prevent any clipping */
+.project-card h2, .project-card h3, .project-card p { overflow: visible; }
+
+/* Tiny list/metadata helpers (if not already present) */
+.mini-list { margin: 6px 0 0 18px; }
+.mini-list li { margin: 2px 0; }
+.meta { display:block; font-size:.9rem; opacity:.85; margin:8px 0 6px; }
+
+/* Soften the Higher-Ed white card so the page background shows a bit */
+.higher-ed-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.88);  /* was #fff */
+  backdrop-filter: saturate(1.1) blur(2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,.08);
+}
+
+html, body { min-height: 100%; }
+
+body {
+  /* soft pastel rainbow from top to bottom */
+  background:
+    linear-gradient(
+      180deg,
+      #fff5f5 0%,    /* red-ish very light */
+      #fff3e6 16%,   /* orange */
+      #fffbe6 32%,   /* yellow */
+      #eefbea 48%,   /* green */
+      #e9f3ff 64%,   /* blue */
+      #eef0ff 80%,   /* indigo */
+      #f7ecff 100%   /* violet */
+    );
+  background-attachment: fixed;     /* gentle parallax feel */
+}
+
+/* Tighten vertical rhythm so flow feels continuous */
+.section-divider { margin: 24px 0; }
+section[id] { padding-top: 44px; padding-bottom: 44px; }
+#highlights { padding: 10px 0; }   /* strip stays compact */
+
+/* Subtle, single-line highlights — no pills, no colored box */
+.highlights {
+  padding: 8px 0;
+  background: transparent;
+  border-top: 1px solid rgba(0,0,0,.06);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+.highlights-line {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 12px;
+  display: flex; flex-wrap: wrap; gap: 10px 16px;
+  justify-content: center;
+  font-weight: 600;
+}
+.highlights-line span {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: #1f1f1f;
+}
+
+/* Two-column grid without an outer container */
+.higher-ed-grid {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+@media (max-width: 900px){
+  .higher-ed-grid { grid-template-columns: 1fr; }
+}
+
+/* Keep images tidy and matching other project cards */
+.project-images--feature .project-image {
+  width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 10px;
+}
+
+/* Right column stack */
+.presentations-stack { display: flex; flex-direction: column; gap: 24px; }
+
+/* Presentation cards: inherit your .project-card look, calm text color */
+.presentation-card,
+.presentation-card h3,
+.presentation-card p,
+.presentation-card li,
+.presentation-card .meta { color: #1f1f1f; }
+
+.presentation-card .inline-link {
+  color: var(--secondary-color, #b6550b);
+  font-weight: 700; text-decoration: none;
+}
+.presentation-card .inline-link:hover { text-decoration: underline; }
+
+.mini-list { margin: 6px 0 0 18px; }
+.mini-list li { margin: 2px 0; }
+.meta { display: block; font-size: .9rem; opacity: .85; margin: 8px 0 6px; }
+
+/* Prevent clipping of headings/paragraphs */
+.project-card h2, .project-card h3, .project-card p { overflow: visible; }
+
+/* Layout: feature left, speaking stack right */
+.highered-grid{
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr; /* left wider */
+  gap: 24px;
+  align-items: start;
+}
+
+/* Right column (stack) */
+.highered-right{ display: flex; flex-direction: column; gap: 24px; }
+
+/* Tidy media */
+.highered-feature .project-images .project-image{
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Calm presentation card text + link color */
+.presentation-card, .presentation-card h3, .presentation-card p,
+.presentation-card li, .presentation-card .meta { color: #1f1f1f; }
+.inline-link{ color: var(--secondary-color, #b6550b); font-weight: 700; text-decoration: none; }
+.inline-link:hover{ text-decoration: underline; }
+
+/* Small list spacing */
+.mini-list{ margin: 6px 0 0 18px; }
+.mini-list li{ margin: 2px 0; }
+
+/* Prevent heading clipping inside cards */
+.project-card h2, .project-card h3, .project-card p{ overflow: visible; }
+
+/* Responsive: stack columns on mobile */
+@media (max-width: 900px){
+  .highered-grid{ grid-template-columns: 1fr; }
+}
+
+/* mobile nav behavior */
+@media (max-width: 900px){
+  header nav{
+    position: absolute; top: 64px; left: 0; right: 0;
+    background: #ffffff;
+    border-bottom: 1px solid rgba(0,0,0,.08);
+    transform: translateY(-16px);
+    opacity: 0; pointer-events: none;
+    transition: opacity .2s ease;
+    z-index: 999;
+  }
+  header nav.is-open{ opacity: 1; pointer-events: auto; transform: translateY(0); }
+  .navigation-list{ display: flex; flex-direction: column; gap: 10px; padding: 12px 16px; }
+  .icon-close{ display: none; } /* default hidden; script toggles */
 }
