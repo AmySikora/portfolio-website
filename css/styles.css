@@ -109,14 +109,14 @@ text-align: center;
 }
 
 .home-name {
-font-size: 2rem;
+font-size: 3rem;
 font-weight: bold;
 color: var(--third-color);
 margin-bottom: 15px;
 }
 
 .home-short {
-font-size: 1.1rem;
+font-size: 1.4rem;
 line-height: 1.5;
 margin-bottom: 20px;
 }
@@ -167,7 +167,7 @@ text-align: left;
 }
 
 .home-long {
-font-size: 1.1rem;
+font-size: 1.2rem;
 line-height: 1.8;
 }
 
@@ -2875,3 +2875,6 @@ header nav.is-open{ opacity: 1; pointer-events: auto; transform: translateY(0); 
   transition: transform 0.2s ease-in-out;
 }
 
+/* Make the carousel a real viewport; the track is the scroller */
+.endorsements { overflow: hidden; }           /* keeps arrows/dots clean */
+.endorsements__track { scroll-behavior: smooth; }  /* smooth arrow/dot jumps */
