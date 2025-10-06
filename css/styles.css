@@ -3044,3 +3044,30 @@ header nav.is-open{ opacity: 1; pointer-events: auto; transform: translateY(0); 
 
 /* Optional: turn off the pulsing after first interaction */
 .modal-hints-off .modal-trigger::before { animation: none; }
+
+/* --- Subtle hints just for project tech badges --- */
+.projects .tech-badge.modal-trigger::before,
+.project-card .tech-badge.modal-trigger::before {
+  width: 14px;
+  height: 14px;
+  font-size: 0.6rem;
+  top: -4px;
+  right: -4px;
+  box-shadow: 0 0 0 0 rgba(19,126,113,0.35);
+  animation: modalPulse 2s ease-out infinite;
+  opacity: 0.85;
+}
+
+/* Remove the extra arrow on the small badges inside projects */
+.projects .tech-badge.modal-trigger::after,
+.project-card .tech-badge.modal-trigger::after {
+  content: "";
+  display: none;
+}
+
+/* Slightly softer hover for small badges so they don't jump */
+.projects .tech-badge.modal-trigger:hover,
+.project-card .tech-badge.modal-trigger:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,.10);
+}
