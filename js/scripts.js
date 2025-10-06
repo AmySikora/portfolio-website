@@ -13,6 +13,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  document.addEventListener("DOMContentLoaded", () => {
+    // Add ARIA + helpful title to every modal trigger
+    document.querySelectorAll(".modal-trigger").forEach(btn => {
+      const targetSel = btn.getAttribute("data-modal-target");
+      const labelText = (btn.textContent || btn.getAttribute("aria-label") || "details")
+        .trim().replace(/\s+/g, " ");
+  
+      if (targetSel && targetSel.startsWith("#")) {
+        btn.setAttribute("aria-haspopup", "dialog");
+        btn.setAttribute("aria-controls", targetSel.slice(1));
+      }
+  
+      // Tooltip text on hover/focus
+      if (!btn.title) btn.title = `Open details: ${labelText}`;
+    });
+  
+    // After user opens any modal, stop the gentle pulsing globally
+    const stopHints = () => document.documentElement.classList.add("modal-hints-off");
+    document.addEventListener("click", e => {
+      const t = e.target.closest(".modal-trigger");
+      if (t) stopHints();
+    });
+    document.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") stopHints();
+    });
+  });
+
+
   // ---- Hamburger menu
   const toggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector("header nav");

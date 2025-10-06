@@ -2971,3 +2971,76 @@ header nav.is-open{ opacity: 1; pointer-events: auto; transform: translateY(0); 
   font-size: 1rem;
   font-weight: 500;
 }
+
+/* --- Modal affordances --- */
+.modal-trigger {
+  position: relative;
+  cursor: pointer;
+  outline-offset: 3px;
+}
+
+/* Big cards (skills/professional strengths) – show "Learn more" line */
+.skill-card.modal-trigger::after {
+  content: "Learn more";
+  display: block;
+  font-size: .85rem;
+  letter-spacing: .2px;
+  color: var(--third-color);
+  opacity: .9;
+  margin-top: 8px;
+}
+
+/* Corner info dot that gently pulses */
+.modal-trigger::before {
+  content: "i";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: .85rem;
+  color: #fff;
+  background: var(--primary-color);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(19,126,113,0.5);
+  animation: modalPulse 1.8s ease-out infinite;
+}
+
+/* Reduce the dot on the small tech badges so it doesn’t crowd text */
+.tech-badge.modal-trigger::before {
+  transform: scale(.8);
+  top: -6px;
+  right: -6px;
+}
+
+/* Minimal arrow hint on tech badges */
+.tech-badge.modal-trigger::after {
+  content: " ›";
+  font-weight: 700;
+  opacity: .9;
+}
+
+/* Hover/focus feedback */
+.modal-trigger:hover,
+.modal-trigger:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,.12);
+}
+
+/* Strong visible focus ring for keyboard users */
+.modal-trigger:focus-visible {
+  outline: 3px solid var(--accent-color);
+}
+
+/* Pulse animation */
+@keyframes modalPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(19,126,113,0.45); }
+  70%  { box-shadow: 0 0 0 10px rgba(19,126,113,0); }
+  100% { box-shadow: 0 0 0 0 rgba(19,126,113,0); }
+}
+
+/* Optional: turn off the pulsing after first interaction */
+.modal-hints-off .modal-trigger::before { animation: none; }
