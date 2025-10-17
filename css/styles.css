@@ -3072,3 +3072,50 @@ header nav.is-open{ opacity: 1; pointer-events: auto; transform: translateY(0); 
   box-shadow: 0 4px 10px rgba(0,0,0,.10);
 }
 
+/* ===== About > Interest coins: visible hint (no hover needed) ===== */
+#about .about-interests { position: relative; }
+
+/* Base hint bubble (hidden by default) */
+#about .about-interests li {
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+#about .about-interests li::after {
+  content: "Click to flip";
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 2px 8px;
+  font-size: .72rem;
+  color: var(--primary-color);
+  background: #fff;
+  border: 1px solid var(--primary-color);
+  border-radius: 999px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
+  white-space: nowrap;
+}
+
+/* Make the hint visible when the list has .hint-coins */
+#about .about-interests.hint-coins li::after {
+  opacity: 1;
+}
+
+/* Touch devices say "Tap to flip" */
+body.is-touch #about .about-interests li::after {
+  content: "Tap to flip";
+}
+
+/* Keyboard focus ring (still helpful) */
+#about .about-interests li:focus-visible .flip-front,
+#about .about-interests li:focus-within .flip-front {
+  box-shadow: 0 0 0 3px var(--third-color), 0 8px 16px rgba(0,0,0,.12);
+}
+
+/* Keep click flip persistent */
+#about .about-interests li.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
