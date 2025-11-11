@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Case Study — Ticket VeriGuard Demo</title>
+  <link rel="icon" href="../favicon_logo.png"/>
+  <link rel="stylesheet" href="../styles.css"/>
+</head>
+<body class="case">
+  <header class="cs-hero">
+    <h1>Ticket VeriGuard — Marketplace Demo</h1>
+    <p class="lead">
+      Prototype that demonstrates data validation and duplicate-prevention across marketplaces using realistic ticket inputs.
+    </p>
+    <div class="actions">
+      <a class="btn" href="https://tvg-demo.onrender.com" target="_blank" rel="noopener">Try Live Demo</a>
+      <a class="btn ghost" href="https://github.com/AmySikora/tvg-demo" target="_blank" rel="noopener">View Code</a>
+      <a class="btn link" href="../index.html#work">Back to Portfolio</a>
+    </div>
+  </header>
+
+  <main class="cs-body">
+    <section>
+      <h2>Overview</h2>
+      <p>
+        This simulator allows users to submit ticket listings and immediately see whether any seats conflict with existing listings.
+        It showcases how Ticket VeriGuard could integrate with marketplaces to prevent duplicate sales before they happen.
+      </p>
+    </section>
+
+    <section class="grid-2">
+      <div>
+        <h3>Key Technical Features</h3>
+        <ul>
+          <li>Parses seat ranges and mixed formats (for example: <code>6-8</code>, <code>4, 6 7</code>).</li>
+          <li>Detects conflicts and blocks duplicate seats in real time.</li>
+          <li>Filters to view your own listings versus the full marketplace.</li>
+          <li>Hosted with a live backend to support real interactions.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Stack and Focus</h3>
+        <ul>
+          <li>HTML, CSS, JavaScript front end.</li>
+          <li>API/backend hosted on Render.</li>
+          <li>Emphasis on clarity, feedback, and testable behavior.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h3>What I Improved</h3>
+      <ul>
+        <li>Added clearer status feedback for approved vs. blocked listings.</li>
+        <li>Improved table layout and filters for readability.</li>
+        <li>Iterated on cross-browser behavior and dropdown interactions.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Next Steps</h3>
+      <ul>
+        <li>Expand support for more marketplaces and webhook integrations.</li>
+        <li>Add authentication and per-partner keys.</li>
+        <li>Introduce automated test coverage for edge-case seat patterns.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
