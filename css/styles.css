@@ -3119,3 +3119,145 @@ body.is-touch #about .about-interests li::after {
 #about .about-interests li.flipped .flip-inner {
   transform: rotateY(180deg);
 }
+.case-page {
+  background: #050816;
+  color: #f5f5f5;
+  font-family: 'Ubuntu', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.simple-header {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 0.5rem;
+}
+
+.simple-header .inline-link {
+  color: #64ffda;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.simple-header .inline-link:hover {
+  text-decoration: underline;
+}
+
+.case-study {
+  max-width: 1080px;
+  margin: 0 auto 3rem;
+  padding: 1.5rem;
+  line-height: 1.7;
+}
+
+.case-study h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.case-tagline {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #9ca3af;
+  font-size: 1rem;
+}
+
+.case-study h2 {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+}
+
+.case-study h3 {
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
+}
+
+.case-study ul {
+  padding-left: 1.25rem;
+}
+/* ========= Case Study Pages ========= */
+
+.case-page {
+  background: #020817;
+  color: #f9fafb;
+  font-family: 'Ubuntu', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.case-header {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 0.5rem;
+}
+
+.case-back-link {
+  font-size: 0.9rem;
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.case-back-link:hover,
+.case-back-link:focus {
+  text-decoration: underline;
+}
+
+.case-layout {
+  max-width: 1080px;
+  margin: 0 auto 3rem;
+  padding: 2rem 1.5rem 2.5rem;
+  background: #020817;
+}
+
+.case-hero {
+  margin-bottom: 1.5rem;
+}
+
+.case-title {
+  margin: 0 0 0.25rem;
+  font-size: 2.2rem;
+  color: #22c55e;
+}
+
+.case-subtitle {
+  margin: 0 0 1rem;
+  color: #9ca3af;
+  max-width: 40rem;
+}
+
+.case-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.case-section {
+  margin-top: 2rem;
+}
+
+.case-section-title {
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem;
+  color: #e5e7eb;
+}
+
+.case-label {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #e5e7eb;
+}
+
+.case-two-col {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  .case-two-col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.case-list {
+  padding-left: 1.25rem;
+  margin: 0.5rem 0 0;
+  line-height: 1.7;
+}
