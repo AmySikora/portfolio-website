@@ -14,7 +14,7 @@
 
 /* === SECTION CONTAINERS === */
 section {
-padding: 80px 20px;
+padding: 60px 20px;
 margin: 0 auto;
 text-align: center;
 max-width: 1200px;
@@ -58,7 +58,7 @@ header {
 
 /* Section Styling */
 section {
-  padding: 160px 20px;
+  padding: 60px 20px;
   margin: 0 auto;
   max-width: 1200px;
   text-align: center;
@@ -66,7 +66,7 @@ section {
 
 /* === HOME SECTION === */
 #home {
-padding: 80px 20px;
+padding: 60px 20px;
 margin: 0;
 text-align: center;
 width: 100vw;
@@ -229,7 +229,7 @@ animation: typeIn 1s ease-out both;
 
 /* About Section General */
 #about {
-padding: 80px 20px;
+padding: 6ch 20px;
 text-align: center;
 width: 100vw;
 max-width: 100%;
@@ -276,7 +276,7 @@ padding: 0 20px;
 }
 
 #contact {
-padding: 80px 20px;
+padding: 60px 20px;
 text-align: center;
 width: 100vw;
 max-width: 100%;
@@ -830,7 +830,7 @@ box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 
 /* Skills Section */
 #skills {
-padding: 80px 20px;
+padding: 60px 20px;
 text-align: center;
 width: 100vw;
 max-width: 100%;
@@ -954,7 +954,7 @@ box-shadow: 0 0 8px rgba(255, 140, 0, 0.1);
 }
 
 #work {
-padding: 80px 20px;
+padding: 60px 20px;
 text-align: center;
 width: 100vw;
 max-width: 100%;
@@ -2207,7 +2207,7 @@ body {
 
 /* ================= Recognition ================= */
 #recognition{
-padding:80px 20px; text-align:center; width:100vw; max-width:100%;
+padding:60px 20px; text-align:center; width:100vw; max-width:100%;
 background: linear-gradient(to bottom, transparent 0%, #fff7cc 20%, #fff7cc 80%, transparent 100%);
 transition: background 1s ease-in-out;
 }
@@ -2265,7 +2265,7 @@ font-size:22px; display:grid;place-items:center; cursor:pointer; line-height:36p
 /* ================= Skills ================= */
 .skills-section{ padding:60px 20px; background: var(--background-color); text-align:center; }
 #skills{
-padding:80px 20px; width:100vw; max-width:100%;
+padding:60px 20px; width:100vw; max-width:100%;
 background: linear-gradient(to bottom, transparent 0%, #ffeedd 20%, #ffeedd 80%, transparent 100%);
 transition: background 1s ease-in-out;
 }
@@ -2295,7 +2295,7 @@ cursor: pointer; border: none;
 }
 
 #presentations {
-padding: 80px 20px;
+padding: 60px 20px;
 max-width: 1200px;
 margin: 0 auto;
 text-align: center;
@@ -2483,7 +2483,7 @@ aspect-ratio: 16/9; object-fit: cover; border-radius:10px;
 .project-card h2, .project-card h3, .project-card p{ overflow: visible; }
 
 /* Optional: keep the section spacing consistent with site */
-#higher-ed{ padding:80px 20px; max-width:1200px; margin:0 auto; }
+#higher-ed{ padding:60px 20px; max-width:1200px; margin:0 auto; }
 
 /* Generic modal shell (reuse or keep if you already have this) */
 .modal{ position: fixed; inset: 0; display:none; align-items:center; justify-content:center; background: rgba(0,0,0,.45); z-index: 1000; }
@@ -3175,6 +3175,11 @@ body.is-touch #about .about-interests li::after {
 }
 /* ========= Case Study Pages ========= */
 
+.writing-image {
+  object-fit: cover;
+  object-position: top;
+}
+
 .case-page {
   background: #020817;
   color: #f9fafb;
@@ -3260,4 +3265,42 @@ body.is-touch #about .about-interests li::after {
   padding-left: 1.25rem;
   margin: 0.5rem 0 0;
   line-height: 1.7;
+}
+
+/* WRITING: force top-crop so covers/titles/faces show */
+#writing .project-images {
+  height: 260px;              /* keep consistent card heights */
+  overflow: hidden;
+}
+
+#writing .project-images img,
+#writing img.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;
+  object-position: top center !important; /* this is the key */
+  display: block;
+}
+
+#writing .project-images {
+  height: 280px;
+}
+
+/* Writing should behave like Work: full width gradient band */
+#writing {
+  padding: 60px 20px;
+  text-align: center;
+
+  width: 100vw;
+  max-width: 100%;
+
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #fbe4e9 20%,
+    #fbe4e9 80%,
+    transparent 100%
+  );
+
+  transition: background 1s ease-in-out;
 }
