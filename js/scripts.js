@@ -280,39 +280,56 @@ document.addEventListener("DOMContentLoaded", () => {
   start();
 })();
 
-// Detect touch for wording
-const isTouch = window.matchMedia?.('(hover: none)').matches || 'ontouchstart' in window;
-document.body.classList.toggle('is-touch', !!isTouch);
+document.addEventListener("DOMContentLoaded", () => {
+  const isTouch =
+    window.matchMedia?.("(hover: none)").matches || "ontouchstart" in window;
 
-// Show coin hints right away, then hide on first interaction or timeout
-const coinsList = document.querySelector('#about .about-interests');
-if (coinsList) {
-  coinsList.classList.add('hint-coins');
+  document.body.classList.toggle("is-touch", !!isTouch);
 
-  const hideHints = () => coinsList.classList.remove('hint-coins');
-  // Hide after the first click/tap/keyboard action anywhere in the list
-  ['click', 'keydown', 'touchstart'].forEach(ev =>
-    coinsList.addEventListener(ev, hideHints, { once: true, passive: true })
-  );
-  // Or auto-hide after 6 seconds
-  setTimeout(hideHints, 6000);
-}
+  const coinsList = document.querySelector("#about .about-interests");
+  if (coinsList && !coinsList.dataset.hintsWired) {
+    coinsList.dataset.hintsWired = "true";
+    coinsList.classList.add("hint-coins");
 
-// Make coins keyboard-accessible + toggle flip state + ARIA
-document.querySelectorAll('#about .about-interests li').forEach((li) => {
-  li.setAttribute('role', 'button');
-  li.setAttribute('tabindex', '0');
-  li.setAttribute('aria-pressed', 'false');
-  if (!li.getAttribute('aria-label')) {
-    const frontText = li.querySelector('.flip-front')?.innerText?.trim().replace(/\s+/g, ' ') || 'Interest';
-    li.setAttribute('aria-label', `${frontText} — ${isTouch ? 'tap' : 'click'} to flip`);
+    const hideHints = () => coinsList.classList.remove("hint-coins");
+    ["click", "keydown", "touchstart"].forEach((ev) => {
+      coinsList.addEventListener(ev, hideHints, { once: true, passive: true });
+    });
+    setTimeout(hideHints, 6000);
   }
-  const toggle = () => {
-    const on = li.classList.toggle('flipped');
-    li.setAttribute('aria-pressed', on ? 'true' : 'false');
-  };
-  li.addEventListener('click', toggle);
-  li.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+
+  document.querySelectorAll("#about .about-interests li").forEach((li) => {
+    if (li.dataset.coinWired) return;
+    li.dataset.coinWired = "true";
+
+    li.setAttribute("role", "button");
+    li.setAttribute("tabindex", "0");
+    li.setAttribute(
+      "aria-pressed",
+      li.classList.contains("flipped") ? "true" : "false"
+    );
+
+    if (!li.getAttribute("aria-label")) {
+      const frontText =
+        li.querySelector(".flip-front")?.innerText?.trim().replace(/\s+/g, " ") ||
+        "Interest";
+      li.setAttribute(
+        "aria-label",
+        `${frontText} — ${isTouch ? "tap" : "click"} to flip`
+      );
+    }
+
+    const toggle = () => {
+      const on = li.classList.toggle("flipped");
+      li.setAttribute("aria-pressed", on ? "true" : "false");
+    };
+
+    li.addEventListener("click", toggle);
+    li.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggle();
+      }
+    });
   });
 });
