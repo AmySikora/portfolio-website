@@ -3333,4 +3333,925 @@ body.is-touch #about .about-interests li::after {
 .writing-intro {
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(6px);
-  border-radius:
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+/* ===== Compact one-page layout fixes ===== */
+
+/* Tighten the home section */
+#home {
+  padding: 28px 20px 18px;
+}
+
+/* Remove extra space under the intro area */
+.home-container {
+  max-width: 1000px;
+}
+
+.home-title {
+  margin: 0 0 24px;
+}
+
+/* Make the intro feel like one balanced row */
+.home-content {
+  display: grid;
+  grid-template-columns: 1fr 180px 1.25fr;
+  align-items: center;
+  gap: 28px;
+  max-width: 900px;
+}
+
+/* Pull the photo into the row instead of letting it float awkwardly */
+.home-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-photo {
+  width: 170px;
+  height: 170px;
+  margin-top: 0;
+  animation: none;
+}
+
+/* Make text blocks feel tighter */
+.home-short,
+.home-long {
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+
+.home-name {
+  margin: 0 0 14px;
+}
+
+/* Tighten icon spacing */
+.home-icons {
+  margin-top: 8px;
+}
+
+/* Tighten the highlights strip */
+.highlights {
+  padding: 8px 0;
+  margin: 0;
+}
+
+/* Kill the giant gap before About */
+#about {
+  padding: 24px 20px 32px;
+}
+
+#about h1 {
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+/* Bring the About content upward */
+.career-journey {
+  margin-top: 10px;
+  gap: 28px;
+}
+
+/* Remove extra paragraph spacing */
+.career-text p {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+/* Optional: make the About heading less lonely */
+#about .career-text h2 {
+  margin-top: 0;
+}
+
+/* Mobile: stack cleanly */
+@media (max-width: 768px) {
+  .home-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .home-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .home-right {
+    text-align: center;
+  }
+
+  #about {
+    padding-top: 20px;
+  }
+}
+
+/* ===== Tighten spacing BETWEEN sections ===== */
+
+/* Reduce vertical spacing between all sections */
+section {
+  margin-bottom: 20px;   /* was effectively much larger */
+}
+
+/* Remove extra top spacing stacking */
+section + section {
+  margin-top: 0;
+}
+
+/* Tighten section headers */
+section h1 {
+  margin-bottom: 16px;   /* was ~30-40px */
+}
+
+/* Subheadings like "Awards & Recognition" */
+.subtle {
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+
+/* Skills grid spacing */
+.skills-section {
+  padding-bottom: 20px;
+}
+
+.skills-grid {
+  margin-top: 10px;
+  gap: 20px;   /* was bigger */
+}
+
+/* Highlights section spacing */
+#recognition {
+  padding-top: 20px;
+}
+
+/* Project / card grids (used in highlights + work) */
+.projects,
+.awards-grid,
+.higher-ed-grid {
+  margin-top: 16px;
+  gap: 20px;
+}
+
+/* Remove sneaky extra space from dividers */
+.section-divider {
+  margin: 10px 0;
+}
+
+/* ===== Final spacing + layout cleanup ===== */
+
+/* Pull sections closer together */
+section,
+section[id],
+#about,
+#skills,
+#recognition,
+#work,
+#writing,
+#contact {
+  padding-top: 28px !important;
+  padding-bottom: 28px !important;
+}
+
+/* Remove big visual gaps between section content */
+.skills-section,
+.projects,
+.awards-grid,
+.higher-ed-grid {
+  margin-top: 12px !important;
+  margin-bottom: 12px !important;
+}
+
+/* Tighten headings */
+h1,
+h2,
+.skills-title,
+.subtle {
+  margin-top: 8px !important;
+  margin-bottom: 16px !important;
+}
+
+/* Tighten divider spacing */
+.section-divider {
+  margin: 10px auto !important;
+}
+
+/* ===== Skills: make it 3 and 3 instead of 4 and 2 ===== */
+
+.skills-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+  max-width: 760px !important;
+  gap: 18px !important;
+  justify-items: center;
+  margin: 0 auto !important;
+}
+
+.skill-card {
+  width: 130px !important;
+  min-height: 120px;
+  padding: 16px 12px !important;
+}
+
+/* Mobile skills */
+@media (max-width: 700px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    max-width: 420px !important;
+  }
+}
+
+/* ===== Higher-Ed section cleanup ===== */
+
+.higher-ed-grid {
+  align-items: stretch;
+  gap: 18px !important;
+  padding: 14px !important;
+}
+
+/* Make presentation cards less giant */
+.presentation-card {
+  min-height: auto !important;
+  padding: 18px !important;
+}
+
+.presentation-card p,
+.presentation-card li {
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+/* ===== Writing section: smaller cards, cleaner row ===== */
+
+#writing .projects {
+  grid-template-columns: repeat(3, 1fr) !important;
+  max-width: 1150px !important;
+  gap: 22px !important;
+  padding: 20px 12px !important;
+}
+
+#writing .project-card {
+  padding: 20px 16px !important;
+}
+
+#writing .project-image {
+  height: 180px !important;
+  object-fit: cover;
+}
+
+#writing .project-card h2 {
+  font-size: 1.15rem !important;
+  margin: 14px 0 8px !important;
+}
+
+#writing .project-card p {
+  font-size: 0.95rem !important;
+  line-height: 1.45;
+}
+
+/* Writing cards stack on smaller screens */
+@media (max-width: 900px) {
+  #writing .projects {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 620px) {
+  #writing .projects {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ===== Compact Higher-Ed Innovation Showcase ===== */
+
+.higher-ed-showcase {
+  max-width: 1100px;
+  margin: 12px auto 28px;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 18px;
+  align-items: stretch;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 18px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* Featured card */
+.higher-ed-feature {
+  padding: 20px 18px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.higher-ed-feature .project-image {
+  height: 240px !important;
+  object-fit: cover;
+  object-position: center;
+}
+
+.higher-ed-feature h2 {
+  font-size: 1.35rem !important;
+  margin: 16px 0 10px !important;
+}
+
+.higher-ed-feature p {
+  font-size: 0.95rem !important;
+  line-height: 1.4 !important;
+  margin: 0 0 12px !important;
+}
+
+.higher-ed-feature .tech-stack {
+  margin: 8px 0 14px !important;
+}
+
+.higher-ed-feature .action-buttons {
+  margin-top: 4px !important;
+}
+
+/* Right-side presentation stack */
+.higher-ed-support {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.higher-ed-mini-card {
+  background: #fff;
+  color: var(--dark-grey);
+  border-radius: 16px;
+  padding: 18px 20px;
+  text-align: left;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.10);
+}
+
+.higher-ed-mini-card .card-icon {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.higher-ed-mini-card h3 {
+  color: var(--dark-grey);
+  font-size: 1.15rem;
+  margin: 6px 0 10px;
+}
+
+.higher-ed-mini-card p {
+  font-size: 0.95rem;
+  line-height: 1.35;
+  margin: 0 0 10px;
+}
+
+.higher-ed-mini-card .mini-list {
+  margin: 8px 0 10px 18px;
+  padding: 0;
+}
+
+.higher-ed-mini-card .mini-list li {
+  font-size: 0.95rem;
+  line-height: 1.35;
+  margin-bottom: 2px;
+}
+
+.higher-ed-mini-card .inline-link {
+  color: var(--secondary-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.higher-ed-mini-card .inline-link:hover {
+  text-decoration: underline;
+}
+
+/* Keep the section from breathing too dramatically */
+#work .subtle {
+  margin-bottom: 12px !important;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .higher-ed-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .higher-ed-feature .project-image {
+    height: 220px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .higher-ed-showcase {
+    padding: 10px;
+    gap: 14px;
+  }
+
+  .higher-ed-feature,
+  .higher-ed-mini-card {
+    padding: 16px !important;
+  }
+
+  .higher-ed-feature .project-image {
+    height: 190px !important;
+  }
+}
+
+/* ===== Writing section: polished 2-column layout ===== */
+
+#writing .projects {
+  grid-template-columns: repeat(2, minmax(280px, 1fr)) !important;
+  max-width: 1050px !important;
+  gap: 32px !important;
+  padding: 24px 20px !important;
+  align-items: stretch;
+}
+
+#writing .project-card {
+  padding: 28px 22px !important;
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#writing .project-image {
+  width: 100%;
+  height: 280px !important;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#writing .project-card h2 {
+  font-size: 1.35rem !important;
+  line-height: 1.25;
+  margin: 24px 0 14px !important;
+}
+
+#writing .project-meta {
+  font-size: 0.95rem !important;
+  line-height: 1.4;
+  margin-bottom: 16px !important;
+}
+
+#writing .project-card p {
+  font-size: 1rem !important;
+  line-height: 1.45 !important;
+}
+
+#writing .project-buttons {
+  margin-top: 18px;
+}
+
+/* Keep magazine cover from looking weird */
+#writing .project-card:nth-child(4) .project-image {
+  object-fit: cover !important;
+  object-position: top center;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  #writing .projects {
+    grid-template-columns: 1fr !important;
+    max-width: 560px !important;
+  }
+
+  #writing .project-card {
+    min-height: auto;
+  }
+}
+
+/* Phone */
+@media (max-width: 560px) {
+  #writing .projects {
+    padding: 18px 12px !important;
+  }
+
+  #writing .project-image {
+    height: 220px !important;
+  }
+}
+
+/* ===== What I Do / Experience Snapshot ===== */
+
+#what-i-do.what-i-do {
+  width: 100vw;
+  max-width: 100%;
+  padding: 34px 20px !important;
+  margin: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 249, 230, 0.85) 20%,
+    rgba(232, 244, 247, 0.85) 100%
+  );
+  text-align: center;
+}
+
+.what-wrap {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.what-wrap h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin: 0 0 22px !important;
+}
+
+.what-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 34px;
+}
+
+.what-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px 20px;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+  border-top: 5px solid var(--primary-color);
+}
+
+.what-icon {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.what-card h3 {
+  color: var(--third-color);
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+}
+
+.what-card p {
+  color: var(--dark-grey);
+  font-size: 0.98rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.experience-snapshot {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.experience-snapshot h2 {
+  color: var(--primary-color);
+  margin-bottom: 18px !important;
+  text-align: center;
+}
+
+.snapshot-feature {
+  background: rgba(255, 255, 255, 0.95);
+  border-left: 6px solid var(--primary-color);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 18px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.snapshot-feature span {
+  display: block;
+  color: var(--primary-color);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.snapshot-feature p {
+  color: var(--dark-grey);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.snapshot-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-left: 5px solid var(--third-color);
+  border-radius: 14px;
+  padding: 20px 18px;
+  text-align: left;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.07);
+}
+
+.snapshot-card span {
+  display: block;
+  color: var(--primary-color);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+}
+
+.snapshot-card p {
+  color: var(--dark-grey);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .snapshot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .snapshot-card {
+    text-align: center;
+  }
+}
+/* ===== Inclusive Student Services ===== */
+
+.inclusive-work {
+  width: 100vw;
+  max-width: 100%;
+  padding: 34px 20px !important;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 249, 230, 0.85) 20%,
+    rgba(232, 244, 247, 0.85) 100%
+  );
+}
+
+.inclusive-wrap {
+  max-width: 850px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.78);
+  border-left: 6px solid var(--primary-color);
+  border-radius: 18px;
+  padding: 28px 32px;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.inclusive-wrap h2 {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.inclusive-wrap p {
+  color: var(--dark-grey);
+  font-size: 1rem;
+  line-height: 1.55;
+  margin: 0 0 14px;
+}
+
+.inclusive-wrap p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .inclusive-wrap {
+    padding: 22px 20px;
+  }
+
+  .inclusive-wrap h2 {
+    text-align: center;
+  }
+}
+
+.snapshot-card.highlight {
+  grid-column: span 2;
+  font-size: 1.05rem;
+  background: #ffffff;
+}
+
+.snapshot-card {
+  display: flex;
+  align-items: center;
+  min-height: 70px;
+}
+
+.snapshot-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.snapshot-card.highlight {
+  grid-column: 1 / -1;
+  padding: 16px 20px;   /* smaller */
+  font-size: 1rem;      /* not shouting */
+  font-weight: 600;
+  min-height: auto;     /* remove blocky feel */
+}
+
+.snapshot-card {
+  display: flex;
+  align-items: center;
+  min-height: 72px;        /* consistent height */
+  padding: 16px 18px;
+  line-height: 1.35;
+}
+
+.snapshot-card {
+  border-left: 4px solid var(--third-color);
+}
+
+.snapshot-card.highlight {
+  border-left: 6px solid var(--primary-color);
+}
+
+.snapshot-card strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  margin-bottom: 2px;
+}
+
+.snapshot-card.highlight {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 22px 24px;
+}
+
+.snapshot-card.highlight {
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.big-number {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 4px;
+}
+
+.snapshot-card.highlight {
+  background: #ffffff;
+  border-left: 6px solid var(--primary-color);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.experience-snapshot {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.experience-snapshot h2 {
+  color: var(--primary-color);
+  margin-bottom: 18px !important;
+  text-align: center;
+}
+
+.snapshot-feature {
+  background: rgba(255, 255, 255, 0.95);
+  border-left: 6px solid var(--primary-color);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 18px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.snapshot-feature span {
+  display: block;
+  color: var(--primary-color);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.snapshot-feature p {
+  color: var(--dark-grey);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.snapshot-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-left: 5px solid var(--third-color);
+  border-radius: 14px;
+  padding: 20px 18px;
+  text-align: left;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.07);
+}
+
+.snapshot-card span {
+  display: block;
+  color: var(--primary-color);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+}
+
+.snapshot-card p {
+  color: var(--dark-grey);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .snapshot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .snapshot-card {
+    text-align: center;
+  }
+}
+
+.snapshot-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-left: 5px solid var(--third-color);
+  border-radius: 14px;
+  padding: 18px 18px;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.07);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.snapshot-card p {
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.snapshot-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  min-height: 88px;
+  padding: 20px 22px;
+}
+
+.snapshot-card span {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.snapshot-card p {
+  margin: 0 auto;
+  max-width: 290px;
+  text-align: center;
+  line-height: 1.35;
+}
+
+.snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 18px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.snapshot-feature {
+  max-width: 760px;
+  margin: 0 auto 18px;
+}
+
+#work .project-card h2 {
+  color: #ffffff !important;
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-align: center;
+  margin: 22px 0 14px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+#writing .project-card h2 {
+  color: #ffffff !important;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin: 20px 0 12px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
