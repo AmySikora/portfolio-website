@@ -1348,3 +1348,36 @@ header {
     scroll-behavior: auto;
   }
 }
+
+/* Force Experience Snapshot into 2x2 layout */
+.experience-snapshot {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.snapshot-feature {
+  max-width: 680px;
+  margin: 0 auto 20px;
+}
+
+.snapshot-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(260px, 1fr)) !important;
+  gap: 18px !important;
+  max-width: 760px !important;
+  margin: 0 auto !important;
+}
+
+.snapshot-card {
+  width: auto !important;
+  min-height: 115px;
+  padding: 20px 22px;
+}
+
+/* Only stack on actual phone screens */
+@media (max-width: 560px) {
+  .snapshot-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 520px !important;
+  }
+}
