@@ -3828,3 +3828,160 @@ h2,
     height: 220px !important;
   }
 }
+
+/* ===== What I Do / Experience Snapshot ===== */
+
+#what-i-do.what-i-do {
+  width: 100vw;
+  max-width: 100%;
+  padding: 34px 20px !important;
+  margin: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 249, 230, 0.85) 20%,
+    rgba(232, 244, 247, 0.85) 100%
+  );
+  text-align: center;
+}
+
+.what-wrap {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.what-wrap h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin: 0 0 22px !important;
+}
+
+.what-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 34px;
+}
+
+.what-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px 20px;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+  border-top: 5px solid var(--primary-color);
+}
+
+.what-icon {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.what-card h3 {
+  color: var(--third-color);
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+}
+
+.what-card p {
+  color: var(--dark-grey);
+  font-size: 0.98rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.experience-snapshot {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.experience-snapshot h2 {
+  color: var(--primary-color);
+  margin-bottom: 18px !important;
+}
+
+.snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.snapshot-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-left: 5px solid var(--third-color);
+  border-radius: 12px;
+  padding: 14px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--dark-grey);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .what-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .snapshot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .what-card,
+  .snapshot-card {
+    text-align: center;
+  }
+}
+
+/* ===== Inclusive Student Services ===== */
+
+.inclusive-work {
+  width: 100vw;
+  max-width: 100%;
+  padding: 34px 20px !important;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 249, 230, 0.85) 20%,
+    rgba(232, 244, 247, 0.85) 100%
+  );
+}
+
+.inclusive-wrap {
+  max-width: 850px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.78);
+  border-left: 6px solid var(--primary-color);
+  border-radius: 18px;
+  padding: 28px 32px;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.inclusive-wrap h2 {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.inclusive-wrap p {
+  color: var(--dark-grey);
+  font-size: 1rem;
+  line-height: 1.55;
+  margin: 0 0 14px;
+}
+
+.inclusive-wrap p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .inclusive-wrap {
+    padding: 22px 20px;
+  }
+
+  .inclusive-wrap h2 {
+    text-align: center;
+  }
+}
