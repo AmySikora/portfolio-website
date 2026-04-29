@@ -331,6 +331,18 @@ header {
   transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
+@media (max-width: 1024px) {
+  .home-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-photo {
+    margin: 0 auto;
+  }
+}
+
 .home-icons a:hover {
   transform: translateY(-3px) scale(1.05);
   background: var(--link-hover-color);
