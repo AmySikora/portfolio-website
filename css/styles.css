@@ -3304,3 +3304,33 @@ body.is-touch #about .about-interests li::after {
 
   transition: background 1s ease-in-out;
 }
+
+.writing-intro {
+  max-width: 700px;
+  margin: 0 auto 2.5rem auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  padding: 0 1rem;
+}
+
+#writing-title {
+  margin-bottom: 0.5rem;
+}
+
+#writing-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 0.5rem auto 1.5rem;
+  background: linear-gradient(90deg, #ff7a18, #ffb347); /* adjust to your theme */
+  border-radius: 2px;
+}
+
+.writing-intro {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
