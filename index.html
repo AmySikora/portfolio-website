@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D7ER873MEE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D7ER873MEE');
-</script>
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D7ER873MEE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-D7ER873MEE");
+  </script>
 
   <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
   <title>Amy Sikora | Portfolio</title>
 
-  <!-- SEO / Social -->
-  <meta name="description" content="Amy Sikora — web development, higher ed systems work, and clear writing. Accessible, practical, and built to last." />
+  <meta
+    name="description"
+    content="Amy Sikora — higher education systems, workflow improvement, student services, web development, and clear writing."
+  />
+
   <meta property="og:title" content="Amy Sikora | Portfolio" />
-  <meta property="og:description" content="Web development, higher ed systems work, and clear writing. Accessible, practical, and built to last." />
+  <meta
+    property="og:description"
+    content="Higher education systems, workflow improvement, student services, web development, and clear writing."
+  />
   <meta property="og:image" content="img/my-image.JPG" />
   <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Favicon -->
   <link rel="shortcut icon" href="./img/RainbowFab.png" />
 
-  <!-- Fonts (preconnect + async load) -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     rel="preload"
@@ -44,17 +44,19 @@
     />
   </noscript>
 
-  <!-- Normalizer / Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
 
-  <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
-
-  <!-- Header with navigation -->
   <header>
     <a href="#home" class="logo-link" aria-label="Home">
       <div class="logo-container">
@@ -62,7 +64,6 @@
       </div>
     </a>
 
-    <!-- Hamburger menu for smaller screens -->
     <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span class="icon-hamburger">☰</span>
       <span class="icon-close" aria-hidden="true">✖</span>
@@ -71,43 +72,56 @@
     <nav>
       <ul class="navigation-list">
         <li><a href="#home" class="navigation-list__item">Home</a></li>
-        <li><a href="#about" class="navigation-list__item">About Me</a></li>
+        <li><a href="#about" class="navigation-list__item">About</a></li>
         <li><a href="#skills" class="navigation-list__item">Skills</a></li>
         <li><a href="#recognition" class="navigation-list__item">Highlights</a></li>
         <li><a href="#work" class="navigation-list__item">Work</a></li>
+        <li><a href="#writing" class="navigation-list__item">Writing</a></li>
         <li><a href="#contact" class="navigation-list__item">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main">
-    <!-- Home Section -->
+    <!-- Home -->
     <section id="home" aria-labelledby="home-title">
       <div class="home-container">
         <h1 id="home-title" class="home-title">Hello!</h1>
 
         <div class="home-content">
-          <!-- Left: name, intro, icons -->
           <div class="home-left">
             <h2 class="home-name">Amy Sikora</h2>
             <p class="home-short">
-              I build clear, accessible digital tools that make complex systems easier to use.
-I’ve led award-winning systems work in higher education and create websites, apps, and content that turns complicated ideas into practical solutions.
+              I help people make sense of complicated systems. My background is in higher education leadership,
+              student services, records, and workflow improvement. I also build clear, accessible digital tools
+              that make everyday processes easier to use.
             </p>
+
             <div class="home-icons">
-              <a href="https://www.linkedin.com/in/amy-sikora-freelance/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <a
+                href="https://www.linkedin.com/in/amy-sikora-freelance/"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+              >
                 <i class="fab fa-linkedin-in" aria-hidden="true"></i>
               </a>
-              <a href="https://github.com/AmySikora" target="_blank" rel="noopener" aria-label="GitHub">
+
+              <a
+                href="https://github.com/AmySikora"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+              >
                 <i class="fab fa-github" aria-hidden="true"></i>
               </a>
+
               <a href="assets/AmySikoraResume2026.pdf" download aria-label="Download résumé">
                 <i class="fas fa-download" aria-hidden="true"></i>
               </a>
             </div>
           </div>
 
-          <!-- Center: Photo -->
           <div class="home-center">
             <img
               src="img/my-image.JPG"
@@ -120,247 +134,156 @@ I’ve led award-winning systems work in higher education and create websites, a
             />
           </div>
 
-          <!-- Right: longer paragraph -->
           <div class="home-right">
             <p class="home-long">
-              I’m based in Albany, OR, and I love turning messy ideas into clean, working results. My background includes higher ed leadership,
-              system projects, and a lot of writing. I build web apps, websites, and early-stage digital products,
+              I’m based in Albany, Oregon, and I’ve spent more than 20 years working in higher education.
+              I’ve led registrar operations, enrollment projects, student records work, and system improvements
+              that helped students and staff get things done faster.
               <br /><br />
-              I’m at my best when I’m improving a flow, simplifying a process, or translating something complicated into something that just makes sense.
+              I’m at my best when I’m untangling a messy process, improving a service, or turning something
+              confusing into something clear and useful.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Highlights Strip (credibility early) -->
+    <!-- Quick Highlights -->
     <section id="highlights" class="highlights" aria-label="Quick highlights">
       <div class="highlights-line">
-        <span>🏆 Laserfiche “Run Smarter” Award</span>
-        <span>🎤 Laserfiche Empower Conference – Presenter</span>
-        <span>🎤 University Business Web Seminar – Presenter</span>
-        <span>📊 20 years of Higher Education Leadership</span>
+        <span>🏆 Laserfiche Run Smarter Award</span>
+        <span>🎤 Laserfiche Empower Conference Presenter</span>
+        <span>📊 20+ years in higher education</span>
+        <span>🧭 Student services, records, and systems</span>
       </div>
-    </section>    
+    </section>
 
-    <!-- About Section -->
+    <!-- About -->
     <section id="about" aria-labelledby="about-title">
       <h1 id="about-title">About Me</h1>
-      <h2>Things I Enjoy Doing</h2>
 
-      <div class="about-content">
-        <!-- Interest Circles -->
-        <ul class="about-interests">
-          <li>
-            <div class="flip-inner">
-              <div class="flip-front"><span>Frontend<br />Development</span></div>
-              <div class="flip-back">I love building clean, responsive screens.</div>
-            </div>
-          </li>
-          <li>
-            <div class="flip-inner">
-              <div class="flip-front"><span>Backend<br />Development</span></div>
-              <div class="flip-back">I enjoy working with data and making it behave.</div>
-            </div>
-          </li>
-          <li>
-            <div class="flip-inner">
-              <div class="flip-front"><span>Running</span></div>
-              <div class="flip-back">I run 5Ks and love destination races!</div>
-            </div>
-          </li>
-          <li>
-            <div class="flip-inner">
-              <div class="flip-front"><span>Live Music</span></div>
-              <div class="flip-back">Fun fact: I used to be in a punk band!</div>
-            </div>
-          </li>
-          <li>
-            <div class="flip-inner">
-              <div class="flip-front"><span>Cooking</span></div>
-              <div class="flip-back">I love cooking, so I made a recipe app!</div>
-            </div>
-          </li>
-        </ul>
-
-        <!-- Phoenix Flip -->
-        <div class="bird-section">
-          <div class="bird-flip-container">
-            <div class="bird-flip-inner">
-              <!-- Front -->
-              <div class="bird-front">
-                <div class="bird-wrapper">
-                  <div class="flame-flicker" aria-hidden="true"></div>
-                  <img src="img/PhoenixBird.png" class="bird-image" alt="Phoenix bird in a desert landscape" loading="lazy" decoding="async" width="240" height="240" />
-                </div>
-              </div>
-              <!-- Back -->
-              <div class="bird-back">
-                <div class="bird-wrapper">
-                  <img src="img/fire-egg.png" class="bird-image" alt="Fire egg" loading="lazy" decoding="async" width="240" height="240" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Journey Text -->
-        <div class="journey">
-          <h2>My Work Story (With a Phoenix)</h2>
-          <p>I grew up in Phoenix, Arizona, a city named after the mythological bird that burns, resets, and rises again.</p>
-          <p>That theme fits my work life perfectly. I’ve built a career around improving services, fixing messy processes, and creating better tools, whether that’s a workflow, a web app, or a piece of writing that makes a confusing topic make sense.</p>
-          <p>The phoenix is a reminder that a fresh start is not scary. It’s fuel.</p>
-        </div>
-      </div>
-
-      <!-- Past Career Section -->
       <div class="career-journey">
         <div class="career-text">
           <h2>What I Bring to the Table</h2>
-          <p>Higher ed was my training ground for real-world problem solving. I led service projects, rebuilt workflows, and helped turn paper-heavy processes into clean online steps that actually moved.</p>
-          <p>Along the way, I learned systems like Banner, DegreeWorks, and Laserfiche, wrote guides and training materials, and became the go-to for “can we make this easier?” (Spoiler: usually yes.)</p>
-          <p>I bring that same mindset to web development and my writing. I create clear, useful, and functional products. If it can also be a little fun, even better.</p>
+
+          <p>
+            Higher education taught me how to solve real problems for real people. I’ve worked with students,
+            faculty, staff, and leadership to improve services, clean up confusing processes, and make systems
+            easier to use.
+          </p>
+
+          <p>
+            My work has included registrar operations, transfer credit, student records, international programs,
+            degree audit, Banner, DegreeWorks, Laserfiche, training, documentation, and workflow redesign.
+            I’ve also helped teams move paper-heavy steps into cleaner online processes that saved time and
+            reduced frustration.
+          </p>
+
+          <p>
+            More recently, I added web development to that same toolkit. I build websites and apps with a focus
+            on clear content, accessibility, and practical design. For me, the goal is not technology for its
+            own sake. The goal is making something easier for the person using it.
+          </p>
         </div>
+
         <div class="career-journey-image slide-in">
-          <img src="img/formscollege.png" alt="Students working with technology" loading="lazy" decoding="async" width="380" height="285" />
+          <img
+            src="img/formscollege.png"
+            alt="Students working with technology"
+            loading="lazy"
+            decoding="async"
+            width="380"
+            height="285"
+          />
         </div>
       </div>
     </section>
 
-    <!-- Divider -->
     <div class="section-divider" aria-hidden="true"></div>
 
-    <!-- Skills Section -->
+    <!-- Skills -->
     <section id="skills" class="skills-section" aria-labelledby="skills-title">
-      <h2 id="skills-title" class="skills-title">Web Development Skills</h2>
-      <div class="skills-grid no-rings">
-        <button type="button" class="skill-card modal-trigger" data-modal-target="#modal-html"aria-haspopup="dialog"
-        aria-controls="modal-html">
-          <img src="img/tech-badges/html5.jpeg" alt="HTML" class="skill-icon" width="36" height="36" loading="lazy" decoding="async" />
-          <p>HTML</p>
-        </button>
-        <button type="button" class="skill-card modal-trigger" data-modal-target="#modal-css" aria-haspopup="dialog"
-        aria-controls="modal-html">
-          <img src="img/tech-badges/css3.jpeg" alt="CSS" class="skill-icon" width="36" height="36" loading="lazy" decoding="async" />
-          <p>CSS</p>
-        </button>
-        <button type="button" class="skill-card modal-trigger" data-modal-target="#modal-js" aria-haspopup="dialog"
-        aria-controls="modal-html">
-          <img src="img/tech-badges/javascript.png" alt="JavaScript" class="skill-icon" width="36" height="36" loading="lazy" decoding="async" />
-          <p>JavaScript</p>
-        </button>
-        <button type="button" class="skill-card modal-trigger" data-modal-target="#modal-react" aria-haspopup="dialog"
-        aria-controls="modal-html">
-          <img src="img/tech-badges/react.png" alt="React" class="skill-icon" width="36" height="36" loading="lazy" decoding="async" />
-          <p>React</p>
-        </button>
-        <button type="button" class="skill-card modal-trigger" data-modal-target="#modal-angular" aria-haspopup="dialog"
-        aria-controls="modal-html">
-          <img src="img/tech-badges/angular.jpeg" alt="Angular" class="skill-icon" width="36" height="36" loading="lazy" decoding="async" />
-          <p>Angular</p>
-        </button>
-        <button type="button" class="skill-card modal-trigger" data-modal-target="#modal-python" aria-haspopup="dialog"
-        aria-controls="modal-html">
-          <img src="img/tech-badges/python.png" alt="Python" class="skill-icon" width="36" height="36" loading="lazy" decoding="async" />
-          <p>Python</p>
-        </button>
-        <button type="button" class="skill-card modal-trigger" data-modal-target="#modal-django" aria-haspopup="dialog"
-        aria-controls="modal-html">
-          <img src="img/tech-badges/django.png" alt="Django" class="skill-icon" width="36" height="36" loading="lazy" decoding="async" />
-          <p>Django</p>
-        </button>
-        <button type="button" class="skill-card modal-trigger" data-modal-target="#modal-sql" aria-haspopup="dialog"
-        aria-controls="modal-html">
-          <img src="img/tech-badges/sql.png" alt="SQL" class="skill-icon" width="36" height="36" loading="lazy" decoding="async" />
-          <p>SQL</p>
-        </button>
-      </div>
-    </section>
+      <h2 id="skills-title" class="skills-title">Skills</h2>
 
-    <!-- Professional Strengths Section -->
-    <section id="skills-pro" class="skills-section" aria-labelledby="pro-title">
-      <h2 id="pro-title" class="skills-title">Professional Strengths</h2>
       <div class="skills-grid no-rings">
-        <button type="button" class="skill-card modal-trigger" data-modal-target="#modal-automation" aria-haspopup="dialog"
-        aria-controls="modal-html">
-          <img src="img/tech-badges/automation.png" alt="Process automation" class="skill-icon" width="36" height="36" loading="lazy" decoding="async" />
+        <button type="button" class="skill-card modal-trigger" data-modal-target="#modal-sis">
+          <img src="img/tech-badges/sis.jpeg" alt="" class="skill-icon" width="36" height="36" />
+          <p>Student Information Systems</p>
+        </button>
+
+        <button type="button" class="skill-card modal-trigger" data-modal-target="#modal-workflow">
+          <img src="img/tech-badges/workflow.png" alt="" class="skill-icon" width="36" height="36" />
+          <p>Workflow Improvement</p>
+        </button>
+
+        <button type="button" class="skill-card modal-trigger" data-modal-target="#modal-automation">
+          <img src="img/tech-badges/automation.png" alt="" class="skill-icon" width="36" height="36" />
           <p>Process Automation</p>
         </button>
-        <button type="button" class="skill-card modal-trigger" data-modal-target="#modal-workflow" aria-haspopup="dialog"
-        aria-controls="modal-html">
-          <img src="img/tech-badges/workflow.png" alt="Workflow optimization" class="skill-icon" width="36" height="36" loading="lazy" decoding="async" />
-          <p>Workflow Optimization</p>
+
+        <button type="button" class="skill-card modal-trigger" data-modal-target="#modal-docs">
+          <img src="img/tech-badges/documentation.png" alt="" class="skill-icon" width="36" height="36" />
+          <p>Documentation</p>
         </button>
-        <button type="button" class="skill-card modal-trigger" data-modal-target="#modal-docs" aria-haspopup="dialog"
-        aria-controls="modal-html">
-          <img src="img/tech-badges/documentation.png" alt="Documentation" class="skill-icon" width="36" height="36" loading="lazy" decoding="async" />
-          <p>Technical Documentation</p>
+
+        <button type="button" class="skill-card modal-trigger" data-modal-target="#modal-training">
+          <img src="img/tech-badges/management.png" alt="" class="skill-icon" width="36" height="36" />
+          <p>Training & Support</p>
         </button>
-        <button type="button" class="skill-card modal-trigger" data-modal-target="#modal-sis" aria-haspopup="dialog"
-        aria-controls="modal-html">
-          <img src="img/tech-badges/sis.jpeg" alt="Student information systems" class="skill-icon" width="36" height="36" loading="lazy" decoding="async" />
-          <p>Student Info Systems</p>
-        </button>
-        <button type="button" class="skill-card modal-trigger" data-modal-target="#modal-training" aria-haspopup="dialog"
-        aria-controls="modal-html">
-          <img src="img/tech-badges/management.png" alt="Training" class="skill-icon" width="36" height="36" loading="lazy" decoding="async" />
-          <p>Training &amp; Support</p>
-        </button>
-        <button type="button" class="skill-card modal-trigger" data-modal-target="#modal-collab" aria-haspopup="dialog"
-        aria-controls="modal-html">
-          <img src="img/tech-badges/Collaboration.png" alt="Collaboration" class="skill-icon" width="36" height="36" loading="lazy" decoding="async" />
-          <p>Cross-Functional Collaboration</p>
-        </button>
-        <button type="button" class="skill-card modal-trigger" data-modal-target="#modal-leadership" aria-haspopup="dialog"
-        aria-controls="modal-html">
-          <img src="img/tech-badges/management.png" alt="Leadership" class="skill-icon" width="36" height="36" loading="lazy" decoding="async" />
-          <p>Project Leadership</p>
-        </button>
-        <button type="button" class="skill-card modal-trigger" data-modal-target="#modal-seo" aria-haspopup="dialog"
-        aria-controls="modal-html">
-          <img src="img/tech-badges/seo.png" alt="SEO" class="skill-icon" width="36" height="36" loading="lazy" decoding="async" />
-          <p>SEO &amp; Web Content Writing</p>
+
+        <button type="button" class="skill-card modal-trigger" data-modal-target="#modal-web">
+          <img src="img/tech-badges/javascript.png" alt="" class="skill-icon" width="36" height="36" />
+          <p>Web Development</p>
         </button>
       </div>
     </section>
 
-    <!-- Divider -->
     <div class="section-divider" aria-hidden="true"></div>
 
     <!-- Recognition -->
     <section id="recognition" aria-labelledby="recog-title">
       <h1 id="recog-title">Highlights</h1>
 
-      <h2 class="subtle">Awards &amp; Institutional Recognition</h2>
+      <h2 class="subtle">Awards & Recognition</h2>
+
       <div class="awards-grid">
         <article class="award-card">
           <div class="award-emoji" aria-hidden="true">🏆</div>
-          <h3>Laserfiche “Run Smarter” Award</h3>
-          <p>Student Services initiative, paperless workflows, and faster routing.</p>
+          <h3>Laserfiche Run Smarter Award</h3>
+          <p>
+            Recognized for improving student services through online forms, workflow automation,
+            and faster transcript evaluation.
+          </p>
         </article>
 
         <article class="award-card">
           <div class="award-emoji" aria-hidden="true">🥇</div>
           <h3>Top 10 Digital Community College</h3>
-          <p>Contributed through automation and service redesign.</p>
+          <p>
+            Contributed to digital service improvements through workflow redesign and better online processes.
+          </p>
         </article>
 
         <article class="award-card">
           <div class="award-emoji" aria-hidden="true">📈</div>
-          <h3>Degree Works Launch</h3>
-          <p>Led rollout of degree audit so program paths were easier to follow.</p>
+          <h3>DegreeWorks Launch</h3>
+          <p>
+            Helped lead the rollout of degree audit tools that made academic planning easier to follow.
+          </p>
         </article>
       </div>
 
       <h2 class="subtle">Endorsements</h2>
+
       <div class="endorsements" role="region" aria-label="Endorsements carousel">
         <button class="endorsements__nav prev" aria-label="Previous quote">‹</button>
+
         <div class="endorsements__track" role="list">
           <figure class="endorsement" role="listitem">
             <blockquote>
               “Her foresight let us serve students seamlessly during COVID. She made processes clearer and more accessible.”
             </blockquote>
-            <figcaption>— <strong>Dr. Ann Buchele</strong>, VP Academic &amp; Student Affairs, LBCC</figcaption>
+            <figcaption>— <strong>Dr. Ann Buchele</strong>, VP Academic & Student Affairs, LBCC</figcaption>
           </figure>
 
           <figure class="endorsement" role="listitem">
@@ -372,496 +295,380 @@ I’ve led award-winning systems work in higher education and create websites, a
 
           <figure class="endorsement" role="listitem">
             <blockquote>
-              “Amy is competent, compassionate, and committed to student success and a systems thinker with a heart.”
-            </blockquote>
-            <figcaption>— <strong>Javier Cervantes</strong>, Racial Justice Council Advisor</figcaption>
-          </figure>
-
-          <figure class="endorsement" role="listitem">
-            <blockquote>
-              “A campus leader and national award winner for Laserfiche work on creating paperless forms, automated workflows, and faster routing.”
+              “A campus leader and national award winner for Laserfiche work on paperless forms, automated workflows, and faster routing.”
             </blockquote>
             <figcaption>— <strong>Lynne Cox</strong>, Former Dean of Students</figcaption>
           </figure>
-
-          <figure class="endorsement" role="listitem">
-            <blockquote>
-              “She delivers superb, SEO-friendly content and is reliable, responsive, and easy to work with.”
-            </blockquote>
-            <figcaption>— <strong>Chris Beckley</strong>, Web/Graphic Designer</figcaption>
-          </figure>
         </div>
+
         <button class="endorsements__nav next" aria-label="Next quote">›</button>
         <div class="endorsements__dots" aria-hidden="true"></div>
       </div>
     </section>
 
-    <!-- Divider -->
     <div class="section-divider" aria-hidden="true"></div>
 
-    <!-- Work / Projects & Impact -->
-    <section id="work" aria-label="Projects and Impact">
-      <h1 class="text-center">Projects &amp; Impact</h1>
+<!-- Work / Projects & Impact -->
+<section id="work" aria-label="Projects and Impact">
+  <h1 class="text-center">Projects &amp; Impact</h1>
 
-      <!-- Web Dev subhead -->
-      <h2 class="subtle text-center">Web Development</h2>
+  <!-- ===== Higher-Ed Innovation ===== -->
+<h2 class="subtle text-center">Higher-Ed Innovation</h2>
 
-      <div class="projects">
-        <!-- Ticket VeriGuard — Landing Page -->
-        <div class="project-card">
-          <div class="project-images">
-            <img src="img/tvg/tvg-hero.png" class="project-image" alt="Ticket VeriGuard landing page hero" />
-            <img src="img/tvg/tvg-csv-check.png" class="project-image" alt="Ticket VeriGuard CSV check" />
-          </div>
-          <h2>Ticket VeriGuard — Landing Page</h2>
-          <p>
-            A branded, responsive marketing site for Ticket VeriGuard, an early-stage platform I’m developing to help marketplaces prevent duplicate ticket sales and improve trust between buyers, sellers, and partners.
-          </p>
-          <div class="project-buttons tech-stack">
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-html">HTML</button>
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-css">CSS</button>
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-js">JavaScript</button>
-          </div>
-          <div class="project-buttons action-buttons">
-            <a href="https://ticketveriguard.com" class="button" target="_blank" rel="noopener">Live Site</a>
-            <a href="https://github.com/AmySikora/ticket-warehouse-landing" class="button" target="_blank" rel="noopener">GitHub Repo</a>
-            <a href="assets/TicketVeriguard Case Study.pdf" class="button" target="_blank" rel="noopener">📄 Case Study</a>
-          </div>
-        </div>
+<div class="higher-ed-showcase">
 
-        <!-- Ticket VeriGuard — Marketplace Demo -->
-        <div class="project-card">
-          <div class="project-images">
-            <img src="img/tvg/tvg-demo-simulator.png" class="project-image" alt="Ticket VeriGuard demo simulator interface" />
-            <img src="img/tvg/tvg-demo-dashboard.png" class="project-image" alt="Ticket VeriGuard demo results table" />
-          </div>
-          <h2>Ticket VeriGuard — Marketplace Demo</h2>
-          <p>
-            An interactive working demo showing how the Ticket VeriGuard validation engine could identify duplicate listings across marketplaces in real time.
-          </p>
-          <div class="project-buttons tech-stack">
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-js">JavaScript</button>
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-react">API Integration</button>
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-sql">Data Logic</button>
-          </div>
-          <div class="project-buttons action-buttons">
-            <a href="https://amysikora.github.io/tvg-demo/index.html" class="button" target="_blank" rel="noopener">Live Demo</a>
-            <a href="https://github.com/AmySikora/tvg-demo" class="button" target="_blank" rel="noopener">GitHub Repo</a>
-            <a href="case-studies/tvg-demo.html" class="button" target="_blank" rel="noopener">📄 Case Study</a>
-          </div>
-        </div>
+  <!-- Featured Laserfiche Project -->
+  <article class="project-card higher-ed-feature">
+    <div class="project-images project-images--feature">
+      <img
+        src="img/LF2.png"
+        class="project-image"
+        alt="Laserfiche transcript evaluation project"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
 
-        <!-- Recipe App (Web Version) -->
-        <div class="project-card">
-          <div class="project-images">
-            <img src="img/Allrecipes.png" class="project-image" alt="Recipe App All Recipes" />
-            <img src="img/RecipeDetail.png" class="project-image" alt="Recipe App Recipe Details" />
-          </div>
-          <h2>Recipe App (Web)</h2>
-          <p>A Django web app for managing and exploring recipes. Users can create and edit recipes, add ratings and comments, and view charts. Images are stored in AWS S3, deployed via Heroku.</p>
-          <div class="project-buttons tech-stack">
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-python">Python</button>
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-django">Django</button>
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-sql">PostgreSQL</button>
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-aws">AWS S3</button>
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-heroku">Heroku</button>
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-pandas">Pandas</button>
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-matplotlib">Matplotlib</button>
-          </div>
-          <div class="project-buttons action-buttons">
-            <a href="https://recipe-app77-71493f5cca54.herokuapp.com/" class="button" target="_blank">Live Site</a>
-            <a href="https://github.com/AmySikora/recipe-app" class="button" target="_blank">GitHub Repo</a>
-            <a href="assets/RecipeAppCaseStudy.pdf" class="button" target="_blank">📄 Case Study</a>
-          </div>
-        </div>
+    <h2>Laserfiche Transcript Evaluation Project</h2>
 
-        <!-- Chat App Project -->
-        <div class="project-card">
-          <div class="project-images">
-            <img src="img/ChatStartScreen.jpg" class="project-image" alt="Chat App Start Screen" />
-            <img src="img/ChatScreen.jpg" class="project-image" alt="Chat Screen" />
-          </div>
-          <h2>Chat App</h2>
-          <p>
-            A mobile chat app built with React Native. Users can send real-time messages, share photos, and
-            send their live location. The app also lets you choose a custom background color and works offline
-            once loaded, so you can keep chatting even without a signal.
-          </p>
-          <div class="project-buttons tech-stack">
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-react-native">React Native</button>
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-firebase">Firebase</button>
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-expo">Expo</button>
-          </div>
-          <div class="project-buttons action-buttons">
-            <a href="https://github.com/AmySikora/Chat-App" class="button" target="_blank">GitHub Repo</a>
-            <a href="assets/Chat-App-case-study.pdf" class="button" target="_blank">📄 Case Study</a>
-          </div>
-        </div>
+    <p>
+      Led the redesign of transcript evaluation at Linn-Benton Community College, moving a slow,
+      paper-heavy process into a clear online workflow. Turnaround time dropped from 6–8 weeks
+      to about one week, and students had better updates at every step. The project received the
+      Laserfiche Run Smarter Award.
+    </p>
 
-        <!-- Angular myFlix Project -->
-        <div class="project-card">
-          <div class="project-images">
-            <img src="img/angular-movies.jpg" class="project-image" alt="Angular Movies Screen" />
-            <img src="img/angular-profile.png" class="project-image" alt="Angular Profile Screen" />
-          </div>
-          <h2>Angular myFlix Project</h2>
-          <p>A movie app built using Angular and TypeScript. Users can view, search, and save their favorite movies to their profiles.</p>
-          <div class="project-buttons tech-stack">
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-angular">Angular</button>
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-typescript">TypeScript</button>
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-scss">SCSS</button>
-          </div>
-          <div class="project-buttons action-buttons">
-            <a href="https://github.com/AmySikora/myFlix-Angular-client" class="button" target="_blank">Frontend Repo</a>
-            <a href="https://github.com/AmySikora/movie_api" class="button" target="_blank">Backend Repo</a>
-            <a href="https://amysikora.github.io/myFlix-Angular-client/" class="button" target="_blank">Live Site</a>
-            <a href="assets/Angular-MyFlix-case-study.pdf" class="button" target="_blank">📄 Case Study</a>
-          </div>
-        </div>
+    <div class="project-buttons tech-stack">
+      <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-laserfiche">Laserfiche</button>
+      <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-banner">Banner</button>
+      <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-workflow">Workflow</button>
+    </div>
 
-        <!-- Meet App Project -->
-        <div class="project-card">
-          <div class="project-images">
-            <img src="img/meet1.png" class="project-image" alt="Meet App Project" />
-            <img src="img/meet2.png" class="project-image" alt="Meet App Workshop" />
-          </div>
-          <h2>Meet App</h2>
-          <p>A progressive web app that allows users to search for events by city and event. Built with React and the Google Calendar API.</p>
-          <div class="project-buttons tech-stack">
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-react">React</button>
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-pwa">PWA</button>
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-gcal">Google Calendar API</button>
-          </div>
-          <div class="project-buttons action-buttons">
-            <a href="https://amysikora.github.io/meet/" class="button" target="_blank">Live Site</a>
-            <a href="https://github.com/AmySikora/meet" class="button" target="_blank">GitHub Repo</a>
-            <a href="assets/Meet-App-Case-Study.pdf" class="button" target="_blank">📄 Case Study</a>
-          </div>
-        </div>
+    <div class="project-buttons action-buttons">
+      <a
+        href="https://www.laserfiche.com/resources/customer-stories/linn-benton-community-college-enhances-student-experience-streamlined-transcript-evaluations/"
+        class="button"
+        target="_blank"
+        rel="noopener"
+      >
+        Read Case Study &amp; Watch Video
+      </a>
+    </div>
+  </article>
 
-        <!-- MyFlix Project -->
-        <div class="project-card">
-          <div class="project-images">
-            <img src="img/myFlix.jpg" class="project-image" alt="MyFlix Project" />
-          </div>
-          <h2>MyFlix</h2>
-          <p>A full-stack movie app using a MERN stack. Users can view, search, and save their favorite movies to their profiles.</p>
-          <div class="project-buttons tech-stack">
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-react">React</button>
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-node">Node.js</button>
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-mongodb">MongoDB</button>
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-express">Express</button>
-          </div>
-          <div class="project-buttons action-buttons">
-            <a href="https://myflix-app-123.netlify.app/" class="button" target="_blank">Live Site</a>
-            <a href="https://github.com/AmySikora/myFlix-client" class="button" target="_blank">Frontend Repo</a>
-            <a href="https://github.com/AmySikora/movie_api" class="button" target="_blank">Backend Repo</a>
-            <a href="assets/my-flix-case-study.pdf" class="button" target="_blank">📄 Case Study</a>
-          </div>
-        </div>
+  <!-- Supporting Presentations -->
+  <div class="higher-ed-support">
 
-        <!-- Recipe App (Command Line Version) -->
-        <div class="project-card">
-          <div class="project-images">
-            <img src="img/RecipeAppCommandLineVersion.png" class="project-image" alt="Recipe CLI Screenshot" />
-          </div>
-          <h2>Recipe App (Command Line)</h2>
-          <p>A command-line app where users can add, view, search, and manage recipes. It stores recipe ingredients, calculates cooking time, and automatically rates difficulty.</p>
-          <div class="project-buttons tech-stack">
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-python">Python</button>
-            <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-sql">MySQL</button>
-          </div>
-          <div class="project-buttons action-buttons">
-            <a href="https://github.com/AmySikora/cf-python-base-project" class="button" target="_blank">GitHub Repo</a>
-          </div>
-        </div>
+    <article class="higher-ed-mini-card">
+      <div class="card-icon" aria-hidden="true">🎤</div>
 
-        <!-- ===== Higher-Ed Innovation (inside Work for equal billing) ===== -->
-        <h2 class="subtle text-center" style="grid-column:1/-1; margin-top:24px;">Higher-Ed Innovation</h2>
+      <h3>Laserfiche Empower Conference</h3>
 
-        <div class="higher-ed-grid" style="grid-column:1/-1;">
-          <!-- LEFT: Featured Award Project -->
-          <article class="project-card project-card--feature">
-            <div class="project-images project-images--feature">
-              <img src="img/LF2.png" class="project-image" alt="Laserfiche video thumbnail" />
-            </div>
+      <p>
+        Presented how our team used e-forms and workflow to make student services faster and easier
+        to navigate. Covered transcript evaluation, petitions, routing, and student updates.
+      </p>
 
-            <h2>Laserfiche Transcript Evaluation Project</h2>
-            <p>
-              I led an online transcript evaluation service at Linn-Benton Community College that cut
-              processing time from six weeks to one. Students stayed informed at every step.
-              The project earned the <strong>Laserfiche Run Smarter Award</strong>.
-            </p>
+      <ul class="mini-list">
+        <li>Conference session, Higher-Ed track</li>
+        <li>Role: Presenter</li>
+        <li>Focus: workflow, routing, communication</li>
+      </ul>
 
-            <div class="project-buttons tech-stack">
-              <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-laserfiche">Laserfiche</button>
-              <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-banner">Banner</button>
-              <button type="button" class="tech-badge modal-trigger" data-modal-target="#modal-sql-hed">SQL</button>
-            </div>
+      <a href="assets/LBCC_Empower_Presentation.pdf" class="inline-link" target="_blank" rel="noopener">
+        View Slide Deck
+      </a>
+    </article>
 
-            <div class="project-buttons action-buttons">
-              <a href="https://www.laserfiche.com/resources/customer-stories/linn-benton-community-college-enhances-student-experience-streamlined-transcript-evaluations/"
-                 class="button" target="_blank">Read Case Study &amp; Watch Video</a>
-            </div>
-          </article>
+    <article class="higher-ed-mini-card">
+      <div class="card-icon" aria-hidden="true">🎤</div>
 
-          <!-- RIGHT: Stacked Presentations -->
-          <div class="presentations-stack">
+      <h3>University Business Web Seminar</h3>
 
-            <article class="project-card presentation-card">
-              <div class="card-icon" aria-hidden="true">🎤</div>
-              <h3>Laserfiche Empower Conference</h3>
-              <p>
-                How our team used e-forms and workflow to make student services faster and friendlier.
-                Shared the transcript evaluation redesign, petitions flow, and tips for change management.
-              </p>
-              <ul class="mini-list">
-                <li>Format: Conference session (Higher-Ed track)</li>
-                <li>Role: Presenter</li>
-                <li>Focus: e-forms, routing, student updates, turnaround time</li>
-              </ul>
-              <span class="meta">Slide deck available below.</span>
-              <a href="assets/LBCC_Empower_Presentation.pdf" class="inline-link" target="_blank">View Slide Deck (PDF)</a>
-            </article>
+      <p>
+        National webinar on improving student services with e-forms and workflow automation while
+        reducing costs and turnaround time.
+      </p>
 
-            <article class="project-card presentation-card">
-              <div class="card-icon" aria-hidden="true">🎤</div>
-              <h3>University Business Web Seminar</h3>
-              <p>
-                <em>Driving Superior Student Services through e-Forms</em> — a national webinar on simple ways
-                to improve service with automation while reducing costs.
-              </p>
-              <ul class="mini-list">
-                <li>Date: Oct 6, 2016 • 2:00 PM ET</li>
-                <li>Speakers: Amy Sikora, Jane Tillman, Linda Ding</li>
-                <li>Topics: Transcript evals, petitions, real-time comms, staffing flex</li>
-              </ul>
-              <a href="https://www3.universitybusiness.com/mailing/webinar16/laserfiche1006-last.html"
-                 class="inline-link" target="_blank">Event Page</a>
-            </article>
+      <ul class="mini-list">
+        <li>Oct. 6, 2016</li>
+        <li>Speakers: Amy Sikora, Jane Tillman, Linda Ding</li>
+        <li>Topics: transcript evaluation, petitions, communication</li>
+      </ul>
 
-          </div>
+      <a
+        href="https://www3.universitybusiness.com/mailing/webinar16/laserfiche1006-last.html"
+        class="inline-link"
+        target="_blank"
+        rel="noopener"
+      >
+        Event Page
+      </a>
+    </article>
 
-          <!-- ===== /Higher-Ed Innovation ===== -->
-        </div>
+  </div>
+</div>
+
+  <!-- ===== Tech Projects ===== -->
+  <h2 class="subtle text-center">Tech Projects</h2>
+
+  <div class="projects">
+
+    <!-- Ticket VeriGuard -->
+    <article class="project-card">
+      <div class="project-images">
+        <img src="img/tvg/TVG_Compare.png" class="project-image" alt="Ticket comparison tool" />
+        <img src="img/tvg/tvg-csv-check.png" class="project-image" alt="Saved listings view" />
       </div>
-    </section>
 
-    <!-- Divider -->
+      <h2>TicketVeriGuard</h2>
+
+      <p>
+        Built a ticket comparison and tracking tool to make ticket shopping less chaotic. Users can
+        search sites, save listings, compare prices and seat details, and check for possible duplicate
+        listings before buying.
+      </p>
+
+      <div class="project-buttons action-buttons">
+        <a href="https://ticketveriguard.com" class="button" target="_blank">Live Site</a>
+        <a href="https://github.com/AmySikora/ticket-warehouse-landing" class="button" target="_blank">GitHub</a>
+      </div>
+    </article>
+
+    <!-- Recipe App -->
+    <article class="project-card">
+      <div class="project-images">
+        <img src="img/Allrecipes.png" class="project-image" alt="Recipe app" />
+        <img src="img/RecipeDetail.png" class="project-image" alt="Recipe details" />
+      </div>
+
+      <h2>Recipe App</h2>
+
+      <p>
+        A full-stack Django app where users can create, edit, and rate recipes. Includes charts,
+        image storage, and a clean layout that makes it easy to browse and manage content.
+      </p>
+
+      <div class="project-buttons action-buttons">
+        <a href="https://recipe-app77-71493f5cca54.herokuapp.com/" class="button" target="_blank">Live Site</a>
+        <a href="https://github.com/AmySikora/recipe-app" class="button" target="_blank">GitHub</a>
+      </div>
+    </article>
+
+    <!-- Chat App -->
+    <article class="project-card">
+      <div class="project-images">
+        <img src="img/ChatStartScreen.jpg" class="project-image" alt="Chat start screen" />
+        <img src="img/ChatScreen.jpg" class="project-image" alt="Chat messages screen" />
+      </div>
+
+      <h2>Chat App</h2>
+
+      <p>
+        A mobile chat app built with React Native. Users can send messages, share images,
+        and access chats offline. Designed with a simple interface that works smoothly on a phone.
+      </p>
+
+      <div class="project-buttons action-buttons">
+        <a href="https://github.com/AmySikora/Chat-App" class="button" target="_blank">GitHub</a>
+      </div>
+    </article>
+
+    <!-- MyFlix -->
+    <article class="project-card">
+      <div class="project-images">
+        <img src="img/angular-movies.jpg" class="project-image" alt="Movie app" />
+        <img src="img/angular-profile.png" class="project-image" alt="User profile" />
+      </div>
+
+      <h2>MyFlix</h2>
+
+      <p>
+        A movie app where users can browse, search, and save favorite films. Built with Angular
+        and connected to a backend API, with a focus on clean layout and easy navigation.
+      </p>
+
+      <div class="project-buttons action-buttons">
+        <a href="https://amysikora.github.io/myFlix-Angular-client/" class="button" target="_blank">Live Site</a>
+        <a href="https://github.com/AmySikora/myFlix-Angular-client" class="button" target="_blank">GitHub</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
     <div class="section-divider" aria-hidden="true"></div>
 
-    <!-- Writing Portfolio -->
+    <!-- Writing -->
     <section id="writing" aria-labelledby="writing-title">
       <h1 id="writing-title" class="text-center">Writing</h1>
 
-     <p class="text-center writing-intro">
-      I write to make complex ideas clear, structured, and easy to navigate. 
-      My work spans essays, magazine features, SEO content, and technical documentation.
-      I focus on clarity, usability, and search visibility—turning dense information into content people can actually understand and use.
-    </p>
+      <p class="text-center writing-intro">
+        I write to make complicated ideas easier to follow. My writing includes personal essays,
+        technical documentation, product content, and magazine features.
+      </p>
 
       <div class="projects">
+        <article class="project-card">
+          <div class="project-images single-image">
+            <img
+              src="img/Tech-writing.png"
+              class="project-image"
+              alt="Technical writing sample"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
 
-        <!-- Stranger’s Comment -->
-        <div class="project-card">
+          <h2>Technical Writing & Documentation</h2>
+
+          <p class="project-meta">Technical writing · Process documentation · Systems workflows</p>
+
+          <p>
+            Documentation and case study work focused on higher education systems, workflow automation,
+            and clear step-by-step guidance.
+          </p>
+
+          <div class="project-buttons action-buttons">
+            <a href="assets/writing/Tech-writing.pdf" class="button" target="_blank" rel="noopener">
+              View Writing Sample
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
           <div class="project-images single-image">
             <img
               src="img/small-strangercomment.png"
               class="project-image"
-              alt="Abstract image representing reflection and personal growth"
+              alt="Personal essay sample"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
           <h2>The Unintentional Impact of a Stranger’s Comment</h2>
 
-          <p class="project-meta">
-            Personal essay · Oregon Women in Higher Education
-          </p>
+          <p class="project-meta">Personal essay · Oregon Women in Higher Education</p>
 
           <p>
-            A personal narrative about how one passing comment changed the course of my life,
-            leading from high school dropout to a career in higher education leadership.
+            A personal essay about education, persistence, and the comment that helped change the direction
+            of my life.
           </p>
 
           <div class="project-buttons action-buttons">
-            <a
-              href="assets/writing/Strangers-Comment.pdf"
-              class="button"
-              target="_blank"
-              rel="noopener"
-            >
-              📄 Read full article
+            <a href="assets/writing/Strangers-Comment.pdf" class="button" target="_blank" rel="noopener">
+              Read Article
             </a>
           </div>
-        </div>
+        </article>
 
-        <!-- You Are What You Golf -->
-        <div class="project-card">
-          <div class="project-images single-image">
-            <img
-              src="img/westcoastgolder.png"
-              class="project-image"
-              alt="West Coast Golfer magazine cover"
-            />
-          </div>
+        <article class="project-card">
+  <div class="project-images single-image">
+    <img
+      src="img/hotelf&b.png"
+      class="project-image"
+      alt="Hotel Food and Beverage magazine article"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
 
-          <h2>You Are What You Golf</h2>
+  <h2>Hotel Food & Beverage Feature</h2>
 
-          <p class="project-meta">
-            Magazine feature · Interview · West Coast Golfer
-          </p>
+  <p class="project-meta">
+    Magazine feature · Hospitality writing · Hotel F&amp;B Executive
+  </p>
 
-          <p>
-            A winter golf feature blending regional color, humor, and an interview with
-            a Master PGA Professional, exploring how golf reveals personality and character.
-          </p>
+  <p>
+    A feature article focused on trends in hotel food and beverage operations, blending industry insight,
+    interviews, and practical takeaways for hospitality professionals.
+  </p>
 
-          <div class="project-buttons action-buttons">
-            <a
-              href="assets/writing/You-Are-What-You-Golf.pdf"
-              class="button"
-              target="_blank"
-              rel="noopener"
-            >
-              📄 Read full article
-            </a>
-          </div>
-        </div>
+  <div class="project-buttons action-buttons">
+    <a
+      href="assets/writing/Finest-Crunch-to-Munch.pdf"
+      class="button"
+      target="_blank"
+      rel="noopener"
+    >
+      Read Article
+    </a>
+  </div>
+</article>
 
-        <!-- Finest Crunch to Munch -->
-        <div class="project-card">
-          <div class="project-images single-image">
-            <img
-              src="img/hotelf&b.png"
-              class="project-image"
-              alt="Hotel F&B Executive magazine cover"
-            />
-          </div>
+        <article class="project-card">
+  <div class="project-images single-image">
+    <img
+      src="img/westcoastgolder.png"
+      class="project-image"
+      alt="West Coast Golfer magazine cover"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
 
-          <h2>The Finest Crunch to Munch</h2>
+  <h2>You Are What You Golf</h2>
 
-          <p class="project-meta">
-            Trade publication · Product feature · Hotel F&amp;B Executive
-          </p>
+  <p class="project-meta">
+    Magazine feature · Interview · West Coast Golfer
+  </p>
 
-          <p>
-            A professional food industry feature highlighting product quality, versatility,
-            and expert perspectives from executive chefs and culinary consultants.
-          </p>
+  <p>
+    A magazine feature blending humor, regional color, and an interview with a Master PGA Professional.
+  </p>
 
-          <div class="project-buttons action-buttons">
-            <a
-              href="assets/writing/Finest-Crunch-to-Munch.pdf"
-              class="button"
-              target="_blank"
-              rel="noopener"
-            >
-              📄 Read full article
-            </a>
-          </div>
-        </div>
-
-        <!-- Ticket VeriGuard SEO -->
-        <div class="project-card">
-          <div class="project-images single-image">
-            <img
-              src="img/tvg/tvg-hero.png"
-              class="project-image"
-              alt="Abstract illustration representing data and ticket validation"
-            />
-          </div>
-
-          <h2>SEO &amp; Content Writing Sample: Ticket VeriGuard</h2>
-
-          <p class="project-meta">
-            Product-focused SEO · Technical-to-non-technical content
-          </p>
-
-          <p>
-            SEO-driven product content explaining a ticket inventory validation platform,
-            written to build trust, improve search visibility, and communicate complex
-            ideas clearly.
-          </p>
-
-          <div class="project-buttons action-buttons">
-            <a
-              href="assets/writing/TicketVeriGuard-SEO-Sample (2).pdf"
-              class="button"
-              target="_blank"
-              rel="noopener"
-            >
-              📄 View writing sample
-            </a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-images single-image">
-            <img
-              src="img/Tech-writing.png"
-              class="project-image"
-              alt="Abstract illustration representing technical documentation and workflow systems"
-            />
-          </div>
-
-          <h2>Technical Writing &amp; Documentation</h2>
-
-          <p class="project-meta">
-            Technical writing · Process documentation · Systems workflows
-          </p>
-
-          <p>
-            I’ve written documentation and case studies focused on workflow automation
-            and systems processes in higher education. The goal is simple: clear steps,
-            helpful structure, and fewer “wait, what does that mean?” moments.
-          </p>
-
-          <div class="project-buttons action-buttons">
-            <a
-              href="assets/writing/Tech-writing.pdf"
-              class="button"
-              target="_blank"
-              rel="noopener"
-            >
-              📄 View technical writing sample
-            </a>
-          </div>
-        </div>
-
+  <div class="project-buttons action-buttons">
+    <a
+      href="assets/writing/You-Are-What-You-Golf.pdf"
+      class="button"
+      target="_blank"
+      rel="noopener"
+    >
+      Read Article
+    </a>
+  </div>
+</article>
       </div>
     </section>
 
-    <!-- Divider -->
     <div class="section-divider" aria-hidden="true"></div>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section id="contact" aria-labelledby="contact-title">
       <div class="contact-page">
         <h1 id="contact-title" class="fw-bold text-center">Contact Me</h1>
-        <p class="text-center">Want to talk projects, systems, writing, or a good workflow glow-up? Reach out.</p>
+        <p class="text-center">
+          Want to talk about student services, systems, workflow improvement, writing, or web projects?
+          I’d be happy to connect.
+        </p>
 
         <div class="contact-row">
-          <!-- Make the whole card a link -->
           <a class="contact-card" href="mailto:amy.sikora77@gmail.com">
-            <img src="img/gmailImage.png" alt="" class="contact-icon" width="40" height="40" loading="lazy" decoding="async" />
+            <img src="img/gmailImage.png" alt="" class="contact-icon" width="40" height="40" />
             <h5>Email</h5>
             <p>Send me a note.</p>
           </a>
 
           <a class="contact-card" href="https://github.com/AmySikora" target="_blank" rel="noopener">
-            <img src="img/287725_github_icon.svg" alt="" class="contact-icon" width="40" height="40" loading="lazy" decoding="async" />
+            <img src="img/287725_github_icon.svg" alt="" class="contact-icon" width="40" height="40" />
             <h5>GitHub</h5>
             <p>Browse projects and code.</p>
           </a>
 
-          <a class="contact-card" href="https://www.linkedin.com/in/amy-sikora-freelance" target="_blank" rel="noopener">
-            <img src="img/104493_linkedin_icon.svg" alt="" class="contact-icon" width="40" height="40" loading="lazy" decoding="async" />
+          <a
+            class="contact-card"
+            href="https://www.linkedin.com/in/amy-sikora-freelance"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="img/104493_linkedin_icon.svg" alt="" class="contact-icon" width="40" height="40" />
             <h5>LinkedIn</h5>
             <p>Connect there.</p>
           </a>
 
           <a class="contact-card" href="assets/AmySikoraResume2026.pdf" download>
-            <img src="img/blackresume.png" alt="" class="contact-icon animated-icon" width="40" height="40" loading="lazy" decoding="async" />
+            <img src="img/blackresume.png" alt="" class="contact-icon animated-icon" width="40" height="40" />
             <h5>Résumé</h5>
             <p>Download the full version.</p>
           </a>
@@ -870,332 +677,110 @@ I’ve led award-winning systems work in higher education and create websites, a
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="page-footer">
     <p>Find me on</p>
+
     <div class="social-media">
-      <a href="https://github.com/AmySikora" aria-label="GitHub"><img src="img/287725_github_icon.svg" alt="" width="30" height="30" /></a>
-      <a href="https://www.linkedin.com/in/amy-sikora-freelance" aria-label="LinkedIn"><img src="img/104493_linkedin_icon.svg" alt="" width="30" height="30" /></a>
+      <a href="https://github.com/AmySikora" aria-label="GitHub">
+        <img src="img/287725_github_icon.svg" alt="" width="30" height="30" />
+      </a>
+
+      <a href="https://www.linkedin.com/in/amy-sikora-freelance" aria-label="LinkedIn">
+        <img src="img/104493_linkedin_icon.svg" alt="" width="30" height="30" />
+      </a>
     </div>
   </footer>
 
-  <!-- ===== Web Dev Skill Modals ===== -->
-  <!-- HTML -->
-  <div id="modal-html" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-html-title">
+  <!-- Skill Modals -->
+  <div id="modal-sis" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-sis-title">
     <div class="modal__dialog" tabindex="-1">
       <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-html-title">HTML</h3>
-      <p>I write clean, semantic markup that is easy to read. I use proper headings, clear landmarks, and helpful alt text so the page works well for everyone.</p>
+      <h3 id="modal-sis-title">Student Information Systems</h3>
+      <p>
+        I have years of experience working with Banner Student, DegreeWorks, student records,
+        transfer credit, admissions, registration, and degree audit processes.
+      </p>
     </div>
   </div>
 
-  <!-- CSS -->
-  <div id="modal-css" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-css-title">
+  <div id="modal-workflow" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-workflow-title">
     <div class="modal__dialog" tabindex="-1">
       <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-css-title">CSS</h3>
-      <p>I build responsive layouts with Flexbox and Grid. I focus on simple spacing, consistent styles, and small touches that feel welcoming.</p>
+      <h3 id="modal-workflow-title">Workflow Improvement</h3>
+      <p>
+        I map out the steps, find what is slowing people down, and help create a cleaner path
+        for students, staff, and teams.
+      </p>
     </div>
   </div>
 
-  <!-- JavaScript -->
-  <div id="modal-js" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-js-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-js-title">JavaScript</h3>
-      <p>I use modern JavaScript for features like modals, carousels, and smooth scrolling. I keep the code small and clear so it is easy to maintain.</p>
-    </div>
-  </div>
-
-  <!-- React -->
-  <div id="modal-react" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-react-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-react-title">React</h3>
-      <p>I build apps with simple components and clear state. In my Meet App I used the Google Calendar API along with easy filters and accessible dialogs.</p>
-    </div>
-  </div>
-
-  <!-- Angular -->
-  <div id="modal-angular" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-angular-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-angular-title">Angular</h3>
-      <p>I built the myFlix client with a clear structure and helpful forms. It lets users browse movies, search by title, and save favorites with a smooth flow.</p>
-    </div>
-  </div>
-
-  <!-- Python -->
-  <div id="modal-python" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-python-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-python-title">Python</h3>
-      <p>I use Python for web apps and small tools. In my Django Recipe App I handled views and data, and used simple charts where they added value.</p>
-    </div>
-  </div>
-
-  <!-- Django -->
-  <div id="modal-django" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-django-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-django-title">Django</h3>
-      <p>I built the Recipe App with models, views, templates, and login. Images live on S3 and the app runs on Heroku. I value clear templates and safe forms.</p>
-    </div>
-  </div>
-
-  <!-- SQL -->
-  <div id="modal-sql" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-sql-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-sql-title">SQL</h3>
-      <p>I write practical queries for day to day needs. I use selects, joins, and filters to support searches, reports, and quick checks.</p>
-    </div>
-  </div>
-
-  <!-- Process Automation -->
   <div id="modal-automation" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-automation-title">
     <div class="modal__dialog" tabindex="-1">
       <button class="modal__close" data-modal-close aria-label="Close">×</button>
       <h3 id="modal-automation-title">Process Automation</h3>
-      <p>I turn slow paper steps into simple online flows. Fewer handoffs. Faster results. Better service for students and staff.</p>
+      <p>
+        I have helped move paper-heavy steps into online forms and workflows that reduce manual work,
+        improve communication, and save time.
+      </p>
     </div>
   </div>
 
-  <!-- Workflow Optimization -->
-  <div id="modal-workflow" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-workflow-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-workflow-title">Workflow Optimization</h3>
-      <p>I map the path, remove bumps, and make it easier to do the work well.</p>
-    </div>
-  </div>
-
-  <!-- Documentation -->
   <div id="modal-docs" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-docs-title">
     <div class="modal__dialog" tabindex="-1">
       <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-docs-title">Technical Documentation</h3>
-      <p>I write steps that a team can follow. Clear language. Helpful screenshots. No fluff.</p>
+      <h3 id="modal-docs-title">Documentation</h3>
+      <p>
+        I write guides, training materials, process notes, and content that help people understand
+        what to do next without needing a translator and a snack break.
+      </p>
     </div>
   </div>
 
-  <!-- Student Info Systems -->
-  <div id="modal-sis" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-sis-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-sis-title">Student Info Systems</h3>
-      <p>I worked in Banner and Degree Works for years. I connect the dots so answers are easier to find and processes run smoother.</p>
-    </div>
-  </div>
-
-  <!-- Training -->
   <div id="modal-training" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-training-title">
     <div class="modal__dialog" tabindex="-1">
       <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-training-title">Training and Support</h3>
-      <p>I create quick guides and lead live sessions. The goal is confidence, not just completion.</p>
+      <h3 id="modal-training-title">Training & Support</h3>
+      <p>
+        I create practical training and support materials that help people feel more confident using
+        systems and following new processes.
+      </p>
     </div>
   </div>
 
-  <!-- Collaboration -->
-  <div id="modal-collab" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-collab-title">
+  <div id="modal-web" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-web-title">
     <div class="modal__dialog" tabindex="-1">
       <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-collab-title">Cross Functional Collaboration</h3>
-      <p>I pull in the right partners, set clear goals, and ship something useful.</p>
+      <h3 id="modal-web-title">Web Development</h3>
+      <p>
+        I build websites and web apps using HTML, CSS, JavaScript, React, Python, Django,
+        SQL, and related tools. I focus on clear structure, accessibility, and ease of use.
+      </p>
     </div>
   </div>
 
-  <!-- Leadership -->
-  <div id="modal-leadership" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-leadership-title">
+  <div id="modal-laserfiche" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-laserfiche-title">
     <div class="modal__dialog" tabindex="-1">
       <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-leadership-title">Project Leadership</h3>
-      <p>I plan the work, track progress, clear roadblocks, and celebrate wins.</p>
+      <h3 id="modal-laserfiche-title">Laserfiche</h3>
+      <p>
+        I used Laserfiche to help turn student service processes into online forms and workflows.
+        The transcript evaluation project reduced turnaround time from 6–8 weeks to about one week.
+      </p>
     </div>
   </div>
 
-  <!-- SEO -->
-  <div id="modal-seo" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-seo-title">
+  <div id="modal-banner" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-banner-title">
     <div class="modal__dialog" tabindex="-1">
       <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-seo-title">SEO and Web Writing</h3>
-      <p>I write friendly, skimmable content that helps readers and works well in search.</p>
+      <h3 id="modal-banner-title">Banner</h3>
+      <p>
+        I have worked with Banner Student in admissions, records, registration, transfer credit,
+        student access, testing, and student data processes.
+      </p>
     </div>
   </div>
 
-  <!-- React Native -->
-  <div id="modal-react-native" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-react-native-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-react-native-title">React Native</h3>
-      <p>I built a chat app with real time messaging, image sharing, and a simple interface that feels natural on a phone.</p>
-    </div>
-  </div>
-
-  <!-- Firebase -->
-  <div id="modal-firebase" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-firebase-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-firebase-title">Firebase</h3>
-      <p>I used Firebase for sign in, real time data, and file storage in the chat app.</p>
-    </div>
-  </div>
-
-  <!-- Expo -->
-  <div id="modal-expo" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-expo-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-expo-title">Expo</h3>
-      <p>Expo helped me build and test the chat app quickly on real devices.</p>
-    </div>
-  </div>
-
-  <!-- PWA -->
-  <div id="modal-pwa" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-pwa-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-pwa-title">Progressive Web App</h3>
-      <p>The Meet App works offline and can be installed on your device. It is handy when you are on the go.</p>
-    </div>
-  </div>
-
-  <!-- Google Calendar API -->
-  <div id="modal-gcal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-gcal-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-gcal-title">Google Calendar API</h3>
-      <p>I used the API to fetch events and filter by city in a way that feels simple to use.</p>
-    </div>
-  </div>
-
-  <!-- Heroku -->
-  <div id="modal-heroku" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-heroku-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-heroku-title">Heroku</h3>
-      <p>The Recipe App is hosted on Heroku with a managed database. The release process is simple and reliable.</p>
-    </div>
-  </div>
-
-  <!-- AWS S3 -->
-  <div id="modal-aws" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-aws-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-aws-title">AWS S3</h3>
-      <p>Recipe images are stored on S3 so they are durable and load quickly.</p>
-    </div>
-  </div>
-
-  <!-- Pandas -->
-  <div id="modal-pandas" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-pandas-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-pandas-title">Pandas</h3>
-      <p>I used Pandas to organize recipe data and create simple insights.</p>
-    </div>
-  </div>
-
-  <!-- Matplotlib -->
-  <div id="modal-matplotlib" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-matplotlib-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-matplotlib-title">Matplotlib</h3>
-      <p>I created small charts that make the data easy to read.</p>
-    </div>
-  </div>
-
-  <!-- Node -->
-  <div id="modal-node" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-node-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-node-title">Node</h3>
-      <p>I used Node with Express to serve data to my apps in a clean way.</p>
-    </div>
-  </div>
-
-  <!-- MongoDB -->
-  <div id="modal-mongodb" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-mongodb-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-mongodb-title">MongoDB</h3>
-      <p>MongoDB stores users, favorites, and movie details for myFlix.</p>
-    </div>
-  </div>
-
-  <!-- Express -->
-  <div id="modal-express" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-express-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-express-title">Express</h3>
-      <p>I built an API that handles sign in and the routes the app needs. It is simple to use from React and Angular.</p>
-    </div>
-  </div>
-
-  <!-- TypeScript -->
-  <div id="modal-typescript" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-typescript-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-typescript-title">TypeScript</h3>
-      <p>TypeScript helps me catch mistakes early and keep the code organized.</p>
-    </div>
-  </div>
-
-  <!-- SCSS -->
-  <div id="modal-scss" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-scss-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="modal-scss-title">SCSS</h3>
-      <p>I organize styles with variables and small, reusable rules so the UI stays consistent.</p>
-    </div>
-  </div>
-
-  <!-- Higher Ed: Laserfiche -->
-  <div id="modal-laserfiche" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="laserfiche-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="laserfiche-title">Laserfiche</h3>
-      <p>I used Laserfiche to move from paper to online forms and clear steps. Students received updates at each stage and staff could work faster.</p>
-      <ul>
-        <li>Online transcript evaluation with smart routing</li>
-        <li>Automatic assignment and helpful notifications</li>
-        <li>Time reduced from six weeks to one week</li>
-        <li>Winner of the Run Smarter Award</li>
-      </ul>
-      <p><a class="inline-link" target="_blank" href="https://www.laserfiche.com/resources/customer-stories/linn-benton-community-college-enhances-student-experience-streamlined-transcript-evaluations/">Read the case study</a></p>
-    </div>
-  </div>
-
-  <!-- Higher Ed: Banner -->
-  <div id="modal-banner" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="banner-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="banner-title">Banner Student Information System</h3>
-      <p>I worked in Banner for years and helped teams improve everyday tasks for staff and students.</p>
-      <ul>
-        <li>Security, access, and upgrade testing</li>
-        <li>Admissions, transfer credit, petitions, and degree audit</li>
-        <li>SQL for audits, troubleshooting, and reports</li>
-        <li>Partnered with functional leads to roll out policy updates</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Higher Ed: SQL -->
-  <div id="modal-sql-hed" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="sql-hed-title">
-    <div class="modal__dialog" tabindex="-1">
-      <button class="modal__close" data-modal-close aria-label="Close">×</button>
-      <h3 id="sql-hed-title">SQL</h3>
-      <p>I use SQL to answer real questions and keep data healthy.</p>
-      <ul>
-        <li>Everyday selects, joins, and filters</li>
-        <li>Data pulled from Banner for checks and fixes</li>
-        <li>Quick reviews of transfer credit and degree progress</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Global Modal target (kept) -->
+  <!-- Global modal target kept for existing scripts -->
   <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="modal__backdrop" data-close-modal></div>
     <div class="modal__dialog" role="document" tabindex="-1" aria-labelledby="modal-title">
@@ -1205,338 +790,6 @@ I’ve led award-winning systems work in higher education and create websites, a
     </div>
   </div>
 
-  <!-- Scripts -->
-  <script src="js/scripts.js" defer onerror="console.error('Failed to load js/scripts.js')"></script>
-</body>
-</html>
-
-  <!-- ===== Web Dev Skill Modals ===== -->
-  <!-- HTML -->
-<div id="modal-html" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-html-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-html-title">HTML</h3>
-    <p>I write clean, semantic markup that is easy to read. I use proper headings, clear landmarks, and helpful alt text so the page works well for everyone.</p>
-  </div>
-</div>
-
-<!-- CSS -->
-<div id="modal-css" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-css-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-css-title">CSS</h3>
-    <p>I build responsive layouts with Flexbox and Grid. I focus on simple spacing, consistent styles, and small touches that feel friendly.</p>
-  </div>
-</div>
-
-<!-- JavaScript -->
-<div id="modal-js" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-js-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-js-title">JavaScript</h3>
-    <p>I use modern JavaScript for features like modals, carousels, and smooth scrolling. I keep the code small and clear so it is easy to maintain.</p>
-  </div>
-</div>
-
-<!-- React -->
-<div id="modal-react" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-react-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-react-title">React</h3>
-    <p>I build apps with simple components and clear state. In my Meet App I used the Google Calendar API along with easy filters and accessible dialogs.</p>
-  </div>
-</div>
-
-<!-- Angular -->
-<div id="modal-angular" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-angular-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-angular-title">Angular</h3>
-    <p>I built the myFlix client with a clear structure and helpful forms. It lets people browse movies, search by title, and save favorites with a smooth flow.</p>
-  </div>
-</div>
-
-<!-- Python -->
-<div id="modal-python" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-python-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-python-title">Python</h3>
-    <p>I use Python for web apps and small tools. In my Django Recipe App I handled views and data, and used simple charts where they added value.</p>
-  </div>
-</div>
-
-<!-- Django -->
-<div id="modal-django" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-django-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-django-title">Django</h3>
-    <p>I built the Recipe App with models, views, templates, and login. Images live on S3 and the app runs on Heroku. I value clear templates and safe forms.</p>
-  </div>
-</div>
-
-<!-- SQL -->
-<div id="modal-sql" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-sql-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-sql-title">SQL</h3>
-    <p>I write practical queries for day to day needs. I use selects, joins, and filters to support searches, reports, and quick checks.</p>
-  </div>
-</div>
-
-<!-- Process Automation -->
-<div id="modal-automation" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-automation-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-automation-title">Process Automation</h3>
-    <p>I turn slow paper steps into simple online flows. Fewer handoffs. Faster results. Better service for students and staff.</p>
-  </div>
-</div>
-
-<!-- Workflow Optimization -->
-<div id="modal-workflow" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-workflow-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-workflow-title">Workflow Optimization</h3>
-    <p>I map the path, remove bumps, and make it easier for everyone to do their best work.</p>
-  </div>
-</div>
-
-<!-- Documentation -->
-<div id="modal-docs" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-docs-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-docs-title">Technical Documentation</h3>
-    <p>I write steps that anyone on the team can follow. Clear language. Helpful screenshots. No fluff.</p>
-  </div>
-</div>
-
-<!-- Student Info Systems -->
-<div id="modal-sis" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-sis-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-sis-title">Student Info Systems</h3>
-    <p>I worked in Banner and Degree Works for years. I connect the dots so students get answers without extra hoops.</p>
-  </div>
-</div>
-
-<!-- Training -->
-<div id="modal-training" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-training-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-training-title">Training and Support</h3>
-    <p>I create quick guides and lead live sessions. My goal is confidence, not just completion.</p>
-  </div>
-</div>
-
-<!-- Collaboration -->
-<div id="modal-collab" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-collab-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-collab-title">Cross Functional Collaboration</h3>
-    <p>I gather the right people, set clear goals, and ship something useful.</p>
-  </div>
-</div>
-
-<!-- Leadership -->
-<div id="modal-leadership" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-leadership-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-leadership-title">Project Leadership</h3>
-    <p>I plan the work, track progress, clear roadblocks, and celebrate wins.</p>
-  </div>
-</div>
-
-<!-- SEO -->
-<div id="modal-seo" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-seo-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-seo-title">SEO and Web Writing</h3>
-    <p>I write friendly, skimmable content that helps people and works well in search.</p>
-  </div>
-</div>
-
-<!-- React Native -->
-<div id="modal-react-native" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-react-native-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-react-native-title">React Native</h3>
-    <p>I built a chat app with real time messaging, image sharing, and a simple interface that feels natural on a phone.</p>
-  </div>
-</div>
-
-<!-- Firebase -->
-<div id="modal-firebase" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-firebase-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-firebase-title">Firebase</h3>
-    <p>I used Firebase for sign in, real time data, and file storage in the chat app.</p>
-  </div>
-</div>
-
-<!-- Expo -->
-<div id="modal-expo" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-expo-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-expo-title">Expo</h3>
-    <p>Expo helped me build and test the chat app quickly on real devices.</p>
-  </div>
-</div>
-
-<!-- PWA -->
-<div id="modal-pwa" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-pwa-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-pwa-title">Progressive Web App</h3>
-    <p>The Meet App works offline and can be installed on your device. It is handy when you are on the go.</p>
-  </div>
-</div>
-
-<!-- Google Calendar API -->
-<div id="modal-gcal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-gcal-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-gcal-title">Google Calendar API</h3>
-    <p>I used the API to fetch events and filter by city in a way that feels simple to use.</p>
-  </div>
-</div>
-
-<!-- Heroku -->
-<div id="modal-heroku" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-heroku-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-heroku-title">Heroku</h3>
-    <p>The Recipe App is hosted on Heroku with a managed database. The release process is simple and reliable.</p>
-  </div>
-</div>
-
-<!-- AWS S3 -->
-<div id="modal-aws" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-aws-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-aws-title">AWS S3</h3>
-    <p>Recipe images are stored on S3 so they are durable and load quickly.</p>
-  </div>
-</div>
-
-<!-- Pandas -->
-<div id="modal-pandas" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-pandas-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-pandas-title">Pandas</h3>
-    <p>I used Pandas to organize recipe data and create simple insights.</p>
-  </div>
-</div>
-
-<!-- Matplotlib -->
-<div id="modal-matplotlib" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-matplotlib-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-matplotlib-title">Matplotlib</h3>
-    <p>I created small charts that make the data easy to read.</p>
-  </div>
-</div>
-
-<!-- Node -->
-<div id="modal-node" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-node-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-node-title">Node</h3>
-    <p>I used Node with Express to serve data to my apps in a clean way.</p>
-  </div>
-</div>
-
-<!-- MongoDB -->
-<div id="modal-mongodb" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-mongodb-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-mongodb-title">MongoDB</h3>
-    <p>MongoDB stores users, favorites, and movie details for myFlix.</p>
-  </div>
-</div>
-
-<!-- Express -->
-<div id="modal-express" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-express-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-express-title">Express</h3>
-    <p>I built an API that handles sign in and the routes the app needs. It is simple to use from React and Angular.</p>
-  </div>
-</div>
-
-<!-- TypeScript -->
-<div id="modal-typescript" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-typescript-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-typescript-title">TypeScript</h3>
-    <p>TypeScript helps me catch mistakes early and keep the code organized.</p>
-  </div>
-</div>
-
-<!-- SCSS -->
-<div id="modal-scss" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-scss-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="modal-scss-title">SCSS</h3>
-    <p>I organize styles with variables and small, reusable rules so the UI stays consistent.</p>
-  </div>
-</div>
-
-<!-- Higher Ed: Laserfiche -->
-<div id="modal-laserfiche" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="laserfiche-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="laserfiche-title">Laserfiche</h3>
-    <p>I used Laserfiche to move from paper to online forms and clear steps. Students received updates at each stage and staff could work faster.</p>
-    <ul>
-      <li>Online transcript evaluation with smart routing</li>
-      <li>Automatic assignment and helpful notifications</li>
-      <li>Time reduced from six weeks to one week</li>
-      <li>Winner of the Run Smarter Award</li>
-    </ul>
-    <p><a class="inline-link" target="_blank" href="https://www.laserfiche.com/resources/customer-stories/linn-benton-community-college-enhances-student-experience-streamlined-transcript-evaluations/">Read the case study</a></p>
-  </div>
-</div>
-
-<!-- Higher Ed: Banner -->
-<div id="modal-banner" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="banner-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="banner-title">Banner Student Information System</h3>
-    <p>I worked in Banner for years and helped teams improve everyday tasks for staff and students.</p>
-    <ul>
-      <li>Security, access, and upgrade testing</li>
-      <li>Admissions, transfer credit, petitions, and degree audit</li>
-      <li>SQL for audits, troubleshooting, and reports</li>
-      <li>Partnered with functional leads to roll out policy updates</li>
-    </ul>
-  </div>
-</div>
-
-<!-- Higher Ed: SQL -->
-<div id="modal-sql-hed" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="sql-hed-title">
-  <div class="modal__dialog" tabindex="-1">
-    <button class="modal__close" data-modal-close aria-label="Close">×</button>
-    <h3 id="sql-hed-title">SQL</h3>
-    <p>I use SQL to answer real questions and keep data healthy.</p>
-    <ul>
-      <li>Everyday selects, joins, and filters</li>
-      <li>Data pulled from Banner for checks and fixes</li>
-      <li>Quick reviews of transfer credit and degree progress</li>
-    </ul>
-  </div>
-</div>
-
-  <!-- Global Modal target (kept) -->
-  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="modal__backdrop" data-close-modal></div>
-    <div class="modal__dialog" role="document" tabindex="-1" aria-labelledby="modal-title">
-      <button class="modal__close" aria-label="Close" data-close-modal>✕</button>
-      <h3 class="modal__title" id="modal-title"></h3>
-      <div class="modal__body" id="modal-body"></div>
-    </div>
-  </div>
-
-  <!-- Scripts -->
   <script src="js/scripts.js" defer onerror="console.error('Failed to load js/scripts.js')"></script>
 </body>
 </html>

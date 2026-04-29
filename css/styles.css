@@ -14,13 +14,15 @@
 
 /* === SECTION CONTAINERS === */
 section {
-padding: 60px 20px;
-margin: 0 auto;
-text-align: center;
-max-width: 1200px;
-background: transparent;
-position: relative;
-z-index: 1;
+  padding: 40px 20px;   /* was 60px */
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
+}
+
+h1, h2, h3, p {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* Body and General Elements */
@@ -58,7 +60,7 @@ header {
 
 /* Section Styling */
 section {
-  padding: 60px 20px;
+  padding: 40px 20px;   /* was 60px */
   margin: 0 auto;
   max-width: 1200px;
   text-align: center;
@@ -66,7 +68,7 @@ section {
 
 /* === HOME SECTION === */
 #home {
-padding: 60px 20px;
+padding: 40px 20px 30px;
 margin: 0;
 text-align: center;
 width: 100vw;
@@ -85,7 +87,7 @@ text-align: center;
 .home-title {
 font-size: 3rem;
 font-weight: bold;
-margin-bottom: 40px;
+margin-bottom: 20px;
 color: var(--third-color);
 }
 
@@ -95,7 +97,7 @@ display: flex;
 flex-wrap: wrap;
 justify-content: center;
 align-items: flex-start;
-gap: 50px;
+gap: 30px;
 max-width: 900px;
 margin: 0 auto;
 }
@@ -229,7 +231,7 @@ animation: typeIn 1s ease-out both;
 
 /* About Section General */
 #about {
-padding: 6ch 20px;
+padding: 40px 20px;
 text-align: center;
 width: 100vw;
 max-width: 100%;
@@ -259,7 +261,7 @@ color: var(--third-color);
 /* Section Container */
 #about {
 background-color: var(--background-color);
-padding: 60px 20px;
+padding: 40px 20px;
 text-align: center;
 }
 
@@ -347,12 +349,10 @@ h2 {
 
 /* General Section Styling */
 section {
-  padding: 60px 20px 40px;
+  padding: 40px 20px;   /* was 60px */
   margin: 0 auto;
-  text-align: center;
   max-width: 1200px;
-  background-color: #fdecea; 
-  position: relative;
+  text-align: center;
 }
 
 /* Divider Line Between Sections */
@@ -404,7 +404,7 @@ h2 {
 /* === ABOUT SECTION === */
 
 #about {
-padding: 60px 20px;
+padding: 40px 20px;
 background-color: var(--background-color);
 text-align: center;
 }
@@ -2539,6 +2539,8 @@ margin-top: 10px;
 .highlights {
 background: linear-gradient(to right, #fff7fb, #fbe4e9);
 padding: 10px 0;               /* tighter */
+margin-top: 10px;
+margin-bottom: 10px;
 border-top: 1px solid rgba(0,0,0,.04);
 border-bottom: 1px solid rgba(0,0,0,.04);
 }
@@ -2576,9 +2578,9 @@ margin: 24px 0;   /* was larger; tighten */
 }
 
 /* Standardize section spacing so the flow feels continuous */
-section[id] {       /* any main section */
-padding-top: 48px;
-padding-bottom: 48px;
+section[id] {
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 /* A few sections can be even tighter */
@@ -3333,4 +3335,496 @@ body.is-touch #about .about-interests li::after {
   backdrop-filter: blur(6px);
   border-radius: 12px;
   padding: 1.5rem;
+}
+
+/* ===== Compact one-page layout fixes ===== */
+
+/* Tighten the home section */
+#home {
+  padding: 28px 20px 18px;
+}
+
+/* Remove extra space under the intro area */
+.home-container {
+  max-width: 1000px;
+}
+
+.home-title {
+  margin: 0 0 24px;
+}
+
+/* Make the intro feel like one balanced row */
+.home-content {
+  display: grid;
+  grid-template-columns: 1fr 180px 1.25fr;
+  align-items: center;
+  gap: 28px;
+  max-width: 900px;
+}
+
+/* Pull the photo into the row instead of letting it float awkwardly */
+.home-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-photo {
+  width: 170px;
+  height: 170px;
+  margin-top: 0;
+  animation: none;
+}
+
+/* Make text blocks feel tighter */
+.home-short,
+.home-long {
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+
+.home-name {
+  margin: 0 0 14px;
+}
+
+/* Tighten icon spacing */
+.home-icons {
+  margin-top: 8px;
+}
+
+/* Tighten the highlights strip */
+.highlights {
+  padding: 8px 0;
+  margin: 0;
+}
+
+/* Kill the giant gap before About */
+#about {
+  padding: 24px 20px 32px;
+}
+
+#about h1 {
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+/* Bring the About content upward */
+.career-journey {
+  margin-top: 10px;
+  gap: 28px;
+}
+
+/* Remove extra paragraph spacing */
+.career-text p {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+/* Optional: make the About heading less lonely */
+#about .career-text h2 {
+  margin-top: 0;
+}
+
+/* Mobile: stack cleanly */
+@media (max-width: 768px) {
+  .home-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .home-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .home-right {
+    text-align: center;
+  }
+
+  #about {
+    padding-top: 20px;
+  }
+}
+
+/* ===== Tighten spacing BETWEEN sections ===== */
+
+/* Reduce vertical spacing between all sections */
+section {
+  margin-bottom: 20px;   /* was effectively much larger */
+}
+
+/* Remove extra top spacing stacking */
+section + section {
+  margin-top: 0;
+}
+
+/* Tighten section headers */
+section h1 {
+  margin-bottom: 16px;   /* was ~30-40px */
+}
+
+/* Subheadings like "Awards & Recognition" */
+.subtle {
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+
+/* Skills grid spacing */
+.skills-section {
+  padding-bottom: 20px;
+}
+
+.skills-grid {
+  margin-top: 10px;
+  gap: 20px;   /* was bigger */
+}
+
+/* Highlights section spacing */
+#recognition {
+  padding-top: 20px;
+}
+
+/* Project / card grids (used in highlights + work) */
+.projects,
+.awards-grid,
+.higher-ed-grid {
+  margin-top: 16px;
+  gap: 20px;
+}
+
+/* Remove sneaky extra space from dividers */
+.section-divider {
+  margin: 10px 0;
+}
+
+/* ===== Final spacing + layout cleanup ===== */
+
+/* Pull sections closer together */
+section,
+section[id],
+#about,
+#skills,
+#recognition,
+#work,
+#writing,
+#contact {
+  padding-top: 28px !important;
+  padding-bottom: 28px !important;
+}
+
+/* Remove big visual gaps between section content */
+.skills-section,
+.projects,
+.awards-grid,
+.higher-ed-grid {
+  margin-top: 12px !important;
+  margin-bottom: 12px !important;
+}
+
+/* Tighten headings */
+h1,
+h2,
+.skills-title,
+.subtle {
+  margin-top: 8px !important;
+  margin-bottom: 16px !important;
+}
+
+/* Tighten divider spacing */
+.section-divider {
+  margin: 10px auto !important;
+}
+
+/* ===== Skills: make it 3 and 3 instead of 4 and 2 ===== */
+
+.skills-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+  max-width: 760px !important;
+  gap: 18px !important;
+  justify-items: center;
+  margin: 0 auto !important;
+}
+
+.skill-card {
+  width: 130px !important;
+  min-height: 120px;
+  padding: 16px 12px !important;
+}
+
+/* Mobile skills */
+@media (max-width: 700px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    max-width: 420px !important;
+  }
+}
+
+/* ===== Higher-Ed section cleanup ===== */
+
+.higher-ed-grid {
+  align-items: stretch;
+  gap: 18px !important;
+  padding: 14px !important;
+}
+
+/* Make presentation cards less giant */
+.presentation-card {
+  min-height: auto !important;
+  padding: 18px !important;
+}
+
+.presentation-card p,
+.presentation-card li {
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+/* ===== Writing section: smaller cards, cleaner row ===== */
+
+#writing .projects {
+  grid-template-columns: repeat(3, 1fr) !important;
+  max-width: 1150px !important;
+  gap: 22px !important;
+  padding: 20px 12px !important;
+}
+
+#writing .project-card {
+  padding: 20px 16px !important;
+}
+
+#writing .project-image {
+  height: 180px !important;
+  object-fit: cover;
+}
+
+#writing .project-card h2 {
+  font-size: 1.15rem !important;
+  margin: 14px 0 8px !important;
+}
+
+#writing .project-card p {
+  font-size: 0.95rem !important;
+  line-height: 1.45;
+}
+
+/* Writing cards stack on smaller screens */
+@media (max-width: 900px) {
+  #writing .projects {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 620px) {
+  #writing .projects {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ===== Compact Higher-Ed Innovation Showcase ===== */
+
+.higher-ed-showcase {
+  max-width: 1100px;
+  margin: 12px auto 28px;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 18px;
+  align-items: stretch;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 18px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* Featured card */
+.higher-ed-feature {
+  padding: 20px 18px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.higher-ed-feature .project-image {
+  height: 240px !important;
+  object-fit: cover;
+  object-position: center;
+}
+
+.higher-ed-feature h2 {
+  font-size: 1.35rem !important;
+  margin: 16px 0 10px !important;
+}
+
+.higher-ed-feature p {
+  font-size: 0.95rem !important;
+  line-height: 1.4 !important;
+  margin: 0 0 12px !important;
+}
+
+.higher-ed-feature .tech-stack {
+  margin: 8px 0 14px !important;
+}
+
+.higher-ed-feature .action-buttons {
+  margin-top: 4px !important;
+}
+
+/* Right-side presentation stack */
+.higher-ed-support {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.higher-ed-mini-card {
+  background: #fff;
+  color: var(--dark-grey);
+  border-radius: 16px;
+  padding: 18px 20px;
+  text-align: left;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.10);
+}
+
+.higher-ed-mini-card .card-icon {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.higher-ed-mini-card h3 {
+  color: var(--dark-grey);
+  font-size: 1.15rem;
+  margin: 6px 0 10px;
+}
+
+.higher-ed-mini-card p {
+  font-size: 0.95rem;
+  line-height: 1.35;
+  margin: 0 0 10px;
+}
+
+.higher-ed-mini-card .mini-list {
+  margin: 8px 0 10px 18px;
+  padding: 0;
+}
+
+.higher-ed-mini-card .mini-list li {
+  font-size: 0.95rem;
+  line-height: 1.35;
+  margin-bottom: 2px;
+}
+
+.higher-ed-mini-card .inline-link {
+  color: var(--secondary-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.higher-ed-mini-card .inline-link:hover {
+  text-decoration: underline;
+}
+
+/* Keep the section from breathing too dramatically */
+#work .subtle {
+  margin-bottom: 12px !important;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .higher-ed-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .higher-ed-feature .project-image {
+    height: 220px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .higher-ed-showcase {
+    padding: 10px;
+    gap: 14px;
+  }
+
+  .higher-ed-feature,
+  .higher-ed-mini-card {
+    padding: 16px !important;
+  }
+
+  .higher-ed-feature .project-image {
+    height: 190px !important;
+  }
+}
+
+/* ===== Writing section: polished 2-column layout ===== */
+
+#writing .projects {
+  grid-template-columns: repeat(2, minmax(280px, 1fr)) !important;
+  max-width: 1050px !important;
+  gap: 32px !important;
+  padding: 24px 20px !important;
+  align-items: stretch;
+}
+
+#writing .project-card {
+  padding: 28px 22px !important;
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#writing .project-image {
+  width: 100%;
+  height: 280px !important;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#writing .project-card h2 {
+  font-size: 1.35rem !important;
+  line-height: 1.25;
+  margin: 24px 0 14px !important;
+}
+
+#writing .project-meta {
+  font-size: 0.95rem !important;
+  line-height: 1.4;
+  margin-bottom: 16px !important;
+}
+
+#writing .project-card p {
+  font-size: 1rem !important;
+  line-height: 1.45 !important;
+}
+
+#writing .project-buttons {
+  margin-top: 18px;
+}
+
+/* Keep magazine cover from looking weird */
+#writing .project-card:nth-child(4) .project-image {
+  object-fit: cover !important;
+  object-position: top center;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  #writing .projects {
+    grid-template-columns: 1fr !important;
+    max-width: 560px !important;
+  }
+
+  #writing .project-card {
+    min-height: auto;
+  }
+}
+
+/* Phone */
+@media (max-width: 560px) {
+  #writing .projects {
+    padding: 18px 12px !important;
+  }
+
+  #writing .project-image {
+    height: 220px !important;
+  }
 }
