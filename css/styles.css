@@ -3891,48 +3891,85 @@ h2,
 }
 
 .experience-snapshot {
-  max-width: 850px;
+  max-width: 860px;
   margin: 0 auto;
 }
 
 .experience-snapshot h2 {
   color: var(--primary-color);
   margin-bottom: 18px !important;
+  text-align: center;
+}
+
+.snapshot-feature {
+  background: rgba(255, 255, 255, 0.95);
+  border-left: 6px solid var(--primary-color);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 18px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.snapshot-feature span {
+  display: block;
+  color: var(--primary-color);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.snapshot-feature p {
+  color: var(--dark-grey);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0;
 }
 
 .snapshot-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
+  gap: 16px;
 }
 
 .snapshot-card {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.92);
   border-left: 5px solid var(--third-color);
-  border-radius: 12px;
-  padding: 14px 16px;
+  border-radius: 14px;
+  padding: 20px 18px;
   text-align: left;
-  font-weight: 600;
-  color: var(--dark-grey);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.07);
 }
 
-/* Mobile */
-@media (max-width: 800px) {
-  .what-grid {
-    grid-template-columns: 1fr;
-  }
+.snapshot-card span {
+  display: block;
+  color: var(--primary-color);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+}
 
+.snapshot-card p {
+  color: var(--dark-grey);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
   .snapshot-grid {
     grid-template-columns: 1fr;
   }
 
-  .what-card,
   .snapshot-card {
     text-align: center;
   }
 }
-
 /* ===== Inclusive Student Services ===== */
 
 .inclusive-work {
@@ -3984,4 +4021,237 @@ h2,
   .inclusive-wrap h2 {
     text-align: center;
   }
+}
+
+.snapshot-card.highlight {
+  grid-column: span 2;
+  font-size: 1.05rem;
+  background: #ffffff;
+}
+
+.snapshot-card {
+  display: flex;
+  align-items: center;
+  min-height: 70px;
+}
+
+.snapshot-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.snapshot-card.highlight {
+  grid-column: 1 / -1;
+  padding: 16px 20px;   /* smaller */
+  font-size: 1rem;      /* not shouting */
+  font-weight: 600;
+  min-height: auto;     /* remove blocky feel */
+}
+
+.snapshot-card {
+  display: flex;
+  align-items: center;
+  min-height: 72px;        /* consistent height */
+  padding: 16px 18px;
+  line-height: 1.35;
+}
+
+.snapshot-card {
+  border-left: 4px solid var(--third-color);
+}
+
+.snapshot-card.highlight {
+  border-left: 6px solid var(--primary-color);
+}
+
+.snapshot-card strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  margin-bottom: 2px;
+}
+
+.snapshot-card.highlight {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 22px 24px;
+}
+
+.snapshot-card.highlight {
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.big-number {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 4px;
+}
+
+.snapshot-card.highlight {
+  background: #ffffff;
+  border-left: 6px solid var(--primary-color);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.experience-snapshot {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.experience-snapshot h2 {
+  color: var(--primary-color);
+  margin-bottom: 18px !important;
+  text-align: center;
+}
+
+.snapshot-feature {
+  background: rgba(255, 255, 255, 0.95);
+  border-left: 6px solid var(--primary-color);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 18px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.snapshot-feature span {
+  display: block;
+  color: var(--primary-color);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.snapshot-feature p {
+  color: var(--dark-grey);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.snapshot-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-left: 5px solid var(--third-color);
+  border-radius: 14px;
+  padding: 20px 18px;
+  text-align: left;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.07);
+}
+
+.snapshot-card span {
+  display: block;
+  color: var(--primary-color);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+}
+
+.snapshot-card p {
+  color: var(--dark-grey);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .snapshot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .snapshot-card {
+    text-align: center;
+  }
+}
+
+.snapshot-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-left: 5px solid var(--third-color);
+  border-radius: 14px;
+  padding: 18px 18px;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.07);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.snapshot-card p {
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.snapshot-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  min-height: 88px;
+  padding: 20px 22px;
+}
+
+.snapshot-card span {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.snapshot-card p {
+  margin: 0 auto;
+  max-width: 290px;
+  text-align: center;
+  line-height: 1.35;
+}
+
+.snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 18px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.snapshot-feature {
+  max-width: 760px;
+  margin: 0 auto 18px;
+}
+
+#work .project-card h2 {
+  color: #ffffff !important;
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-align: center;
+  margin: 22px 0 14px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+#writing .project-card h2 {
+  color: #ffffff !important;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin: 20px 0 12px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
