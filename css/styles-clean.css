@@ -524,9 +524,11 @@ header {
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(255, 249, 230, 0.85) 20%,
-    rgba(232, 244, 247, 0.85) 100%
+    rgba(255, 249, 230, 0.85) 15%,
+    rgba(232, 244, 247, 0.85) 65%,
+    var(--soft-orange) 100%
   );
+  padding-bottom: 80px;
 }
 
 .inclusive-wrap {
@@ -561,11 +563,14 @@ header {
 ========================= */
 
 #skills {
+  position: relative;
+  margin-top: -40px;
+  padding-top: 80px;
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    var(--soft-orange) 20%,
-    var(--soft-orange) 80%,
+    var(--soft-orange) 22%,
+    var(--soft-orange) 82%,
     transparent 100%
   );
 }
@@ -605,36 +610,6 @@ header {
   box-shadow: var(--strong-shadow);
 }
 
-#skills {
-  position: relative;
-  background: linear-gradient(
-    to bottom,
-    var(--soft-orange) 15%,
-    var(--soft-orange) 85%,
-    transparent 100%
-  );
-}
-
-/* Stronger, taller fade */
-#skills::before {
-  content: "";
-  position: absolute;
-  top: -100px;   /* extend upward more */
-  left: 0;
-  width: 100%;
-  height: 140px;
-
-  background: linear-gradient(
-    to bottom,
-    rgba(160, 216, 239, 0.9),   /* stronger start */
-    rgba(160, 216, 239, 0.4),
-    rgba(160, 216, 239, 0.0)
-  );
-
-  filter: blur(10px);  /* softer blend */
-  pointer-events: none;
-}
-
 .skill-icon {
   width: 40px;
   height: 40px;
@@ -649,11 +624,6 @@ header {
   font-weight: 800;
   line-height: 1.25;
 }
-
-#skills::before {
-  filter: blur(6px);
-}
-
 
 /* =========================
    11. Recognition
