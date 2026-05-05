@@ -609,26 +609,29 @@ header {
   position: relative;
   background: linear-gradient(
     to bottom,
-    var(--soft-orange) 20%,
-    var(--soft-orange) 80%,
+    var(--soft-orange) 15%,
+    var(--soft-orange) 85%,
     transparent 100%
   );
 }
 
+/* Stronger, taller fade */
 #skills::before {
   content: "";
   position: absolute;
-  top: -60px;
+  top: -100px;   /* extend upward more */
   left: 0;
   width: 100%;
-  height: 80px;
+  height: 140px;
 
   background: linear-gradient(
     to bottom,
-    rgba(160, 216, 239, 0.6),
+    rgba(160, 216, 239, 0.9),   /* stronger start */
+    rgba(160, 216, 239, 0.4),
     rgba(160, 216, 239, 0.0)
   );
 
+  filter: blur(10px);  /* softer blend */
   pointer-events: none;
 }
 
